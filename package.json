@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "metalsmith": "^2.3.0",
+    "metalsmith-pug": "^2.0.0",
+    "metalsmith-stylus": "^3.0.0"
+  }
+}
