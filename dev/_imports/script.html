@@ -1,0 +1,44 @@
+<script>
+    const THEME = "theme";
+    const DARK = "dark";
+    const LIGHT = "light";
+    let localTheme = localStorage.getItem(THEME);
+    if (localTheme === DARK) {
+        setTheme(DARK, document.querySelector('#theme-switch'));
+    }
+    else if (localTheme === LIGHT) {
+        setTheme(DARK, document.querySelector('#theme-switch'));
+    }
+    else if (
+        !localTheme &&
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        setTheme(DARK, document.querySelector('#theme-switch'));
+    }
+    // skip if light, no need to change
+
+    function setTheme(theme, el) {
+        const bodyClass = document.body.classList;
+        if (theme === DARK) {
+            bodyClass.add("dark");
+            el.innerHTML = "🌙";
+            localStorage.setItem(THEME, DARK);
+        }
+        else if (theme === LIGHT) {
+            bodyClass.remove("dark");
+            el.innerHTML = "☀️";
+            localStorage.setItem(THEME, LIGHT);
+        }
+    }
+
+    function switchMode(el) {
+        const bodyClass = document.body.classList;
+        if (bodyClass.contains("dark")) {
+            setTheme(LIGHT, el);
+        }
+        else {
+            setTheme(DARK, el);
+        }
+    }
+</script>

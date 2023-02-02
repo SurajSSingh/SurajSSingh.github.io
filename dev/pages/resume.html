@@ -1,0 +1,23 @@
+@layout(base)
+
+@section(title, SurajSSingh Resume)
+@section(desc, Suraj S Singh Resume)
+
+@section(content)
+
+<main class="container is-full-screen">
+    <div class="row">
+        @import(resume/title)
+        @import(resume_contact)
+        <hr />
+        @import(resume_summary)
+        <hr />
+        @import(resume_education)
+        <hr />
+        @import(resume_experience)
+        <hr />
+        @import(resume_skills)
+    </div>
+</main>
+
+@endsection
