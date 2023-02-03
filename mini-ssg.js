@@ -238,8 +238,7 @@ function runSSG() {
     }
 
     function renderSlot(rawComp, rawAttach) {
-        const attachName = getTagContent(rawAttach);
-
+        const [attachName, ...fallback] = getTagContent(rawAttach).split(",");
         const patternBetweenSlot = /(?<=@slot)([\S\s]*?)(?=@endslot)/g;
         const slots = rawComp.match(patternBetweenSlot);
 
@@ -253,8 +252,7 @@ function runSSG() {
                 item => item.startsWith("(" + attachName)
             )[0];
         }
-        const slotContent = matchSlot.replace(`(${attachName})`, '');
-
+        const slotContent = matchSlot ? matchSlot.replace(`(${attachName})`, '') : fallback.join(",");
         return slotContent;
     }
 
