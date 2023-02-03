@@ -4,19 +4,22 @@
 @section(desc, Suraj S Singh Resume)
 
 @section(content)
-
+<hr />
 <main class="container is-full-screen">
     <div class="row">
         @import(resume/title)
-        @import(resume_contact)
+        @import(resume/contact)
+        @import(resume/summary)
         <hr />
-        @import(resume_summary)
+        @import(resume/education)
         <hr />
-        @import(resume_education)
-        <hr />
-        @import(resume_experience)
-        <hr />
-        @import(resume_skills)
+        <div class="row col-12 col-8-md">
+            @import(resume/experience)
+            <hr />
+            @import(resume/skills)
+            <hr />
+            @import(resume/projects)
+        </div>
     </div>
 </main>
 
