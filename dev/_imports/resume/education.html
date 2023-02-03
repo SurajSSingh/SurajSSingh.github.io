@@ -1,18 +1,39 @@
 <section class="col-4">
     <h2 class="text-center">Education</h2>
-    <section class="card no-border">
-        <h3>Masters of Computer Science</h3>
-        <h4>University of Illinois, Urbana-Champaign</h4>
-        <p>Graduated: December, 2022</p>
-    </section>
-    <section class="card no-border">
-        <h3>B.S. Computer Game Science</h3>
-        <h4>University of California, Irvine</h4>
-        <p>Graduated: June 12, 2020; Cum Laude</p>
-    </section>
-    <section class="card">
-        <h3>B.A. Education Science</h3>
-        <h4>University of California, Irvine</h4>
-        <p>Graduated: June 12, 2020; Cum Laude</p>
-    </section>
+    @component(education_card)
+    @slot(degree)
+    Masters of Computer Science
+    @endslot
+    @slot(place)
+    University of Illinois, Urbana–Champaign
+    @endslot
+    @slot(attendance)
+    September 2021 — December 2022
+    @endslot
+
+    @endcomponent
+
+    @component(education_card)
+    @slot(class)
+    card
+    @endslot
+    @slot(degree)
+    B.S. Computer Game Science <br /> B.A. Education Science
+    @endslot
+    @slot(place)
+    University of California, Irvine
+    @endslot
+    @slot(attendance)
+    August 2016 — June 2020
+    @endslot
+
+    @slot(honors)
+    <p><strong>Honors:</strong></p>
+    <ul>
+        <li>Cum Laude, both degrees</li>
+        <li>Dean's Honor List</li>
+        <li>Phi Beta Kappa Society (ΦΒΚ)</li>
+    </ul>
+    @endslot
+    @endcomponent
 </section>
