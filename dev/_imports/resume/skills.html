@@ -1,4 +1,4 @@
-<section class="col-4">
+<section class="col-12">
     <h2 class="text-center">Skills</h2>
     <div class="row card">
         @component(skill_card)
@@ -8,14 +8,14 @@
 
         @slot(skillsList)
         <ul>
-            <li>
-                <a href="" class="tag">Rust</a>
+            <li class="tag">
+                <a href="">Rust</a>
             </li>
-            <li>
-                <a href="" class="tag">C#</a>
+            <li class="tag">
+                <a href="">C#</a>
             </li>
-            <li>
-                <a href="" class="tag">Python</a>
+            <li class="tag">
+                <a href="">Python</a>
             </li>
         </ul>
         @endslot
@@ -28,25 +28,11 @@
 
         @slot(skillsList)
         <ul>
-            <li>
-                <a href="" class="tag">Research</a>
+            <li class="tag">
+                Research
             </li>
-            <li>
-                <a href="" class="tag">Documentation</a>
-            </li>
-        </ul>
-        @endslot
-        @endcomponent
-
-        @component(skill_card)
-        @slot(title)
-        Interpersonal Skills
-        @endslot
-
-        @slot(skillsList)
-        <ul>
-            <li>
-                <a href="" class="tag">Collaboration</a>
+            <li class="tag">
+                Documentation
             </li>
         </ul>
         @endslot
@@ -59,12 +45,27 @@
 
         @slot(skillsList)
         <ul>
-            <li>
-                <a href="" class="tag">Unity</a>
+            <li class="tag">
+                <a href="">Unity</a>
             </li>
         </ul>
         @endslot
         @endcomponent
+
+        @component(skill_card)
+        @slot(title)
+        Interpersonal Skills
+        @endslot
+
+        @slot(skillsList)
+        <ul>
+            <li class="tag">
+                Collaboration
+            </li>
+        </ul>
+        @endslot
+        @endcomponent
+
 
     </div>
 </section>
