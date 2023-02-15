@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About SurajSSingh</title>
+    <meta name="description" content="Suraj S Singh About Page">
+    <meta property="og:title" content="About SurajSSingh">
+    <meta property="og:description" content="Suraj S Singh About Page">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/22825536?v=4">
+    <meta property="og:image:alt" content="GitHub Profile Picture">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About SurajSSingh">
+    <meta name="twitter:description" content="Suraj S Singh About Page">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/22825536?v=4">
+    <meta name="twitter:image:alt" content="GitHub Profile Picture">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+    <header class="hide-pr">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-left">
+                <a href="/" class="brand text-primary">Suraj S Singh</a>
+            </div>
+            <div class="nav-center tabs">
+                <a href="https://surajssingh.github.io/Tech-Tree-Blog/">
+                    <img src="https://icongr.am/jam/book.svg?size=24&color=3aa854" alt="">
+                    Website
+                </a>
+                <a href="https://github.com/SurajSSingh">
+                    <img src="https://icongr.am/jam/github-square.svg?size=24&color=3aa854" alt="">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/suraj-s-singh/">
+                    <img src="https://icongr.am/jam/linkedin-square.svg?size=24&color=3aa854" alt="">
+                    Linkedin
+                </a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-switch" onclick="switchMode(this)" class="pull-right button outline"></button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+<main class="container is-full-screen">
+    <h1>About Me</h1>
+    <h2>Who Am I</h2>
+    <p>Hi, my name is Suraj Singh. I am currently a coding instructor.</p>
+    <h2>Interests</h2>
+    <p>I am generally interested in game development and education, and particularly the intersection between them. I also have
+        curiosity about technology and mathematical subjects.</p>
+</main>
+
+
+
+    <footer class="hide-pr text-center">
+    <p>Made with <a href="https://minissg.vercel.app/">Mini-SSG</a> and <a href="https://jenil.github.io/chota/">Chota</a></p>
+</footer>
+
+    <script>
+    const THEME = "theme";
+    const DARK = "dark";
+    const LIGHT = "light";
+    let localTheme = localStorage.getItem(THEME);
+    if (localTheme === DARK) {
+        setTheme(DARK, document.querySelector('#theme-switch'));
+    }
+    else if (localTheme === LIGHT) {
+        setTheme(DARK, document.querySelector('#theme-switch'));
+    }
+    else if (
+        !localTheme &&
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        setTheme(DARK, document.querySelector('#theme-switch'));
+    }
+    // skip if light, no need to change
+
+    function setTheme(theme, el) {
+        const bodyClass = document.body.classList;
+        if (theme === DARK) {
+            bodyClass.add("dark");
+            el.innerHTML = "🌙";
+            localStorage.setItem(THEME, DARK);
+        }
+        else if (theme === LIGHT) {
+            bodyClass.remove("dark");
+            el.innerHTML = "☀️";
+            localStorage.setItem(THEME, LIGHT);
+        }
+    }
+
+    function switchMode(el) {
+        const bodyClass = document.body.classList;
+        if (bodyClass.contains("dark")) {
+            setTheme(LIGHT, el);
+        }
+        else {
+            setTheme(DARK, el);
+        }
+    }
+</script>
+</body>
+
+</html>
