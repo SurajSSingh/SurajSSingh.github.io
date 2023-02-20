@@ -1,6 +1,9 @@
 <section class="col-4">
     <h2 class="text-center">Education</h2>
     @component(education_card)
+    @slot(class)
+    card dot-border
+    @endslot
     @slot(degree)
     Masters of Computer Science
     @endslot
@@ -31,7 +34,8 @@
     <p><strong>Honors:</strong></p>
     <ul>
         <li>Cum Laude, both degrees</li>
-        <li>Dean's Honor List</li>
+        <li>Dean's Honor List: 2016 Fall, 2017 Spring, 2018 Fall-Winter-Spring, 2019 Fall-Winter-Spring, 2020 Fall-Winter-Spring
+        </li>
         <li>Phi Beta Kappa Society (ΦΒΚ)</li>
     </ul>
     @endslot

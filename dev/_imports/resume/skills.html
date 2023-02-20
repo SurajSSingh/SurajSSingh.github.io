@@ -1,21 +1,27 @@
 <section class="col-12">
-    <h2 class="text-center">Skills</h2>
+    <h2 class="text-center">Technical Skills</h2>
     <div class="row card">
         @component(skill_card)
         @slot(title)
-        Programming Languages
+        Languages
         @endslot
 
         @slot(skillsList)
         <ul>
-            <li class="tag">
-                <a href="">Rust</a>
+            <li>
+                <a href="https://dotnet.microsoft.com/en-us/languages/csharp">C#</a>
             </li>
-            <li class="tag">
-                <a href="">C#</a>
+            <li>
+                <a href="https://www.python.org/">Python</a>
             </li>
-            <li class="tag">
-                <a href="">Python</a>
+            <li>
+                <a href="https://www.rust-lang.org/">Rust</a>
+            </li>
+            <li>
+                <a href="https://github.github.com/gfm/">Markdown</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/javascript">JavaScript</a>
             </li>
         </ul>
         @endslot
@@ -23,44 +29,68 @@
 
         @component(skill_card)
         @slot(title)
-        Technical Skills
+        Tools
         @endslot
 
         @slot(skillsList)
         <ul>
-            <li class="tag">
-                Research
+            <li>
+                <a href="https://unity.com/">Unity</a>
             </li>
-            <li class="tag">
+            <li>
+                <a href="https://code.visualstudio.com/">Visual Studio Code</a>
+            </li>
+            <li>
+                <a href="https://github.com/">GitHub</a>
+            </li>
+            <li>
+                <a href="https://replit.com/">Replit</a>
+            </li>
+        </ul>
+        @endslot
+        @endcomponent
+
+        @component(skill_card)
+        @slot(title)
+        Project Management
+        @endslot
+
+        @slot(skillsList)
+        <ul>
+            <li>
+                Establishing Project Scope
+            </li>
+            <li>
+                Communicating Requirements
+            </li>
+            <li>
+                Collaboration (In-Person and Online)
+            </li>
+            <li>
+                Debugging and Troubleshooting
+            </li>
+        </ul>
+        @endslot
+        @endcomponent
+
+        @component(skill_card)
+        @slot(title)
+        Research
+        @endslot
+
+        @slot(skillsList)
+        <ul>
+            <li>
+                Data Gathering
+            </li>
+            <li>
+                Problem Solving
+            </li>
+            <li>
+                Evaluation
+            </li>
+            <li>
                 Documentation
-            </li>
-        </ul>
-        @endslot
-        @endcomponent
-
-        @component(skill_card)
-        @slot(title)
-        Software
-        @endslot
-
-        @slot(skillsList)
-        <ul>
-            <li class="tag">
-                <a href="">Unity</a>
-            </li>
-        </ul>
-        @endslot
-        @endcomponent
-
-        @component(skill_card)
-        @slot(title)
-        Interpersonal Skills
-        @endslot
-
-        @slot(skillsList)
-        <ul>
-            <li class="tag">
-                Collaboration
             </li>
         </ul>
         @endslot
