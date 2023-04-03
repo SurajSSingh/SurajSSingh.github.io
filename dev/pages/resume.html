@@ -8,13 +8,19 @@
 <main class="is-full-screen">
     <div class="row">
         @import(resume/title)
-        @import(resume/summary)
-        @import(resume/contact)
+        <section class="col-8">
+            @import(resume/summary)
+        </section>
+        <section class="col-4 text-center">
+            @import(resume/contact)
+        </section>
         <div class="col-8">
             @import(resume/experience)
             @import(resume/projects)
         </div>
-        @import(resume/education)
+        <section class="col-4">
+            @import(resume/education)
+        </section>
         @import(resume/skills)
     </div>
 </main>
