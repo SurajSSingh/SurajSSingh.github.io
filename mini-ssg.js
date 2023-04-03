@@ -87,8 +87,9 @@ function runSSG() {
         const ext = extname(fileName);
         if (ext == ".html") {
             content = renderPage(content);
-            const folder = fileName.split('.')[0]; //get name with subfolder
-
+            const split_filename = fileName.split('.');
+            const modifier = split_filename.slice(-2)[0]; // get modifier (second to last)
+            const folder = modifier != split_filename[0] ? split_filename[0] + `_${modifier}` : split_filename[0]; //get name with subfolder
             //except index, no folder.
             if (folder != 'index') {
                 createFolderIfNone(`${publicDir}` + folder);
