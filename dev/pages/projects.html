@@ -7,95 +7,261 @@
 
 <main class="container">
     <h1 class="text-center">Projects</h1>
-    <section>
-        <h2>Personal Projects</h2>
-        <p>These are some personal projects I've worked on.</p>
-        <ul>
-            <li><a href="https://github.com/SurajSSingh/comp-lang-comp.github.io">Comp-Lang-Comp</a>: A website to help compare
-                the syntaxes of many different programming languages. </li>
-            <li><a href="https://surajssingh.github.io/Tech-Tree-Blog/">Tech-Tree-Blog</a>: A website to hold my blog post and
-                notes.</li>
-            <li><a href="https://github.com/SurajSSingh/Nomie-Stopwatch">Nomie 6 Stopwatch</a>: A plugin I created for <a
-                    href="https://github.com/open-nomie/nomie6-oss">Nomie 6</a> to allow a more unified way of using the timer
-                trackers. Used to help learn about and develop TypeScript projects.</li>
-        </ul>
+    <h2>Personal Projects</h2>
+    <p>These are some personal projects I've worked on.</p>
+    <section id="personal-projects" class="row">
+        @component(project_card)
 
-        <h2>Student Projects</h2>
-        <p>These are some student projects I helped with. For these project, I primarily assisted with programming and game
-            design based on input from students. All of the game presented here were made in Unity</p>
-        <ul>
-            <li><a
-                    href="https://store.steampowered.com/app/1501920/Toewr_le_Fence__REMASTERED_coming_prob_not_soon/">Toewr_le_Fence</a>:
-                A 2D tower defense game using memes as the theme.
-            </li>
-            <li><a href="https://da-bank.itch.io/horde">Horde</a>: A 2D multiplayer co-op survival game where one is tasked with
-                killing all the zombies and escaping with friends.</li>
-            <li><a href="https://ihdfbisblncselzkx.itch.io/bridge2code">Bridge2Code</a>: A 2D puzzle game where one writes a
-                script to build a bridge. </li>
-            <li><a href="https://g47god3.itch.io/dungeon-project-summer-2021">Dungeon Project 1</a>: A 2D top-down shooter game
-                where one has to kill all the enemies inside the level.
-            </li>
-            <li><a href="https://jasonzhu.itch.io/clean-up-crew">Clean Up Crew</a>: A simple 3D game where one is tasked with
-                controlling robots to move boxes from one area to the scoring zone. </li>
-            <li><a
-                    href="https://play.google.com/store/apps/details/Pawdometer_Match_the_Dogs?id=com.Pawdometer.MatchProject&gl=US">Pawdometer</a>:
-                A match 4-game with dog theming and with integration with a sibling app to monitor dog steps.
-            </li>
-            <li><a href="https://cchristinafu.github.io/Program1-Website/">StemSisters Program-1</a>: A 2D coding farming that
-                helps teach students about coding.</li>
-            <li><a href="https://2131790781.github.io/simluator-project-website/">Escape from Emergency Simulator</a>: A 3D
-                first person simulation game that can be used to teach others how to react in an emergency situation, such as a
-                fire.</li>
-        </ul>
+        @slot(title)
+        <h3><a href="https://github.com/SurajSSingh/comp-lang-comp.github.io">Comp-Lang-Comp</a></h3>
+        @endslot
 
-        <h2>Work Projects</h2>
-        <p>These are work projects I had a hand in developing.</p>
-        <ul>
-            <li>Unity Game Exercise Templates:
-                <ul>
-                    <li> <a href="https://github.com/SurajSSingh/Unity-2-Templates">Old Unity 2 Templates</a>:
-                        <ul>
-                            <li> <a href="https://github.com/SurajSSingh/Unity-2-Platforming-Game"> Unity 2 - Platforming </a>:
-                                Template to help guide with developing a 2D Platformer. Used to help teach how to use Unity's
-                                tilemap system, understand 2D physics, and save data across levels.
-                            </li>
-                            <li><a href="https://github.com/SurajSSingh/Unity_2_RTS_Game"> Unity 2 - RTS </a>: A simple RTS
-                                template to provide scaffolding for learning about inheritance and polymorphism.</li>
-                        </ul>
-                    </li>
-                    <li><a href="https://github.com/SurajSSingh/Unity-2-Tower-Defense-Template"> Unity 2 - Tower Defense </a>: A
-                        simple tower defense game used to help teach Unity's scriptable object. Modified from the Unity 2 RTS
-                        project.
-                    </li>
-                    <li><a href="https://github.com/SurajSSingh/Unity-2-Platforming-Template"> Unity 2 - Platforming </a>: An
-                        updated 2D platform for Unity 2, focusing on improving assets and making the lesson flow clearer. </li>
-                    <li><a href="https://github.com/SurajSSingh/Unity-2-Module-3---Unity-Exercises"> Unity 2 - Module 3
-                            Exercises
-                        </a>: 5 exercise scenes to help reinforce Unity teachings.</li>
-                    <li><a href="https://github.com/SurajSSingh/Obstacle-Course-Project">Unity 3 - Module 1 Obstacle Course</a>:
-                        A simple 3D obstacle course that is used to teach Unity' new Input System and local computer
-                        multiplayer.
-                    </li>
-                    <li><a href="https://github.com/SurajSSingh/MultiplayerPongTemplate">Unity 3 - Multiplayer Pong
-                            Template</a>: A
-                        simple Pong setup framework to help teach multiplayer using Unity's Netcode for GameObjects.
-                    </li>
-                    <li><a href="https://github.com/SurajSSingh/Steam_NGO_Example">Unity 3 - Steam NGO Example</a>: A set of
-                        scenes showing how to combine Steam and Unity's Netcode for GameObject.</li>
-                    <li><a href="https://github.com/SurajSSingh/ML-Agents-Example">Unity 4 - ML-Agents Example</a>: A set of
-                        prefabs and scripts used to bootstrap working with Unity's ML-Agents package.</li>
-                </ul>
-            </li>
-        </ul>
+        @slot(image)
+        <a href="https://github.com/SurajSSingh/comp-lang-comp.github.io"><img src="../assets/images/comp-lang-comp.png"
+                alt="Comp-Lang-Comp website screenshot"></a>
+        @endslot
 
-        <h2>School Projects</h2>
-        <p>These are school projects I worked on.</p>
+        @slot(description)
+        <p>
+            A website to help compare the syntaxes of many different programming languages.
+        </p>
+        @endslot
+
+        @endcomponent
+
+        @component(project_card)
+
+        @slot(title)
+        <h3><a href="https://surajssingh.github.io/Tech-Tree-Blog/">Tech-Tree-Blog</a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://surajssingh.github.io/Tech-Tree-Blog/"><img src="../assets/images/tech-tree-blog.png"
+                alt="Tech Tree Blog logo"></a>
+        @endslot
+
+        @slot(description)
+        <p>A website to hold my blog post and notes on computer science, mathematics, and technology explainers.</p>
+        @endslot
+
+        @endcomponent
+
+        @component(project_card)
+
+        @slot(title)
+        <h3><a href="https://github.com/SurajSSingh/Nomie-Stopwatch">Nomie 6 Stopwatch</a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://github.com/SurajSSingh/Nomie-Stopwatch"><img src="../assets/images/nomie-stopwatch.png"
+                alt="Nomie Stopwatch web page"></a>
+        @endslot
+
+        @slot(description)
+        <p>A plugin I created for <a href="https://github.com/open-nomie/nomie6-oss">Nomie 6</a> to allow a more unified way of
+            using the timer
+            trackers. Used to help learn about and develop TypeScript projects.</p>
+        @endslot
+
+        @endcomponent
+    </section>
+    <h2>Student Projects</h2>
+    <p>These are some student projects I helped with. For these project, I primarily assisted with programming and game
+        design based on input from students. All of the game presented here were made in Unity</p>
+    <section class="row">
+        @component(project_card)
+        @slot(title)
+        <h3><a
+                href="https://store.steampowered.com/app/1501920/Toewr_le_Fence__REMASTERED_coming_prob_not_soon/">Toewr_le_Fence</a>
+        </h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://store.steampowered.com/app/1501920/Toewr_le_Fence__REMASTERED_coming_prob_not_soon/"><img
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/1501920/header.jpg?t=1677113417"
+                alt="Toewr_le_Fence Logo"></a>
+        @endslot
+
+        @slot(description)
+        <p>A 3D/2D tower defense game using memes as the theme. Available on Steam.</p>
+        @endslot
+        @endcomponent
+
+        @component(project_card)
+        @slot(title)
+        <h3><a href="https://ihdfbisblncselzkx.itch.io/bridge2code">Bridge2Code</a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://store.steampowered.com/app/1547630/Bridge2Code/"><img
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/1547630/header.jpg?t=1618877916"
+                alt="Bridge2Code Logo"></a>
+        @endslot
+
+        @slot(description)
+        <p>A 2D puzzle game where one writes a script to build a bridge. Available on Itch.io and Steam.</p>
+        @endslot
+        @endcomponent
+
+        <div class="col-12 divider"></div>
+
+        @component(project_card)
+        @slot(title)
+        <h3><a
+                href="https://play.google.com/store/apps/details/Pawdometer_Match_the_Dogs?id=com.Pawdometer.MatchProject&gl=US">Pawdometer</a>
+        </h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://play.google.com/store/apps/details/Pawdometer_Match_the_Dogs?id=com.Pawdometer.MatchProject&gl=US"
+            class="is-center"><img src="../assets/images/mtd-logo.png" alt="Pawdometer: Match The Dog Logo"></a>
+        @endslot
+
+        @slot(description)
+        <p>A match 4-game with dog theming and with integration with a sibling app to monitor dog steps. Available on the Google
+            Play store.</p>
+        @endslot
+        @endcomponent
+
+        @component(project_card)
+        @slot(title)
+        <h3><a href="https://cchristinafu.github.io/Program1-Website/">StemSisters Program-1</a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://cchristinafu.github.io/Program1-Website/"><img src="../assets/images/stem-sister.png"
+                alt="Program 1 screenshot"></a>
+        @endslot
+
+        @slot(description)
+        <p>A 2D coding farming that helps teach students about coding.</p>
+        @endslot
+        @endcomponent
+
+
+
+        @component(project_card)
+        @slot(title)
+        <h3><a href="https://2131790781.github.io/simluator-project-website/">Escape from Emergency Simulator</a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://2131790781.github.io/simluator-project-website/"><img src="../assets/images/fire-emergency.png"
+                alt="Fire Emergency Level"></a>
+        @endslot
+
+        @slot(description)
+        <p>A 3D first person simulation game that can be used to teach others how to react in an emergency situation, such as a
+            fire.</p>
+        @endslot
+        @endcomponent
+
+        <div class="col-12 divider"></div>
+
+        @component(project_card)
+        @slot(title)
+        <h3><a href="https://sites.google.com/view/horde-zombie-survival/home">Horde</a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://da-bank.itch.io/horde"><img
+                src="https://img.itch.zone/aW1hZ2UvMTA2MTYxNS85NzE5NTEyLnBuZw==/original/m0YLN9.png" alt="Horde screenshot"></a>
+        @endslot
+
+        @slot(description)
+        <p>A 2D multiplayer co-op survival game where one is tasked with
+            killing all the zombies and escaping with friends.</p>
+        @endslot
+        @endcomponent
+
+
+        @component(project_card)
+        @slot(title)
+        <h3><a href="https://g47god3.itch.io/dungeon-project-summer-2021">Dungeon Project 1</a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://g47god3.itch.io/dungeon-project-summer-2021"><img src="../assets/images/dungeon.png" alt=""></a>
+        @endslot
+
+        @slot(description)
+        <p>A 2D top-down shooter game where one has to kill all the enemies inside the level.</p>
+        @endslot
+        @endcomponent
+
+        @component(project_card)
+        @slot(title)
+        <h3><a href="https://jasonzhu.itch.io/clean-up-crew">Clean Up Crew</a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://jasonzhu.itch.io/clean-up-crew"><img src="../assets/images/agent-cleanup.png" alt="Agent #2"></a>
+        @endslot
+
+        @slot(description)
+        <p>A simple 3D game where one is tasked with
+            controlling robots to move boxes from one area to the scoring zone.</p>
+        @endslot
+        @endcomponent
+
+        <div class="col-12 divider"></div>
+
+    </section>
+
+    <h2>School Projects</h2>
+    <p>These are school projects I worked on.</p>
+
+    <section class="row">
+        @component(project_card)
+        @slot(title)
+        <h3><a href="https://github.com/SurajSSingh/Team-Alpha"> Withered Away by Team Alpha for ICS 169AB </a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://team-alpha.itch.io/withered-away"><img
+                src="https://img.itch.zone/aW1nLzMxMTI4MDQucG5n/315x250%23c/ySWAdD.png" alt="Withered Away Logo"></a>
+        @endslot
+
+        @slot(description)
+        <p>A 2D
+            platforming game for the Capstone class. I worked on music and audio for the game, and assisted with coding.
+            Available for download on Itch.io for Windows and Mac.</p>
+        @endslot
+        @endcomponent
+
+        @component(project_card)
+        @slot(title)
+        <h3><a href="https://surajss.itch.io/energyrollaball">Energy-Ball for ICS 161</a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://surajss.itch.io/energyrollaball"><img
+                src="https://img.itch.zone/aW1nLzExNzg2MDQ3LnBuZw==/315x250%23c/VNLSq7.png" alt="Energy Ball Logo"></a>
+        @endslot
+
+        @slot(description)
+        <p>My first Unity game, adapted from Roll-a-Ball template. Go through the level and build up energy for jumps. Available
+            online on Itch.io.</p>
+        @endslot
+        @endcomponent
+
+        @component(project_card)
+        @slot(title)
+        <h3><a href="https://surajss.itch.io/croweded-market"> Crowded Market for ICS 166 </a></h3>
+        @endslot
+
+        @slot(image)
+        <a href="https://surajss.itch.io/croweded-market"><img
+                src="https://img.itch.zone/aW1nLzExNzg2MTM4LnBuZw==/315x250%23c/4GomOe.png" alt="Crowded Market Logo"></a>
+        @endslot
+
+        @slot(description)
+        <p>A Unity game designed to simulate a marketplace using a simple AI implemented using Navigation Mesh and priority
+            queue. Available online on Itch.io.</p>
+        @endslot
+        @endcomponent
+
         <ul>
-            <li><a href="https://github.com/SurajSSingh/Team-Alpha"> Withered Away by Team Alpha for ICS 169AB </a>: A 2D
-                platforming game for the Capstone class. I worked on music and audio for the game, and assisted with coding.
-                Available
-                for
-                download on <a href="https://team-alpha.itch.io/withered-away">Itch.io</a>.</li>
             <li><a href="https://github.com/SurajSSingh/Collabuilder"> Collabuilder for ICS 175 </a>: A reinforcement learning
                 project using <a href="https://www.microsoft.com/en-us/research/project/project-malmo/">Project Malmo</a> to
                 make an agent that can build a house.</li>
@@ -104,6 +270,46 @@
                 a teapot.</li>
         </ul>
     </section>
+
+    <h2>Work Projects</h2>
+    <p>These are work projects I had a hand in developing.</p>
+    <ul>
+        <li>Unity Game Exercise Templates:
+            <ul>
+                <li> <a href="https://github.com/SurajSSingh/Unity-2-Templates">Old Unity 2 Templates</a>:
+                    <ul>
+                        <li> <a href="https://github.com/SurajSSingh/Unity-2-Platforming-Game"> Unity 2 - Platforming </a>:
+                            Template to help guide with developing a 2D Platformer. Used to help teach how to use Unity's
+                            tilemap system, understand 2D physics, and save data across levels.
+                        </li>
+                        <li><a href="https://github.com/SurajSSingh/Unity_2_RTS_Game"> Unity 2 - RTS </a>: A simple RTS
+                            template to provide scaffolding for learning about inheritance and polymorphism.</li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/SurajSSingh/Unity-2-Tower-Defense-Template"> Unity 2 - Tower Defense </a>: A
+                    simple tower defense game used to help teach Unity's scriptable object. Modified from the Unity 2 RTS
+                    project.
+                </li>
+                <li><a href="https://github.com/SurajSSingh/Unity-2-Platforming-Template"> Unity 2 - Platforming </a>: An
+                    updated 2D platform for Unity 2, focusing on improving assets and making the lesson flow clearer. </li>
+                <li><a href="https://github.com/SurajSSingh/Unity-2-Module-3---Unity-Exercises"> Unity 2 - Module 3
+                        Exercises
+                    </a>: 5 exercise scenes to help reinforce Unity teachings.</li>
+                <li><a href="https://github.com/SurajSSingh/Obstacle-Course-Project">Unity 3 - Module 1 Obstacle Course</a>:
+                    A simple 3D obstacle course that is used to teach Unity' new Input System and local computer
+                    multiplayer.
+                </li>
+                <li><a href="https://github.com/SurajSSingh/MultiplayerPongTemplate">Unity 3 - Multiplayer Pong
+                        Template</a>: A
+                    simple Pong setup framework to help teach multiplayer using Unity's Netcode for GameObjects.
+                </li>
+                <li><a href="https://github.com/SurajSSingh/Steam_NGO_Example">Unity 3 - Steam NGO Example</a>: A set of
+                    scenes showing how to combine Steam and Unity's Netcode for GameObject.</li>
+                <li><a href="https://github.com/SurajSSingh/ML-Agents-Example">Unity 4 - ML-Agents Example</a>: A set of
+                    prefabs and scripts used to bootstrap working with Unity's ML-Agents package.</li>
+            </ul>
+        </li>
+    </ul>
 
 </main>
 
