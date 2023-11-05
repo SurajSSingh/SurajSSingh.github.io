@@ -1,0 +1,22 @@
+<header id="top" class="hide-pr">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-left">
+                <a href="/" class="brand text-primary">Suraj S Singh</a>
+            </div>
+            <div class="nav-center tabs">
+                {{#site}}
+                {{#header_nav}}
+                <a href="{{link}}">
+                    {{icon}}
+                    <span>{{name}}</span>
+                </a>
+                {{/header_nav}}
+                {{/site}}
+            </div>
+            <div class="nav-right">
+                <button id="theme-switch" onclick="switchMode(this)" class="pull-right button outline">theme</button>
+            </div>
+        </div>
+    </nav>
+</header>

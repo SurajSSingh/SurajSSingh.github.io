@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+
+{{>head.html}}
+
+<body class="">
+    {{>header.html}}
+    <main id="content" class="is-full-screen container" role="main">
+        {{content}}
+    </main>
+    {{>footer.html}}
+    <span>{{#is_section}}section-template{{/is_section}}{{^is_section}}post-template{{/is_section}}</span>
+</body>
