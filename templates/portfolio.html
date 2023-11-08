@@ -1,1 +1,60 @@
-{{>layout.html}}
+<!DOCTYPE HTML>
+<html lang="{{#site}}{{lang}}{{/site}}">
+
+{{>head.html}}
+
+<body class="">
+    {{>header.html}}
+    <main id="content" class="is-full-screen container" role="main">
+        <hgroup>
+            <h1>{{title}}</h1>
+            {{#summary}}
+            <p>{{{summary}}}</p>
+            {{/summary}}
+        </hgroup>
+        <h2>Main Projects</h2>
+        <section class="row">
+            {{#pages}}
+            <section class="card col no-border">
+                {{#permalink}}
+                <a href="{{permalink}}"></a>
+                {{/permalink}}
+                <h3>
+                    {{#project_link}}<a href="{{project_link}}">{{title}}</a>{{/project_link}}
+                    {{^project_link}}{{title}}{{/project_link}}
+                </h3>
+                {{#image}}
+                {{#project_link}}<a href="{{project_link}}">{{/project_link}}
+                    <img src="{{image}}" alt="{{alt}}" class="outline-dark" />
+                    {{#project_link}}</a>{{/project_link}}
+                {{/image}}
+                {{#summary}}
+                <p>{{& summary}}
+                    <br />
+                    {{#permalink}}<a href="{{permalink}}">Learn More...</a>{{/permalink}}
+                </p>
+                {{/summary}}
+            </section>
+            {{/pages}}
+        </section>
+        <h2>Other Projects</h2>
+        {{#subsections}}
+        <section class="no-border">
+            {{#permalink}}
+            <a href="{{permalink}}">
+                <h3>{{title}}</h3>
+            </a>
+            {{/permalink}}
+            {{#image}}
+            {{#project_link}}<a href="{{project_link}}">{{/project_link}}
+                <img src="{{image}}" alt="{{alt}}">
+                {{#project_link}}</a>{{/project_link}}
+            {{/image}}
+            {{#summary}}
+            <p>{{& summary}}</p>
+            {{/summary}}
+        </section>
+        {{/subsections}}
+    </main>
+    {{>footer.html}}
+</body>

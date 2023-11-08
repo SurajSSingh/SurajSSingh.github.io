@@ -2,36 +2,30 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8">
+    {{>meta/main.html}}
     {{#site}}
-    <title>{{#current}}{{pid}} | {{/current}}{{title}}</title>
     <meta property="og:title" content="{{title}}" />
     <meta property="og:type" content="website" />
-    {{#author}}
-    <meta name="author" content="{{author}}">{{/author}}
+
     {{#description}}
-    <meta name="description" content="{{description}}">
     <meta property="og:description" content="{{description}}" />
     {{/description}}
-    {{#keywords}}
-    <meta name="keywords" content="{{keywords}}">
-    {{/keywords}}
     {{#image}}
-    <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+    <meta property="og:image" content="{{image}}" />
     {{/image}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
     {{#url}}
-    <base href="{{url}}" />
     <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
     {{/url}}
     {{#rss}}
-    <link href="rss.xml" rel="alternate" title="{{title}}" type="application/rss+xml">
+    <link href="{{url}}/rss.xml" rel="alternate" title="{{title}}" type="application/rss+xml">
     {{/rss}}
     {{#atom}}
-    <link href="atom.xml" rel="alternate" title="{{title}}" type="application/atom+xml">
+    <link href="{{url}}/atom.xml" rel="alternate" title="{{title}}" type="application/atom+xml">
     {{/atom}}
-    <link href="{{assets}}/custom.min.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <script src="{{assets}}/theme_switcher.js" defer></script>
+    <link href="{{url}}/{{assets}}/custom.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script src="{{url}}/{{assets}}/theme_switcher.js" defer></script>
     {{/site}}
 </head>

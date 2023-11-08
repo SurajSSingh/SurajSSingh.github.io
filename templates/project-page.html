@@ -6,6 +6,12 @@
 <body class="">
     {{>header.html}}
     <main id="content" class="is-full-screen container" role="main">
+        <hgroup>
+            <h1>{{title}}</h1>
+            <p>Link: <a href="{{project_link}}">{{project_link}}</a></p>
+            <p>{{{summary}}}</p>
+        </hgroup>
+
         {{content}}
     </main>
     {{>footer.html}}
