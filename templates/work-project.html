@@ -10,19 +10,20 @@
             <h1>{{title}}</h1>
             <p>{{{summary}}}</p>
         </hgroup>
+        {{content}}
         <section class="row">
-            {{#pages}}
+            {{#student_project}}
             {{#start_new_row}}
             <div class="divider col-12"></div>
             {{/start_new_row}}
             <article class="col card">
-                <a href="{{permalink}}">
-                    <h4>{{title}}</h4>
-                    {{#image}}<img src="{{image}}" alt="{{alt}}">{{/image}}
+                <a href="{{link}}">
+                    <h4>{{name}}</h4>
+                    <img src="{{image}}" alt="alt">
                 </a>
                 <p>{{{summary}}}</p>
             </article>
-            {{/pages}}
+            {{/student_project}}
         </section>
     </main>
     {{>footer.html}}

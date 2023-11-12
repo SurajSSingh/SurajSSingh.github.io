@@ -15,7 +15,7 @@
         <h2>Main Projects</h2>
         <section class="row">
             {{#pages}}
-            <section class="card col no-border">
+            <article class="card col no-border">
                 {{#permalink}}
                 <a href="{{permalink}}"></a>
                 {{/permalink}}
@@ -34,10 +34,10 @@
                     {{#permalink}}<a href="{{permalink}}">Learn More...</a>{{/permalink}}
                 </p>
                 {{/summary}}
-            </section>
+            </article>
             {{/pages}}
         </section>
-        <h2>Other Projects</h2>
+        <h2>Additional Projects</h2>
         {{#subsections}}
         <section class="no-border">
             {{#permalink}}
@@ -53,6 +53,50 @@
             {{#summary}}
             <p>{{& summary}}</p>
             {{/summary}}
+            <section class="row">
+                {{#pages}}
+                {{#start_new_row}}
+                <div class="divider col-12"></div>
+                {{/start_new_row}}
+                <section class="card col no-border">
+                    {{#permalink}}
+                    <a href="{{permalink}}"></a>
+                    {{/permalink}}
+                    <h4>
+                        {{#project_link}}<a href="{{project_link}}">{{title}}</a>{{/project_link}}
+                        {{^project_link}}{{title}}{{/project_link}}
+                    </h4>
+                    {{#image}}
+                    {{#project_link}}<a href="{{project_link}}">{{/project_link}}
+                        <img src="{{image}}" alt="{{alt}}" class="outline-dark" />
+                        {{#project_link}}</a>{{/project_link}}
+                    {{/image}}
+                    {{#summary}}
+                    <p>{{& summary}}
+                        <br />
+                        {{#permalink}}<a href="{{permalink}}">Learn More...</a>{{/permalink}}
+                    </p>
+                    {{/summary}}
+                </section>
+                {{/pages}}
+            </section>
+            {{#subsections}}
+            <section class="card col no-border">
+                {{#permalink}}
+                <a href="{{permalink}}">
+                    <h3>{{title}}</h3>
+                </a>
+                {{/permalink}}
+                {{#image}}
+                {{#project_link}}<a href="{{project_link}}">{{/project_link}}
+                    <img src="{{image}}" alt="{{alt}}">
+                    {{#project_link}}</a>{{/project_link}}
+                {{/image}}
+                {{#summary}}
+                <p>{{& summary}}</p>
+                {{/summary}}
+            </section>
+            {{/subsections}}
         </section>
         {{/subsections}}
     </main>

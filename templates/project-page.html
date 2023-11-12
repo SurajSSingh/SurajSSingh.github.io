@@ -11,7 +11,14 @@
             <p>Link: <a href="{{project_link}}">{{project_link}}</a></p>
             <p>{{{summary}}}</p>
         </hgroup>
-
+        <section class="row">
+            {{#pictures}}
+            <figure class="card col no-border">
+                <img src="{{permalink}}" alt="{{alt}}">
+                <figcaption>{{caption}}</figcaption>
+            </figure>
+            {{/pictures}}
+        </section>
         {{content}}
     </main>
     {{>footer.html}}
