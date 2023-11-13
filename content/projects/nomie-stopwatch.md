@@ -1,7 +1,7 @@
 +++
 title = "Nomie 6 Stopwatch Plugin"
 date = 2023-11-06
-image="assets/images/nomie-stopwatch.png"
+image="/assets/images/nomie-stopwatch.png"
 alt="Screenshot of Stopwatch plugin for Nomie 6."
 summary = "A plugin I created for <a href='https://github.com/open-nomie/nomie6-oss'>Nomie 6</a> to allow a more unified way ofusing the timer trackers."
 project_link="https://github.com/SurajSSingh/Nomie-Stopwatch"

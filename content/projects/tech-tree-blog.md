@@ -1,7 +1,7 @@
 +++
 title = "Tech-Tree-Blog"
 date = 2023-11-12
-image="assets/images/tech-tree-blog.png"
+image="/assets/images/tech-tree-blog.png"
 alt="Tech Tree Blog logo"
 summary = "A website to hold my blog post and notes on computer science, mathematics, and technology explainers."
 project_link="https://surajssingh.github.io/Tech-Tree-Blog/"

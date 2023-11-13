@@ -1,7 +1,7 @@
 +++
 title = "Comp-Lang-Comp"
 date = 2023-11-05
-image="assets/images/comp-lang-comp.png"
+image="/assets/images/comp-lang-comp.png"
 alt="Comp-Lang-Comp website screenshot"
 summary = "A website to help compare the syntaxes of many different programming languages. Created initially out of my notes for the <a href='https://exercism.org/challenges/12in23'>12in23 Exercism challenge</a>."
 project_link="https://github.com/SurajSSingh/comp-lang-comp.github.io"
