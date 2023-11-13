@@ -1,0 +1,66 @@
+<!-- TOML front-matter -->
++++
+# Title of the page
+title = ""
+# Date when the page was created
+date = nan
+# date = 2020-09-08
+
+# An image representing the page
+image = ""
+# A brief summary of the page content
+summary = ""
+
+# The main content of the page
+# CommonMark markdown can be used here
+# In Markdown files, it is replaced with the actual content of the file, if present.
+content = """
+"""
+
+# A weight of the page, used if a collection this page is in is sorted by weight
+weight = 0
+# A priority of this page for SEO, in the range of 0-1
+priority = 0.5
+# Hide the page from the list of its parent's subpages or subsections
+hidden = false
+#A list of alternative paths to render this page in, relative to the output directory
+alternative_paths = []
+
+#A list of content plugins to transform the content of this page with
+plugins = []
+
+# The path in the output directory this page is rendered into*
+path = "{{ parent directory of the page }}"
+# The file name this page is rendered into, without the .html extension*
+slug = "{{ file name without the extension }}"
+
+# A template to render this page with.
+# If none is specified, the one specified in the parent section is used
+template = ""
+# A template to render the gallery pictures with
+gallery_template = "gallery.html"
+
+# A list of pictures associated with this page
+# Each will be rendered into a separate gallery page
+[[pictures]]
+# Id string of the picture, used for the generated URL in the gallery page
+# MANDATORY for every picture used!
+pid = ""
+# An associated caption of the picture
+# [CommonMark](https://commonmark.org/) markdown can be used here
+caption = ""
+# An alternative text displayed when the image can't be loaded of for accessibility
+alt = ""
+# File name of the image
+file = ""
+# Date and time of when the image was taken
+taken = None
+# Repeat for every picture
+
+# A map of lists to classify this page with
+[taxonomies]
+# For example:
+# tags = ["blades", "documentation"]
++++
+<!-- Markdown Content -->
+When the file is called index.md or index.toml, the corresponding page is called section
