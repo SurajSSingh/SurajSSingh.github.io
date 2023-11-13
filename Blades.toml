@@ -1,7 +1,7 @@
 # Title of the site
 title = "Suraj's personal website"
 # URL which the site is expected to be accessed through
-url = "surajssingh.com"
+url = "https://surajssingh.com"
 # Name of the folder where theme templates and assets shall be loaded from,
 # located in the themes directory (see below)
 theme = ""

@@ -2,21 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title>Suraj's personal website</title>
-    <link rel="related" href="surajssingh.com" />
-    <id>surajssingh.com</id>
+    <link rel="related" href="https://surajssingh.com" />
+    <id>https://surajssingh.com</id>
     <author>
         <name>Suraj S. Singh</name>
         
     </author>
     <subtitle></subtitle>
     <generator>blades</generator>
-    <updated>2023-11-13T03:55:57Z</updated>
+    <updated>2023-11-13T04:32:57Z</updated>
 
 
     <entry>
         <title>Homepage</title>
-        <link rel="alternate" href="surajssingh.com/" />
-        <id>surajssingh.com</id>
+        <link rel="alternate" href="https://surajssingh.com/" />
+        <id>https://surajssingh.com</id>
         <summary>Homepage of my website</summary>
         <content><h1>Welcome to my home page.</h1>
 <p>Hello, my name is Suraj. You can use the above tabs to go to specific pages.</p>
@@ -27,8 +27,8 @@
 
     <entry>
         <title>About Me</title>
-        <link rel="alternate" href="surajssingh.com/about/index.html" />
-        <id>surajssingh.com/about/index</id>
+        <link rel="alternate" href="https://surajssingh.com/about/index.html" />
+        <id>https://surajssingh.com/about/index</id>
         <summary>Learn more about me</summary>
         <content><h1>About me</h1>
 <h2>Who I am</h2>
@@ -63,8 +63,8 @@
 
     <entry>
         <title>Portfolio</title>
-        <link rel="alternate" href="surajssingh.com/projects/" />
-        <id>surajssingh.com/projects</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/" />
+        <id>https://surajssingh.com/projects</id>
         <summary>A list of projects I have worked on.</summary>
         <content><h1>My Projects</h1>
 </content>
@@ -74,8 +74,8 @@
 
     <entry>
         <title>Comp-Lang-Comp</title>
-        <link rel="alternate" href="surajssingh.com/projects/comp-lang-comp.html" />
-        <id>surajssingh.com/projects/comp-lang-comp</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/comp-lang-comp.html" />
+        <id>https://surajssingh.com/projects/comp-lang-comp</id>
         <summary>A website to help compare the syntaxes of many different programming languages. Created initially out of my notes for the &lt;a href='https://exercism.org/challenges/12in23'&gt;12in23 Exercism challenge&lt;/a&gt;.</summary>
         <content><h2>Overview</h2>
 <p>The idea is to have a website that can allow one to compare multiple different programming languages (or any kind of programming languages) easily. I primarily wanted to make this website to help catalog all the different ideas from a variety of programming languages to eventually make my own programming language.</p>
@@ -92,8 +92,8 @@
 
     <entry>
         <title>Make A Lisp Implementation</title>
-        <link rel="alternate" href="surajssingh.com/projects/my-mal.html" />
-        <id>surajssingh.com/projects/my-mal</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/my-mal.html" />
+        <id>https://surajssingh.com/projects/my-mal</id>
         <summary>A Rust implementation of &lt;a href='https://github.com/kanaka/mal'&gt;mal - Make a Lisp&lt;/a&gt; (a Clojure inspired lisp).</summary>
         <content><h2>Overview</h2>
 <p>My implementation of Make a Lisp (MAL) done in Rust. Used to learn more about how to work with Rust, as well as learn more about certain programming concepts such as tail-call optimization. </p>
@@ -112,8 +112,8 @@
 
     <entry>
         <title>Tech-Tree-Blog</title>
-        <link rel="alternate" href="surajssingh.com/projects/tech-tree-blog.html" />
-        <id>surajssingh.com/projects/tech-tree-blog</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/tech-tree-blog.html" />
+        <id>https://surajssingh.com/projects/tech-tree-blog</id>
         <summary>A website to hold my blog post and notes on computer science, mathematics, and technology explainers.</summary>
         <content><h2>Overview</h2>
 <p>A blog for teaching others online. I used this to help with my technical writing, as well as my teaching ability.</p>
@@ -130,8 +130,8 @@
 
     <entry>
         <title>Nomie 6 Stopwatch Plugin</title>
-        <link rel="alternate" href="surajssingh.com/projects/nomie-stopwatch.html" />
-        <id>surajssingh.com/projects/nomie-stopwatch</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/nomie-stopwatch.html" />
+        <id>https://surajssingh.com/projects/nomie-stopwatch</id>
         <summary>A plugin I created for &lt;a href='https://github.com/open-nomie/nomie6-oss'&gt;Nomie 6&lt;/a&gt; to allow a more unified way ofusing the timer trackers.</summary>
         <content><h2>Overview</h2>
 <p>I created this plugin to allow me to easily have timers (known as stopwatches for the plugin) which is tied to specific trackers. This would make it easier to associate timers with specific trackers.</p>
@@ -150,8 +150,8 @@
 
     <entry>
         <title>Tymeit</title>
-        <link rel="alternate" href="surajssingh.com/projects/tymeit.html" />
-        <id>surajssingh.com/projects/tymeit</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/tymeit.html" />
+        <id>https://surajssingh.com/projects/tymeit</id>
         <summary>A privacy respecting time tracker for yourself. Heavily inspired by &lt;a href='https://nomie.app/'&gt;Nomie&lt;/a&gt;.</summary>
         <content><h2>Overview</h2>
 <p>A web app that lets you time track from anywhere and privately. This project takes ideas from Nomie and modifies it a bit to make it easier to track specifically with timing. This also let me work on a full project that uses <a href="https://svelte.dev/">Svelte</a> (through SvelteKit) and <a href="https://tailwindcss.com/">TailwindCSS</a> (through SkeletonUI). Develop following the YouTube tutorial <a href="https://youtu.be/P_A0qQ7AuK8">“Best UI Library for Svelte” by Huntabyte</a>.</p>
@@ -169,8 +169,8 @@
 
     <entry>
         <title>Work Projects</title>
-        <link rel="alternate" href="surajssingh.com/projects/work/" />
-        <id>surajssingh.com/projects/work</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/work/" />
+        <id>https://surajssingh.com/projects/work</id>
         <summary>Projects I have worked on for work.</summary>
         <content><h2>Coding Minds Academy</h2>
 <p>Projects I have either worked on or lead the development of at <a href="https://codingmindsacademy.com/">Coding Minds Academy</a>.</p>
@@ -194,24 +194,24 @@
 <h3>Student Projects</h3>
 <p>These are some student projects I helped with. For these project, I primarily assisted with programming and game design based on input from students. All of the game presented here were made in Unity using C#.</p>
 </content>
-        <updated>2023-11-07T03:22:59Z</updated>
+        <updated>2023-11-13T04:29:40Z</updated>
     </entry>
     
 
     <entry>
         <title>School Projects</title>
-        <link rel="alternate" href="surajssingh.com/projects/school/" />
-        <id>surajssingh.com/projects/school</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/school/" />
+        <id>https://surajssingh.com/projects/school</id>
         <summary>Projects I have worked on for school. This include my undergraduate work at University of California: Irvine (UCI) and graduate work at  University of Illinois Urbana-Champaign (UIUC).</summary>
         <content></content>
-        <updated>2023-11-07T03:22:43Z</updated>
+        <updated>2023-11-13T04:29:40Z</updated>
     </entry>
     
 
     <entry>
         <title>Withered Away by Team Alpha</title>
-        <link rel="alternate" href="surajssingh.com/projects/school/withered-away.html" />
-        <id>surajssingh.com/projects/school/withered-away</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/school/withered-away.html" />
+        <id>https://surajssingh.com/projects/school/withered-away</id>
         <summary>A 2D platforming game for the Capstone class. Lead music, audio, and level designer for the game, and assisted with coding development.</summary>
         <content><h2>Course</h2>
 <p>UCI – ICS 169AB: Capstone Game Project</p>
@@ -239,8 +239,8 @@
 
     <entry>
         <title>Collabuilder</title>
-        <link rel="alternate" href="surajssingh.com/projects/school/collabuilder.html" />
-        <id>surajssingh.com/projects/school/collabuilder</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/school/collabuilder.html" />
+        <id>https://surajssingh.com/projects/school/collabuilder</id>
         <summary>A reinforcement learning project using &lt;a href='https://www.microsoft.com/en-us/research/project/project-malmo/'&gt;Project Malmo&lt;/a&gt; to make an agent that can build a house.</summary>
         <content><h2>Course</h2>
 <p>UCI – ICS 175: Project in AI</p>
@@ -258,8 +258,8 @@
 
     <entry>
         <title>Crowded Market</title>
-        <link rel="alternate" href="surajssingh.com/projects/school/crowded-market.html" />
-        <id>surajssingh.com/projects/school/crowded-market</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/school/crowded-market.html" />
+        <id>https://surajssingh.com/projects/school/crowded-market</id>
         <summary>A Unity game designed to simulate a marketplace using a simple AI implemented using Navigation Mesh and priority queue.</summary>
         <content><h2>Course</h2>
 <p>UCI – ICS 166: Game Design</p>
@@ -275,8 +275,8 @@
 
     <entry>
         <title>Energy-Ball</title>
-        <link rel="alternate" href="surajssingh.com/projects/school/energy-ball.html" />
-        <id>surajssingh.com/projects/school/energy-ball</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/school/energy-ball.html" />
+        <id>https://surajssingh.com/projects/school/energy-ball</id>
         <summary>My first Unity game, adapted from Roll-a-Ball template. Go through the level and build up energy for jumps. Available online on Itch.io.</summary>
         <content><h2>Course</h2>
 <p>UCI – ICS 161: Game Engine Lab</p>
@@ -292,8 +292,8 @@
 
     <entry>
         <title>Teapot</title>
-        <link rel="alternate" href="surajssingh.com/projects/school/teapot.html" />
-        <id>surajssingh.com/projects/school/teapot</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/school/teapot.html" />
+        <id>https://surajssingh.com/projects/school/teapot</id>
         <summary>The final project for Interactive Graphics class, focusing on using knowledge of the graphics pipeline and applying that to texturing a teapot.</summary>
         <content><h2>Course</h2>
 <p>UIUC: CS 418 Interactive Computer Graphics</p>
@@ -311,8 +311,8 @@
 
     <entry>
         <title>StrSol</title>
-        <link rel="alternate" href="surajssingh.com/projects/school/strsol.html" />
-        <id>surajssingh.com/projects/school/strsol</id>
+        <link rel="alternate" href="https://surajssingh.com/projects/school/strsol.html" />
+        <id>https://surajssingh.com/projects/school/strsol</id>
         <summary>A (partial) implementation of String Solving with Regex in Haskell using transducers.</summary>
         <content><h2>Course</h2>
 <p>UIUC – CS 421: Programming Languages &amp; Compilers</p>

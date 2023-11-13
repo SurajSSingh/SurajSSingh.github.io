@@ -3,17 +3,17 @@
     <channel>
     
         <title>Suraj's personal website</title>
-        <link>surajssingh.com</link>
+        <link>https://surajssingh.com</link>
         <description></description>
         <ttl>1440</ttl>
         <generator>blades</generator>
-        <pubDate>Mon, 13 Nov 2023 03:55:57 GMT</pubDate>
+        <pubDate>Mon, 13 Nov 2023 04:32:57 GMT</pubDate>
         
     
     
         <item>
             <title>Homepage</title>
-            <link>surajssingh.com/</link>
+            <link>https://surajssingh.com/</link>
             <description>Homepage of my website</description>
             <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -21,7 +21,7 @@
     
         <item>
             <title>About Me</title>
-            <link>surajssingh.com/about/index.html</link>
+            <link>https://surajssingh.com/about/index.html</link>
             <description>Learn more about me</description>
             <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -29,7 +29,7 @@
     
         <item>
             <title>Portfolio</title>
-            <link>surajssingh.com/projects/</link>
+            <link>https://surajssingh.com/projects/</link>
             <description>A list of projects I have worked on.</description>
             <pubDate>Sun, 05 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -37,7 +37,7 @@
     
         <item>
             <title>Comp-Lang-Comp</title>
-            <link>surajssingh.com/projects/comp-lang-comp.html</link>
+            <link>https://surajssingh.com/projects/comp-lang-comp.html</link>
             <description>A website to help compare the syntaxes of many different programming languages. Created initially out of my notes for the &lt;a href='https://exercism.org/challenges/12in23'&gt;12in23 Exercism challenge&lt;/a&gt;.</description>
             <pubDate>Sun, 05 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -45,7 +45,7 @@
     
         <item>
             <title>Make A Lisp Implementation</title>
-            <link>surajssingh.com/projects/my-mal.html</link>
+            <link>https://surajssingh.com/projects/my-mal.html</link>
             <description>A Rust implementation of &lt;a href='https://github.com/kanaka/mal'&gt;mal - Make a Lisp&lt;/a&gt; (a Clojure inspired lisp).</description>
             <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -53,7 +53,7 @@
     
         <item>
             <title>Tech-Tree-Blog</title>
-            <link>surajssingh.com/projects/tech-tree-blog.html</link>
+            <link>https://surajssingh.com/projects/tech-tree-blog.html</link>
             <description>A website to hold my blog post and notes on computer science, mathematics, and technology explainers.</description>
             <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -61,7 +61,7 @@
     
         <item>
             <title>Nomie 6 Stopwatch Plugin</title>
-            <link>surajssingh.com/projects/nomie-stopwatch.html</link>
+            <link>https://surajssingh.com/projects/nomie-stopwatch.html</link>
             <description>A plugin I created for &lt;a href='https://github.com/open-nomie/nomie6-oss'&gt;Nomie 6&lt;/a&gt; to allow a more unified way ofusing the timer trackers.</description>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -69,7 +69,7 @@
     
         <item>
             <title>Tymeit</title>
-            <link>surajssingh.com/projects/tymeit.html</link>
+            <link>https://surajssingh.com/projects/tymeit.html</link>
             <description>A privacy respecting time tracker for yourself. Heavily inspired by &lt;a href='https://nomie.app/'&gt;Nomie&lt;/a&gt;.</description>
             <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -77,23 +77,23 @@
     
         <item>
             <title>Work Projects</title>
-            <link>surajssingh.com/projects/work/</link>
+            <link>https://surajssingh.com/projects/work/</link>
             <description>Projects I have worked on for work.</description>
-            <pubDate>Tue, 07 Nov 2023 03:22:59 GMT</pubDate>
+            <pubDate>Mon, 13 Nov 2023 04:29:40 GMT</pubDate>
         </item>
         
     
         <item>
             <title>School Projects</title>
-            <link>surajssingh.com/projects/school/</link>
+            <link>https://surajssingh.com/projects/school/</link>
             <description>Projects I have worked on for school. This include my undergraduate work at University of California: Irvine (UCI) and graduate work at  University of Illinois Urbana-Champaign (UIUC).</description>
-            <pubDate>Tue, 07 Nov 2023 03:22:43 GMT</pubDate>
+            <pubDate>Mon, 13 Nov 2023 04:29:40 GMT</pubDate>
         </item>
         
     
         <item>
             <title>Withered Away by Team Alpha</title>
-            <link>surajssingh.com/projects/school/withered-away.html</link>
+            <link>https://surajssingh.com/projects/school/withered-away.html</link>
             <description>A 2D platforming game for the Capstone class. Lead music, audio, and level designer for the game, and assisted with coding development.</description>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -101,7 +101,7 @@
     
         <item>
             <title>Collabuilder</title>
-            <link>surajssingh.com/projects/school/collabuilder.html</link>
+            <link>https://surajssingh.com/projects/school/collabuilder.html</link>
             <description>A reinforcement learning project using &lt;a href='https://www.microsoft.com/en-us/research/project/project-malmo/'&gt;Project Malmo&lt;/a&gt; to make an agent that can build a house.</description>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -109,7 +109,7 @@
     
         <item>
             <title>Crowded Market</title>
-            <link>surajssingh.com/projects/school/crowded-market.html</link>
+            <link>https://surajssingh.com/projects/school/crowded-market.html</link>
             <description>A Unity game designed to simulate a marketplace using a simple AI implemented using Navigation Mesh and priority queue.</description>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -117,7 +117,7 @@
     
         <item>
             <title>Energy-Ball</title>
-            <link>surajssingh.com/projects/school/energy-ball.html</link>
+            <link>https://surajssingh.com/projects/school/energy-ball.html</link>
             <description>My first Unity game, adapted from Roll-a-Ball template. Go through the level and build up energy for jumps. Available online on Itch.io.</description>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -125,7 +125,7 @@
     
         <item>
             <title>Teapot</title>
-            <link>surajssingh.com/projects/school/teapot.html</link>
+            <link>https://surajssingh.com/projects/school/teapot.html</link>
             <description>The final project for Interactive Graphics class, focusing on using knowledge of the graphics pipeline and applying that to texturing a teapot.</description>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
         </item>
@@ -133,7 +133,7 @@
     
         <item>
             <title>StrSol</title>
-            <link>surajssingh.com/projects/school/strsol.html</link>
+            <link>https://surajssingh.com/projects/school/strsol.html</link>
             <description>A (partial) implementation of String Solving with Regex in Haskell using transducers.</description>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
         </item>
