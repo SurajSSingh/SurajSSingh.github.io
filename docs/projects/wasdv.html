@@ -25,13 +25,13 @@
     <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
     
     
-    <link href="surajssingh.com/rss.xml" rel="alternate" title="Suraj's personal website" type="application/rss+xml">
+    <link href="https://surajssingh.com/rss.xml" rel="alternate" title="Suraj's personal website" type="application/rss+xml">
     
     
-    <link href="surajssingh.com/atom.xml" rel="alternate" title="Suraj's personal website" type="application/atom+xml">
+    <link href="https://surajssingh.com/atom.xml" rel="alternate" title="Suraj's personal website" type="application/atom+xml">
     
-    <link href="surajssingh.com/assets/custom.min.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <script src="surajssingh.com/assets/theme_switcher.js" defer></script>
+    <link href="https://surajssingh.com/assets/custom.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script src="https://surajssingh.com/assets/theme_switcher.js" defer></script>
     
 </head>
 
@@ -108,8 +108,26 @@
     </nav>
 </header>
     <main id="content" class="is-full-screen container" role="main">
-        <h1></h1>
-<p>Link:</p>
+        <hgroup>
+            <h1>WASVD</h1>
+            <p>Link: <a href="https://github.com/SurajSSingh/WASVD">https://github.com/SurajSSingh/WASVD</a></p>
+            <p>A WebAssembly Stack Visual Debugger</p>
+        </hgroup>
+        <section class="row">
+            
+        </section>
+        <h2>Overview</h2>
+<p>A visual debugger for WebAssembly Text format. The idea is to allow one to see how the stack works in WebAssembly, which can make it easier to understand and write Wasm (text format). I started this to help understand how WebAssembly is (generally) evaluated for <a href="https://exercism.org/blog/nibbly-november">Exercism’s #12in23 Nibbly November</a></p>
+<h3>Tech Stack</h3>
+<ul>
+<li><a href="https://www.rust-lang.org">Rust</a>: Backend Programming Language</li>
+<li><a href="https://tauri.app">Tauri</a>: Desktop Framework</li>
+<li><a href="https://www.typescriptlang.org">TypeScript</a>: Frontend Programming Language</li>
+<li><a href="https://kit.svelte.dev">SvelteKit</a>: JavaScript (Meta) Framework</li>
+<li><a href="https://www.skeleton.dev">SkeletonUI</a>: Tailwind UI Framework</li>
+</ul>
+<h3>Current Status</h3>
+<p>Version 1 finished. Reworking for version 2 to allow this to be made into a website (by compiling Rust specific code into WebAssembly). Will also be trying to split the WAT interpreter into a separate library for others to use.</p>
 
     </main>
     <footer class="hide-pr text-center">

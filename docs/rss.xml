@@ -7,7 +7,7 @@
         <description></description>
         <ttl>1440</ttl>
         <generator>blades</generator>
-        <pubDate>Mon, 13 Nov 2023 04:39:57 GMT</pubDate>
+        <pubDate>Sun, 11 Feb 2024 02:22:04 GMT</pubDate>
         
     
     
@@ -62,8 +62,16 @@
         <item>
             <title>Nomie 6 Stopwatch Plugin</title>
             <link>https://surajssingh.com/projects/nomie-stopwatch.html</link>
-            <description>A plugin I created for &lt;a href='https://github.com/open-nomie/nomie6-oss'&gt;Nomie 6&lt;/a&gt; to allow a more unified way ofusing the timer trackers.</description>
+            <description>A plugin I created for &lt;a href='https://github.com/open-nomie/nomie6-oss'&gt;Nomie 6&lt;/a&gt; to allow a more unified way of using the timer trackers.</description>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
+        </item>
+        
+    
+        <item>
+            <title>WASVD</title>
+            <link>https://surajssingh.com/projects/wasdv.html</link>
+            <description>A WebAssembly Stack Visual Debugger</description>
+            <pubDate>Sat, 10 Feb 2024 00:00:00 GMT</pubDate>
         </item>
         
     
@@ -86,7 +94,7 @@
         <item>
             <title>School Projects</title>
             <link>https://surajssingh.com/projects/school/</link>
-            <description>Projects I have worked on for school. This include my undergraduate work at University of California: Irvine (UCI) and graduate work at  University of Illinois Urbana-Champaign (UIUC).</description>
+            <description>Projects I have worked on for school. This includes my undergraduate work at University of California: Irvine (UCI) and graduate work at University of Illinois Urbana-Champaign (UIUC).</description>
             <pubDate>Mon, 13 Nov 2023 04:29:40 GMT</pubDate>
         </item>
         

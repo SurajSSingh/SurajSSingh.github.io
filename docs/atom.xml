@@ -10,7 +10,7 @@
     </author>
     <subtitle></subtitle>
     <generator>blades</generator>
-    <updated>2023-11-13T04:39:57Z</updated>
+    <updated>2024-02-11T02:22:04Z</updated>
 
 
     <entry>
@@ -34,25 +34,18 @@
 <h2>Who I am</h2>
 <p>Hi, my name is Suraj (S.) Singh. I am currently a coding instructor at Coding Minds Academy.</p>
 <h2>Preferred Pronouns</h2>
-<p>I mostly prefer use of my name over pronouns when ever possible (avoids confusion), however my most preferred pronoun is: <em><strong>he/him/his</strong></em>.
+<p>I most prefer use of my name over pronouns when ever possible (avoids confusion), however an acceptable pronoun is: <em><strong>he/him/his</strong></em>.
 <em>Example: <strong>He</strong> went to open <strong>his</strong> book, which was <strong>his</strong> as of last year and had been with <strong>him</strong> ever since.</em></p>
 <p>Other acceptable pronouns is: <em><strong>they/them/their/theirs</strong></em>. 
 <em>Example: <strong>They</strong> went to open <strong>their</strong> book, which was <strong>theirs</strong> as of last year and had been with <strong>them</strong> ever since.</em></p>
 <h2>Interests</h2>
-<p>I am interested in game development and education, and particularly the intersection between them. I am curiosity about many subjects, from mathematical and technology topics to art and history. I am also very interested in open source development.</p>
-<h2>Current Projects</h2>
-<p>Here are some projects I am currently working on:</p>
-<ul>
-<li><a href="https://redeagle-p1.itch.io/skyjellies">Skyjellies</a>: A Unity programmer for this game.</li>
-<li><a href="https://github.com/SurajSSingh/Tymire">Tymeit</a>: A time tracking web app that runs locally. </li>
-</ul>
-<p>You can find more project at: <a href="/projects">Projects</a></p>
+<p>I am interested in game development and education, and particularly the intersection between them. I am curiosity about many subjects, from mathematical and technology topics to art and history. I am also very interested in open source technologies.</p>
 <h2>What I am Learning</h2>
-<p>Here is a list of somethings I am currently learning about:</p>
+<p>Here is a list of some things I am currently learning about:</p>
 <ul>
 <li>Svelte and SvelteKit</li>
 <li>Rust</li>
-<li>Godot</li>
+<li>Unreal</li>
 </ul>
 <h2>Contact</h2>
 <p>I don’t have much of a social media presence, but I am somewhat available on LinkedIn and GitHub.</p>
@@ -84,7 +77,7 @@
 <li><a href="https://github.com/slatedocs/slate">Slate</a>: Static Site Generator</li>
 </ul>
 <h2>Current Status</h2>
-<p>Hiatus, learning more about other languages to add to the website, considering how to open it up for public contributions, as well as seeing if it can be updated from Slate. Likely to slow ramp up by the end of 2023.</p>
+<p>Migrating from Slate to <a href="https://astro.build">Astro</a>. This will help simplify the build process, allowing for faster iteration.</p>
 </content>
         <updated>2023-11-05T00:00:00Z</updated>
     </entry>
@@ -120,9 +113,11 @@
 <h2>Tech Stack</h2>
 <ul>
 <li><a href="https://www.getzola.org/">Zola</a>: Static Site Generator </li>
+<li><a href="https://picocss.com">Pico CSS</a>: CSS Framework</li>
+<li><a href="https://feathericons.com/">Feather Icon</a>: Icon Pack</li>
 </ul>
 <h2>Current Status</h2>
-<p>Writing Hiatus, working on prime sieve code and trying to see if I can add interactive elements to the website to aid in teaching concepts.</p>
+<p>Working on exercise visualizations blog posts for <a href="https://exercism.org/challenges/48in24">Exercism’s #48in24</a>.</p>
 </content>
         <updated>2023-11-12T00:00:00Z</updated>
     </entry>
@@ -132,7 +127,7 @@
         <title>Nomie 6 Stopwatch Plugin</title>
         <link rel="alternate" href="https://surajssingh.com/projects/nomie-stopwatch.html" />
         <id>https://surajssingh.com/projects/nomie-stopwatch</id>
-        <summary>A plugin I created for &lt;a href='https://github.com/open-nomie/nomie6-oss'&gt;Nomie 6&lt;/a&gt; to allow a more unified way ofusing the timer trackers.</summary>
+        <summary>A plugin I created for &lt;a href='https://github.com/open-nomie/nomie6-oss'&gt;Nomie 6&lt;/a&gt; to allow a more unified way of using the timer trackers.</summary>
         <content><h2>Overview</h2>
 <p>I created this plugin to allow me to easily have timers (known as stopwatches for the plugin) which is tied to specific trackers. This would make it easier to associate timers with specific trackers.</p>
 <h2>Stack</h2>
@@ -142,9 +137,31 @@
 <li><a href="https://github.com/open-nomie/plugins">Nomie 6 Plugin</a></li>
 </ul>
 <h2>Current Status</h2>
-<p>Finished prototype, will be bringing idea learned to my new web app Tymeit.</p>
+<p>Finished prototype, will be bringing idea learned to my new web app <a href="https://github.com/SurajSSingh/Tymeit">Tymeit</a>.</p>
 </content>
         <updated>2023-11-06T00:00:00Z</updated>
+    </entry>
+    
+
+    <entry>
+        <title>WASVD</title>
+        <link rel="alternate" href="https://surajssingh.com/projects/wasdv.html" />
+        <id>https://surajssingh.com/projects/wasdv</id>
+        <summary>A WebAssembly Stack Visual Debugger</summary>
+        <content><h2>Overview</h2>
+<p>A visual debugger for WebAssembly Text format. The idea is to allow one to see how the stack works in WebAssembly, which can make it easier to understand and write Wasm (text format). I started this to help understand how WebAssembly is (generally) evaluated for <a href="https://exercism.org/blog/nibbly-november">Exercism’s #12in23 Nibbly November</a></p>
+<h3>Tech Stack</h3>
+<ul>
+<li><a href="https://www.rust-lang.org">Rust</a>: Backend Programming Language</li>
+<li><a href="https://tauri.app">Tauri</a>: Desktop Framework</li>
+<li><a href="https://www.typescriptlang.org">TypeScript</a>: Frontend Programming Language</li>
+<li><a href="https://kit.svelte.dev">SvelteKit</a>: JavaScript (Meta) Framework</li>
+<li><a href="https://www.skeleton.dev">SkeletonUI</a>: Tailwind UI Framework</li>
+</ul>
+<h3>Current Status</h3>
+<p>Version 1 finished. Reworking for version 2 to allow this to be made into a website (by compiling Rust specific code into WebAssembly). Will also be trying to split the WAT interpreter into a separate library for others to use.</p>
+</content>
+        <updated>2024-02-10T00:00:00Z</updated>
     </entry>
     
 
@@ -155,13 +172,13 @@
         <summary>A privacy respecting time tracker for yourself. Heavily inspired by &lt;a href='https://nomie.app/'&gt;Nomie&lt;/a&gt;.</summary>
         <content><h2>Overview</h2>
 <p>A web app that lets you time track from anywhere and privately. This project takes ideas from Nomie and modifies it a bit to make it easier to track specifically with timing. This also let me work on a full project that uses <a href="https://svelte.dev/">Svelte</a> (through SvelteKit) and <a href="https://tailwindcss.com/">TailwindCSS</a> (through SkeletonUI). Develop following the YouTube tutorial <a href="https://youtu.be/P_A0qQ7AuK8">“Best UI Library for Svelte” by Huntabyte</a>.</p>
-<h2>Tech Stack</h2>
+<h3>Tech Stack</h3>
 <ul>
 <li><a href="https://kit.svelte.dev">SvelteKit</a>: JavaScript (Meta) Framework</li>
-<li><a href="https://www.skeleton.dev">SkeletonUI</a>: Tailwind Framework</li>
+<li><a href="https://www.skeleton.dev">SkeletonUI</a>: Tailwind UI Framework</li>
 </ul>
-<h2>Current Status</h2>
-<p>Basic Prototype finished, working on designing stopwatch system and better integrating data from Nomie.</p>
+<h3>Current Status</h3>
+<p>Basic Prototype finished, working on designing stopwatch system, better integrating data from Nomie, and learn how to make the app into a Progressive Web Application (PWA).</p>
 </content>
         <updated>2023-11-12T00:00:00Z</updated>
     </entry>
@@ -192,7 +209,7 @@
 <li><a href="https://github.com/SurajSSingh/ML-Agents-Example">Unity 4 - ML-Agents Example</a>: A set of prefabs and scripts used to bootstrap working with <a href="https://unity.com/products/machine-learning-agent">Unity’s ML-Agents package</a>.</li>
 </ul>
 <h3>Student Projects</h3>
-<p>These are some student projects I helped with. For these project, I primarily assisted with programming and game design based on input from students. All of the game presented here were made in Unity using C#.</p>
+<p>These are some student projects I helped with. For these project, I primarily assisted with programming and game design based on input from students. All the game presented here were made in Unity using C#.</p>
 </content>
         <updated>2023-11-13T04:29:40Z</updated>
     </entry>
@@ -202,7 +219,7 @@
         <title>School Projects</title>
         <link rel="alternate" href="https://surajssingh.com/projects/school/" />
         <id>https://surajssingh.com/projects/school</id>
-        <summary>Projects I have worked on for school. This include my undergraduate work at University of California: Irvine (UCI) and graduate work at  University of Illinois Urbana-Champaign (UIUC).</summary>
+        <summary>Projects I have worked on for school. This includes my undergraduate work at University of California: Irvine (UCI) and graduate work at University of Illinois Urbana-Champaign (UIUC).</summary>
         <content></content>
         <updated>2023-11-13T04:29:40Z</updated>
     </entry>
@@ -221,7 +238,7 @@
 <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C#</a>: Programming Language</li>
 <li><a href="https://www.apple.com/mac/garageband/">GarageBand</a>: Digital Audio Workstation</li>
 <li><a href="https://fmod.com/">FMOD</a>: Music and Sound Effects authoring</li>
-<li><a href="https://pernyblom.github.io/abundant-music/index.html">Abundant Music</a>: Music generator, used pieces as inspriation for my music</li>
+<li><a href="https://pernyblom.github.io/abundant-music/index.html">Abundant Music</a>: Music generator, used pieces as inspiration for my music</li>
 </ul>
 <h2>Role</h2>
 <ul>
@@ -231,7 +248,7 @@
 <li>Devlog Writer Assistant </li>
 </ul>
 <h2>Overview</h2>
-<p>The capstone project for my Computer Game Science degree. Learned how to work from game prototype to final product publishing in a small group within a constrained time frame. Available for download on Itch.io for Windows and Mac.</p>
+<p>The capstone project for my Computer Game Science degree. This is a 2D action platformer where the player has to keep moving or else get subsumed by the deadly mist. Over the two quarters, I worked on developing level ideas into the prototype, integrated it with the player and enemy objects, applied the 2D sprites provided from the artist, and developed music and sound effects for the final product. I learned how to work from game prototype to final product publishing in a small group within a constrained time frame. Available for download on Itch.io for Windows and Mac.</p>
 </content>
         <updated>2023-11-06T00:00:00Z</updated>
     </entry>
@@ -268,6 +285,8 @@
 <li><a href="https://unity.com/">Unity</a>: Game Engine</li>
 <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C#</a>: Programming Language</li>
 </ul>
+<h2>Overview</h2>
+<p>My final project for ICS 166. Focused on learning how to use Unity’s NavMesh system to create simple agents, which would navigate along and around the player in order to complete their own tasks.</p>
 </content>
         <updated>2023-11-06T00:00:00Z</updated>
     </entry>
@@ -285,6 +304,8 @@
 <li><a href="https://unity.com/">Unity</a>: Game Engine</li>
 <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C#</a>: Programming Language</li>
 </ul>
+<h2>Overview</h2>
+<p>My first Unity game based from the tutorial on Roll-a-Ball. I learned how to add simple physics to an object, manage dynamically changing data (player momentum and timer), and prototyped out a simple level.</p>
 </content>
         <updated>2023-11-06T00:00:00Z</updated>
     </entry>
@@ -303,7 +324,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a>: Graphic Library</li>
 </ul>
 <h2>Overview</h2>
-<p>Final project for interactive graphics class, learned how to write direct mesh and vertex shaders in WebGL. Teapot has simple reflections with image and coloring for spout and handle.</p>
+<p>Final project for interactive graphics class; learned how to write direct mesh and vertex shaders in WebGL to produce a textured object inside the browser. Teapot has simple reflections with image and coloring for spout and handle.</p>
 </content>
         <updated>2023-11-06T00:00:00Z</updated>
     </entry>
@@ -321,7 +342,7 @@
 <li><a href="https://www.haskell.org/">Haskell</a>: Programming Language</li>
 </ul>
 <h2>Overview</h2>
-<p>An implementation of a string constraint solver in Haskell, focusing on regex and transducers. Based on the paper <a href="https://arxiv.org/abs/2111.04298">“Solving String Constraints With Regex-Dependent Functions Through Transducers With Priorities And Variables” by T. Chen, et al.</a>.</p>
+<p>An implementation of a string constraint solver in Haskell, focusing on regex and transducers. Based on the paper <a href="https://arxiv.org/abs/2111.04298">“Solving String Constraints With Regex-Dependent Functions Through Transducers With Priorities And Variables” by T. Chen, et al.</a></p>
 </content>
         <updated>2023-11-06T00:00:00Z</updated>
     </entry>
