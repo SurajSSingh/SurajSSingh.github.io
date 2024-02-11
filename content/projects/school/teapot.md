@@ -16,4 +16,4 @@ UIUC: CS 418 Interactive Computer Graphics
 * [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API): Graphic Library
 
 ## Overview
-Final project for interactive graphics class, learned how to write direct mesh and vertex shaders in WebGL. Teapot has simple reflections with image and coloring for spout and handle.
+Final project for interactive graphics class; learned how to write direct mesh and vertex shaders in WebGL to produce a textured object inside the browser. Teapot has simple reflections with image and coloring for spout and handle.

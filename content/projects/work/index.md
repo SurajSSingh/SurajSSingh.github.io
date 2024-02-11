@@ -77,4 +77,4 @@ These are curriculum projects/exercises I had a hand in developing for a variety
        
 
 ### Student Projects
-These are some student projects I helped with. For these project, I primarily assisted with programming and game design based on input from students. All of the game presented here were made in Unity using C#.
+These are some student projects I helped with. For these project, I primarily assisted with programming and game design based on input from students. All the game presented here were made in Unity using C#.

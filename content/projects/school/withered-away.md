@@ -16,7 +16,7 @@ UCI – ICS 169AB: Capstone Game Project
 * [C#](https://learn.microsoft.com/en-us/dotnet/csharp/): Programming Language
 * [GarageBand](https://www.apple.com/mac/garageband/): Digital Audio Workstation
 * [FMOD](https://fmod.com/): Music and Sound Effects authoring
-* [Abundant Music](https://pernyblom.github.io/abundant-music/index.html): Music generator, used pieces as inspriation for my music
+* [Abundant Music](https://pernyblom.github.io/abundant-music/index.html): Music generator, used pieces as inspiration for my music
 
 ## Role
 * Level Designer and Developer
@@ -25,4 +25,4 @@ UCI – ICS 169AB: Capstone Game Project
 * Devlog Writer Assistant 
 
 ## Overview
-The capstone project for my Computer Game Science degree. Learned how to work from game prototype to final product publishing in a small group within a constrained time frame. Available for download on Itch.io for Windows and Mac.
+The capstone project for my Computer Game Science degree. This is a 2D action platformer where the player has to keep moving or else get subsumed by the deadly mist. Over the two quarters, I worked on developing level ideas into the prototype, integrated it with the player and enemy objects, applied the 2D sprites provided from the artist, and developed music and sound effects for the final product. I learned how to work from game prototype to final product publishing in a small group within a constrained time frame. Available for download on Itch.io for Windows and Mac.

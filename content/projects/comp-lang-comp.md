@@ -15,4 +15,4 @@ The idea is to have a website that can allow one to compare multiple different p
 * [Slate](https://github.com/slatedocs/slate): Static Site Generator
 
 ## Current Status
-Hiatus, learning more about other languages to add to the website, considering how to open it up for public contributions, as well as seeing if it can be updated from Slate. Likely to slow ramp up by the end of 2023.
+Migrating from Slate to [Astro](https://astro.build). This will help simplify the build process, allowing for faster iteration.

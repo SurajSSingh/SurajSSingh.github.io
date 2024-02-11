@@ -14,6 +14,8 @@ A blog for teaching others online. I used this to help with my technical writing
 
 ## Tech Stack
 * [Zola](https://www.getzola.org/): Static Site Generator 
+* [Pico CSS](https://picocss.com): CSS Framework
+* [Feather Icon](https://feathericons.com/): Icon Pack
 
 ## Current Status
-Writing Hiatus, working on prime sieve code and trying to see if I can add interactive elements to the website to aid in teaching concepts.
+Working on exercise visualizations blog posts for [Exercism's #48in24](https://exercism.org/challenges/48in24).

@@ -3,7 +3,7 @@ title = "Nomie 6 Stopwatch Plugin"
 date = 2023-11-06
 image="/assets/images/nomie-stopwatch.png"
 alt="Screenshot of Stopwatch plugin for Nomie 6."
-summary = "A plugin I created for <a href='https://github.com/open-nomie/nomie6-oss'>Nomie 6</a> to allow a more unified way ofusing the timer trackers."
+summary = "A plugin I created for <a href='https://github.com/open-nomie/nomie6-oss'>Nomie 6</a> to allow a more unified way of using the timer trackers."
 project_link="https://github.com/SurajSSingh/Nomie-Stopwatch"
 weight=4
 +++
@@ -16,4 +16,4 @@ I created this plugin to allow me to easily have timers (known as stopwatches fo
 * [Nomie 6 Plugin](https://github.com/open-nomie/plugins)
 
 ## Current Status
-Finished prototype, will be bringing idea learned to my new web app Tymeit.
+Finished prototype, will be bringing idea learned to my new web app [Tymeit](https://github.com/SurajSSingh/Tymeit).

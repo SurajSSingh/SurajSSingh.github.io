@@ -14,3 +14,6 @@ UCI – ICS 161: Game Engine Lab
 ## Tech Stack
 * [Unity](https://unity.com/): Game Engine
 * [C#](https://learn.microsoft.com/en-us/dotnet/csharp/): Programming Language
+
+## Overview
+My first Unity game based from the tutorial on Roll-a-Ball. I learned how to add simple physics to an object, manage dynamically changing data (player momentum and timer), and prototyped out a simple level. 
