@@ -6,7 +6,6 @@ alt="Make-A-Lisp Step A Diagram"
 summary = "A Rust implementation of <a href='https://github.com/kanaka/mal'>mal - Make a Lisp</a> (a Clojure inspired lisp)."
 project_link="https://github.com/SurajSSingh/make_a_lisp_typed_and_readable"
 weight=1
-start_new_row=true
 +++
 ## Overview
 My implementation of Make a Lisp (MAL) done in Rust. Used to learn more about how to work with Rust, as well as learn more about certain programming concepts such as tail-call optimization. 

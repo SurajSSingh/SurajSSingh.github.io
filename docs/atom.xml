@@ -10,7 +10,7 @@
     </author>
     <subtitle>Explore Suraj S Singh's projects</subtitle>
     <generator>blades</generator>
-    <updated>2024-03-18T04:33:11Z</updated>
+    <updated>2024-03-18T16:00:17Z</updated>
 
 
     <entry>
@@ -67,24 +67,6 @@
     
 
     <entry>
-        <title>Comp-Lang-Comp</title>
-        <link rel="alternate" href="https://surajssingh.com/projects/comp-lang-comp.html" />
-        <id>https://surajssingh.com/projects/comp-lang-comp</id>
-        <summary>A website to help compare the syntaxes of many different programming languages. Created initially out of my notes for the &lt;a href='https://exercism.org/challenges/12in23'&gt;12in23 Exercism challenge&lt;/a&gt;.</summary>
-        <content><h2>Overview</h2>
-<p>The idea is to have a website that can allow one to compare multiple different programming languages (or any kind of programming languages) easily. I primarily wanted to make this website to help catalog all the different ideas from a variety of programming languages to eventually make my own programming language.</p>
-<h2>Current Tech Stack</h2>
-<ul>
-<li><a href="https://github.com/slatedocs/slate">Slate</a>: Static Site Generator</li>
-</ul>
-<h2>Current Status</h2>
-<p>Migrating from Slate to <a href="https://astro.build">Astro</a>. This will help simplify the build process, allowing for faster iteration.</p>
-</content>
-        <updated>2023-11-05T00:00:00Z</updated>
-    </entry>
-    
-
-    <entry>
         <title>Keito Yarn Game</title>
         <link rel="alternate" href="https://surajssingh.com/projects/keito.html" />
         <id>https://surajssingh.com/projects/keito</id>
@@ -126,6 +108,24 @@
 </ul>
 </content>
         <updated>2024-03-17T00:00:00Z</updated>
+    </entry>
+    
+
+    <entry>
+        <title>Comp-Lang-Comp</title>
+        <link rel="alternate" href="https://surajssingh.com/projects/comp-lang-comp.html" />
+        <id>https://surajssingh.com/projects/comp-lang-comp</id>
+        <summary>A website to help compare the syntaxes of many different programming languages. Created initially out of my notes for the &lt;a href='https://exercism.org/challenges/12in23'&gt;12in23 Exercism challenge&lt;/a&gt;.</summary>
+        <content><h2>Overview</h2>
+<p>The idea is to have a website that can allow one to compare multiple different programming languages (or any kind of programming languages) easily. I primarily wanted to make this website to help catalog all the different ideas from a variety of programming languages to eventually make my own programming language.</p>
+<h2>Current Tech Stack</h2>
+<ul>
+<li><a href="https://github.com/slatedocs/slate">Slate</a>: Static Site Generator</li>
+</ul>
+<h2>Current Status</h2>
+<p>Migrating from Slate to <a href="https://astro.build">Astro</a>. This will help simplify the build process, allowing for faster iteration.</p>
+</content>
+        <updated>2023-11-05T00:00:00Z</updated>
     </entry>
     
 
