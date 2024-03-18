@@ -5,7 +5,7 @@ image="https://img.itch.zone/aW1nLzE1MjAwMTI3LnBuZw==/315x250%23c/LEs%2BXf.png"
 alt="Keito Yarn Game logo"
 summary = "A 3D yarn tossing game where you toss, bounce, and combine yarn balls to a cat and earn points as quickly as you can."
 project_link="https://sam325.itch.io/keito-game"
-weight=3
+weight=0
 on_home_page=true
 +++
 ## Tagline

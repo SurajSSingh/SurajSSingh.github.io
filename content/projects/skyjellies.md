@@ -5,7 +5,7 @@ image="https://img.itch.zone/aW1hZ2UvMTIyMTUyMC8xMTMwNDE4OS5wbmc=/794x1000/KJlc%
 alt="SkyJellies screenshot"
 summary = "A cute adventure game about taking care of jelly creatures."
 project_link="https://redeagle-p1.itch.io/skyjellies"
-weight=3
+weight=0
 on_home_page=true
 +++
 
