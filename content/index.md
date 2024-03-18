@@ -8,5 +8,5 @@ priority=1
 alternative_paths=["home"]
 +++
 
-# Welcome to my home page.
-Hello, my name is Suraj. You can use the above tabs to go to specific pages.
+# Suraj S. Singh Portfolio
+Hello, I'm Suraj and welcome to website. Driven by a passion for creating immersive experiences, I am a software developer specializing in game development with Unity and C#. Explore the creative depth and technical prowess showcased in my portfolio below.

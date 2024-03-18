@@ -9,7 +9,22 @@ slug="index"
 # About me
 
 ## Who I am
-Hi, my name is Suraj (S.) Singh. I am currently a coding instructor at Coding Minds Academy.
+A life-long learner curious about the world and driven to help others learn. I am eager to build interactive learning experiences that simplifies complex ideas and enhances learning by connecting students to the content they learn. My hope is to make knowledge accessible to as many people as possible.
+
+Graduated from UCI with a dual degree in Computer Game Science (B.S.) and Education Science (B.A.) and UIUC with a Masters of Computer Science; through my academic journey, I have worked through the video game development process, learned about how people learn, and built connections between the theoretical and application sides of computer science.
+
+Working as a coding instructor at Coding Minds Academy, I have provided guidance to K-12 students through the world of STEM using project-based lessons. Applying what I learned through my academic work, I passed on that knowledge and mentored students through development of their projects, from helping with writing a machine learning programming in Python, to developing video games with Unity and helping them release their game online.
+
+I have volunteered time as a Unity programmer at P1 Virtual Civilization, an organization dedicated to building ethical virtual worlds. My contribution focused on fixing bugs and implementing features for the player-NPC interaction in the Skyjellies game. As new volunteers joined our organization, I have helped out with getting them oriented and ready to contribute.
+
+## Interests
+I have a passion for game development and education, and exploring the dynamic intersection where creativity meets learning. My curiosity is boundless, diving deep into a wide array of subjects—from the intricacies of mathematics and technology to the rich tapestry of art and history. I always strive to pick up how others teach so that I may be better able to help others understand through a variety of mediums. I am particularly drawn to the power of open source technologies, which not only enrich my projects but also foster a sense of community and innovation. This blend of interests driving me to create immersive experiences that not only entertain but also educate.
+
+## What I am Learning
+Here is a short list of some things I am currently focusing my learning on:
+* Unity
+* Python
+* SvelteKit
 
 ## Preferred Pronouns
 I most prefer use of my name over pronouns when ever possible (avoids confusion), however an acceptable pronoun is: ***he/him/his***.
@@ -17,15 +32,3 @@ I most prefer use of my name over pronouns when ever possible (avoids confusion)
 
 Other acceptable pronouns is: ***they/them/their/theirs***. 
 *Example: **They** went to open **their** book, which was **theirs** as of last year and had been with **them** ever since.*
-
-## Interests
-I am interested in game development and education, and particularly the intersection between them. I am curiosity about many subjects, from mathematical and technology topics to art and history. I am also very interested in open source technologies.
-
-## What I am Learning
-Here is a list of some things I am currently learning about:
-* Svelte and SvelteKit
-* Rust
-* Unreal
-
-## Contact
-I don't have much of a social media presence, but I am somewhat available on LinkedIn and GitHub.

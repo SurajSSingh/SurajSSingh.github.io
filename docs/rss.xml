@@ -2,12 +2,12 @@
 <rss version="2.0">
     <channel>
     
-        <title>Suraj's personal website</title>
+        <title>Suraj's portfolio website</title>
         <link>https://surajssingh.com</link>
-        <description></description>
+        <description>Explore Suraj S Singh's projects</description>
         <ttl>1440</ttl>
         <generator>blades</generator>
-        <pubDate>Sun, 11 Feb 2024 02:22:04 GMT</pubDate>
+        <pubDate>Mon, 18 Mar 2024 04:24:27 GMT</pubDate>
         
     
     
@@ -48,6 +48,22 @@
             <link>https://surajssingh.com/projects/my-mal.html</link>
             <description>A Rust implementation of &lt;a href='https://github.com/kanaka/mal'&gt;mal - Make a Lisp&lt;/a&gt; (a Clojure inspired lisp).</description>
             <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
+        </item>
+        
+    
+        <item>
+            <title>Keito Yarn Game</title>
+            <link>https://surajssingh.com/projects/keito.html</link>
+            <description>A 3D yarn tossing game where you toss, bounce, and combine yarn balls to a cat and earn points as quickly as you can.</description>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+        </item>
+        
+    
+        <item>
+            <title>SkyJellies</title>
+            <link>https://surajssingh.com/projects/skyjellies.html</link>
+            <description>A cute adventure game about taking care of jelly creatures.</description>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
         </item>
         
     
@@ -102,7 +118,7 @@
         <item>
             <title>Withered Away by Team Alpha</title>
             <link>https://surajssingh.com/projects/school/withered-away.html</link>
-            <description>A 2D platforming game for the Capstone class. Lead music, audio, and level designer for the game, and assisted with coding development.</description>
+            <description>A fast-paced 2D Adventure Platformer game where you control a lone king cursed to run or be consumed by the mist.</description>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
         </item>
         

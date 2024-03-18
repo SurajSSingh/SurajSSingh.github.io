@@ -6,7 +6,6 @@ alt="Tech Tree Blog logo"
 summary = "A website to hold my blog post and notes on computer science, mathematics, and technology explainers."
 project_link="https://surajssingh.github.io/Tech-Tree-Blog/"
 weight=3
-on_home_page=true
 start_new_row=true
 +++
 ## Overview

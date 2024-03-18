@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title>Suraj's personal website</title>
+    <title>Suraj's portfolio website</title>
     <link rel="related" href="https://surajssingh.com" />
     <id>https://surajssingh.com</id>
     <author>
         <name>Suraj S. Singh</name>
         
     </author>
-    <subtitle></subtitle>
+    <subtitle>Explore Suraj S Singh's projects</subtitle>
     <generator>blades</generator>
-    <updated>2024-02-11T02:22:04Z</updated>
+    <updated>2024-03-18T04:24:27Z</updated>
 
 
     <entry>
@@ -18,8 +18,8 @@
         <link rel="alternate" href="https://surajssingh.com/" />
         <id>https://surajssingh.com</id>
         <summary>Homepage of my website</summary>
-        <content><h1>Welcome to my home page.</h1>
-<p>Hello, my name is Suraj. You can use the above tabs to go to specific pages.</p>
+        <content><h1>Suraj S. Singh Portfolio</h1>
+<p>Hello, I’m Suraj and welcome to website. Driven by a passion for creating immersive experiences, I am a software developer specializing in game development with Unity and C#. Explore the creative depth and technical prowess showcased in my portfolio below.</p>
 </content>
         <updated>2023-11-12T00:00:00Z</updated>
     </entry>
@@ -32,23 +32,24 @@
         <summary>Learn more about me</summary>
         <content><h1>About me</h1>
 <h2>Who I am</h2>
-<p>Hi, my name is Suraj (S.) Singh. I am currently a coding instructor at Coding Minds Academy.</p>
+<p>A life-long learner curious about the world and driven to help others learn. I am eager to build interactive learning experiences that simplifies complex ideas and enhances learning by connecting students to the content they learn. My hope is to make knowledge accessible to as many people as possible.</p>
+<p>Graduated from UCI with a dual degree in Computer Game Science (B.S.) and Education Science (B.A.) and UIUC with a Masters of Computer Science; through my academic journey, I have worked through the video game development process, learned about how people learn, and built connections between the theoretical and application sides of computer science.</p>
+<p>Working as a coding instructor at Coding Minds Academy, I have provided guidance to K-12 students through the world of STEM using project-based lessons. Applying what I learned through my academic work, I passed on that knowledge and mentored students through development of their projects, from helping with writing a machine learning programming in Python, to developing video games with Unity and helping them release their game online.</p>
+<p>I have volunteered time as a Unity programmer at P1 Virtual Civilization, an organization dedicated to building ethical virtual worlds. My contribution focused on fixing bugs and implementing features for the player-NPC interaction in the Skyjellies game. As new volunteers joined our organization, I have helped out with getting them oriented and ready to contribute.</p>
+<h2>Interests</h2>
+<p>I have a passion for game development and education, and exploring the dynamic intersection where creativity meets learning. My curiosity is boundless, diving deep into a wide array of subjects—from the intricacies of mathematics and technology to the rich tapestry of art and history. I always strive to pick up how others teach so that I may be better able to help others understand through a variety of mediums. I am particularly drawn to the power of open source technologies, which not only enrich my projects but also foster a sense of community and innovation. This blend of interests driving me to create immersive experiences that not only entertain but also educate.</p>
+<h2>What I am Learning</h2>
+<p>Here is a short list of some things I am currently focusing my learning on:</p>
+<ul>
+<li>Unity</li>
+<li>Python</li>
+<li>SvelteKit</li>
+</ul>
 <h2>Preferred Pronouns</h2>
 <p>I most prefer use of my name over pronouns when ever possible (avoids confusion), however an acceptable pronoun is: <em><strong>he/him/his</strong></em>.
 <em>Example: <strong>He</strong> went to open <strong>his</strong> book, which was <strong>his</strong> as of last year and had been with <strong>him</strong> ever since.</em></p>
 <p>Other acceptable pronouns is: <em><strong>they/them/their/theirs</strong></em>. 
 <em>Example: <strong>They</strong> went to open <strong>their</strong> book, which was <strong>theirs</strong> as of last year and had been with <strong>them</strong> ever since.</em></p>
-<h2>Interests</h2>
-<p>I am interested in game development and education, and particularly the intersection between them. I am curiosity about many subjects, from mathematical and technology topics to art and history. I am also very interested in open source technologies.</p>
-<h2>What I am Learning</h2>
-<p>Here is a list of some things I am currently learning about:</p>
-<ul>
-<li>Svelte and SvelteKit</li>
-<li>Rust</li>
-<li>Unreal</li>
-</ul>
-<h2>Contact</h2>
-<p>I don’t have much of a social media presence, but I am somewhat available on LinkedIn and GitHub.</p>
 </content>
         <updated>2023-11-12T00:00:00Z</updated>
     </entry>
@@ -100,6 +101,51 @@
 <p>Hiatus, learning more about other Lisps to see what I can bring into the language.</p>
 </content>
         <updated>2023-11-12T00:00:00Z</updated>
+    </entry>
+    
+
+    <entry>
+        <title>Keito Yarn Game</title>
+        <link rel="alternate" href="https://surajssingh.com/projects/keito.html" />
+        <id>https://surajssingh.com/projects/keito</id>
+        <summary>A 3D yarn tossing game where you toss, bounce, and combine yarn balls to a cat and earn points as quickly as you can.</summary>
+        <content><h2>Tagline</h2>
+<p>Drop yarn balls from above and bounce them to the bored cat below to delight them with colorful yarn! Combine yarn balls of the same color to earn more points.</p>
+<h2>Overview</h2>
+<p>A 3D yarn tossing game made for the P1 February and March game jams.</p>
+<h3>Role</h3>
+<p>I started as C# programmer, focusing in on the yarn physics and dropper/tossing code. Later took on a producer role to help lead meeting, keep everyone on the same page, and get everyone’s changes merged in.</p>
+<h2>Tech Stack</h2>
+<ul>
+<li><a href="https://unity.com/">Unity</a>: Game Engine</li>
+<li><a href="https://github.com">GitHub</a>: Open Source project management.</li>
+<li><a href="https://trello.com/">Trello</a>: Task Management</li>
+</ul>
+<h2>Current Status</h2>
+<p>Finished prototype for February game jam, continuing to work on it with team members for the March game jam.</p>
+</content>
+        <updated>2024-03-17T00:00:00Z</updated>
+    </entry>
+    
+
+    <entry>
+        <title>SkyJellies</title>
+        <link rel="alternate" href="https://surajssingh.com/projects/skyjellies.html" />
+        <id>https://surajssingh.com/projects/skyjellies</id>
+        <summary>A cute adventure game about taking care of jelly creatures.</summary>
+        <content><h2>Overview</h2>
+<p>SkyJellies is a 3D adventure and resource management game designed to help teach empathy. Your character lands on a planet with jelly creatures that you take care of by gathering, building, and crafting.</p>
+<h3>Role</h3>
+<p>I started work on the prototype as a C# programmer. I worked with other programmers to help diagnosis and fix a bug in the non-player character pathfinding by adjusting NavMesh agent properties. I also worked on creating unit test for Player movement, learning how to structure test in Unity.</p>
+<p>During the transition to open source, I help guide my contributions to the open source repository, so that others could continue work on it.</p>
+<h2>Tech Stack</h2>
+<ul>
+<li><a href="https://unity.com/">Unity</a>: Game Engine</li>
+<li><a href="https://github.com">GitHub</a>: Version Control</li>
+<li><a href="https://trello.com/">Trello</a>: Task Management</li>
+</ul>
+</content>
+        <updated>2024-03-17T00:00:00Z</updated>
     </entry>
     
 
@@ -190,7 +236,7 @@
         <id>https://surajssingh.com/projects/work</id>
         <summary>Projects I have worked on for work.</summary>
         <content><h2>Coding Minds Academy</h2>
-<p>Projects I have either worked on or lead the development of at <a href="https://codingmindsacademy.com/">Coding Minds Academy</a>.</p>
+<p>Projects I have either assisted with or lead the development of at <a href="https://codingmindsacademy.com/">Coding Minds Academy</a>.</p>
 <h3>Unity Curriculum Templates</h3>
 <p>These are curriculum projects/exercises I had a hand in developing for a variety of levels for the Unity curriculum.</p>
 <ul>
@@ -208,8 +254,8 @@
 <li><a href="https://github.com/SurajSSingh/Steam_NGO_Example">Unity 3 - Steam NGO Example</a>: A set of scenes showing how to combine Steam and Unity’s Netcode for GameObject.</li>
 <li><a href="https://github.com/SurajSSingh/ML-Agents-Example">Unity 4 - ML-Agents Example</a>: A set of prefabs and scripts used to bootstrap working with <a href="https://unity.com/products/machine-learning-agent">Unity’s ML-Agents package</a>.</li>
 </ul>
-<h3>Student Projects</h3>
-<p>These are some student projects I helped with. For these project, I primarily assisted with programming and game design based on input from students. All the game presented here were made in Unity using C#.</p>
+<h3>Mentored Projects</h3>
+<p>These are some student projects I helped mentor. For these project, I primarily assisted with teaching programming and game design concepts and all the game presented here were made in Unity.</p>
 </content>
         <updated>2023-11-13T04:29:40Z</updated>
     </entry>
@@ -229,7 +275,7 @@
         <title>Withered Away by Team Alpha</title>
         <link rel="alternate" href="https://surajssingh.com/projects/school/withered-away.html" />
         <id>https://surajssingh.com/projects/school/withered-away</id>
-        <summary>A 2D platforming game for the Capstone class. Lead music, audio, and level designer for the game, and assisted with coding development.</summary>
+        <summary>A fast-paced 2D Adventure Platformer game where you control a lone king cursed to run or be consumed by the mist.</summary>
         <content><h2>Course</h2>
 <p>UCI – ICS 169AB: Capstone Game Project</p>
 <h2>Technology Used</h2>

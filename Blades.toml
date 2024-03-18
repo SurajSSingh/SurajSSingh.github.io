@@ -1,12 +1,12 @@
 # Title of the site
-title = "Suraj's personal website"
+title = "Suraj's portfolio website"
 # URL which the site is expected to be accessed through
 url = "https://surajssingh.com"
 # Name of the folder where theme templates and assets shall be loaded from,
 # located in the themes directory (see below)
 theme = ""
-description = "" 
-keywords = ""
+description = "Explore Suraj S Singh's projects" 
+keywords = "portfolio, projects, unity, c#"
 image = ""
 # A code for the language of the site, such as en-gb
 lang = "en-US"

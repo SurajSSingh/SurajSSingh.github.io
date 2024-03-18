@@ -59,7 +59,7 @@ summary="A simple 3D game where one is tasked with controlling robots to move bo
 +++
 
 ## Coding Minds Academy
-Projects I have either worked on or lead the development of at [Coding Minds Academy](https://codingmindsacademy.com/).
+Projects I have either assisted with or lead the development of at [Coding Minds Academy](https://codingmindsacademy.com/).
 
 ### Unity Curriculum Templates
 These are curriculum projects/exercises I had a hand in developing for a variety of levels for the Unity curriculum.
@@ -76,5 +76,5 @@ These are curriculum projects/exercises I had a hand in developing for a variety
 * [Unity 4 - ML-Agents Example](https://github.com/SurajSSingh/ML-Agents-Example): A set of prefabs and scripts used to bootstrap working with [Unity's ML-Agents package](https://unity.com/products/machine-learning-agent).
        
 
-### Student Projects
-These are some student projects I helped with. For these project, I primarily assisted with programming and game design based on input from students. All the game presented here were made in Unity using C#.
+### Mentored Projects
+These are some student projects I helped mentor. For these project, I primarily assisted with teaching programming and game design concepts and all the game presented here were made in Unity.
