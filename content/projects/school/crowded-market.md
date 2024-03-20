@@ -6,6 +6,7 @@ alt="Crowded Market Logo"
 summary = "A Unity game designed to simulate a marketplace using a simple AI implemented using Navigation Mesh and priority queue."
 project_link="https://surajss.itch.io/croweded-market"
 weight=2
+start_new_row=true
 +++
 
 ## Course
