@@ -10,7 +10,7 @@
     </author>
     <subtitle>Explore Suraj S Singh's projects</subtitle>
     <generator>blades</generator>
-    <updated>2024-03-18T16:50:19Z</updated>
+    <updated>2024-03-28T01:51:37Z</updated>
 
 
     <entry>
@@ -76,15 +76,16 @@
 <h2>Overview</h2>
 <p>A 3D yarn tossing game made for the P1 February and March game jams.</p>
 <h3>Role</h3>
-<p>I started as C# programmer, focusing in on the yarn physics and dropper/tossing code. Later took on a producer role to help lead meeting, keep everyone on the same page, and get everyone’s changes merged in.</p>
+<p>I started as C# programmer, focusing in on the yarn physics and dropper/tossing code. Later took on a team lead role to help lead meeting, keep everyone on the same page, and get everyone’s changes merged in.</p>
 <h2>Tech Stack</h2>
 <ul>
 <li><a href="https://unity.com/">Unity</a>: Game Engine</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C#</a>: Programming Language</li>
 <li><a href="https://github.com">GitHub</a>: Open Source project management.</li>
 <li><a href="https://trello.com/">Trello</a>: Task Management</li>
 </ul>
 <h2>Current Status</h2>
-<p>Finished prototype for February game jam, continuing to work on it with team members for the March game jam.</p>
+<p>Finished demo for March game jam, re-evaluating with team about what next steps will be.</p>
 </content>
         <updated>2024-03-17T00:00:00Z</updated>
     </entry>
@@ -103,6 +104,7 @@
 <h2>Tech Stack</h2>
 <ul>
 <li><a href="https://unity.com/">Unity</a>: Game Engine</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C#</a>: Programming Language</li>
 <li><a href="https://github.com">GitHub</a>: Version Control</li>
 <li><a href="https://trello.com/">Trello</a>: Task Management</li>
 </ul>

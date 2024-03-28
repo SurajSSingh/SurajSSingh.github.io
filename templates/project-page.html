@@ -12,6 +12,14 @@
             <p>{{{summary}}}</p>
         </hgroup>
         <section class="row">
+            {{#image}}
+            <figure class="card col-3 no-border">
+                <img src="{{image}}" alt="{{alt}}">
+                {{#caption}}
+                <figcaption>{{caption}}</figcaption>
+                {{/caption}}
+            </figure>
+            {{/image}}
             {{#pictures}}
             <figure class="card col no-border">
                 <img src="{{permalink}}" alt="{{alt}}">

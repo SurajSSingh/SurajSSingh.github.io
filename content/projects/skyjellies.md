@@ -19,5 +19,6 @@ During the transition to open source, I help guide my contributions to the open 
 
 ## Tech Stack
 * [Unity](https://unity.com/): Game Engine
+* [C#](https://learn.microsoft.com/en-us/dotnet/csharp/): Programming Language
 * [GitHub](https://github.com): Version Control
 * [Trello](https://trello.com/): Task Management
