@@ -4,6 +4,7 @@
     "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.3.10/"
   },
   "tasks": {
+    // TODO: Refine permission
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
