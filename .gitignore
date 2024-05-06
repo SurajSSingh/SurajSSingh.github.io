@@ -1,3 +1,5 @@
 .DS_Store
 *.ignore.html
 *_ignore/
+_site
+_cache
