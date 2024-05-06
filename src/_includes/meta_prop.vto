@@ -1,0 +1,24 @@
+{{#site}}
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="website" />
+
+    {{#description}}
+    <meta property="og:description" content="{{description}}" />
+    {{/description}}
+    {{#image}}
+    <meta property="og:image" content="{{image}}" />
+    {{/image}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    {{#url}}
+    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+    {{/url}}
+    {{#rss}}
+    <link href="{{url}}/rss.xml" rel="alternate" title="{{title}}" type="application/rss+xml">
+    {{/rss}}
+    {{#atom}}
+    <link href="{{url}}/atom.xml" rel="alternate" title="{{title}}" type="application/atom+xml">
+    {{/atom}}
+
+    {{/site}}

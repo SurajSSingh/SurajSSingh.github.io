@@ -1,0 +1,20 @@
+<header id="top" class="hide-pr">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-left">
+                <a href="/" class="brand text-primary">{{brand || author}}</a>
+            </div>
+            <div class="nav-center tabs">
+                {{ for nav of header_nav }}
+                    <a href="{{nav.link}}">
+                        {{nav.icon || ""}}
+                        <span>{{nav.name}}</span>
+                    </a>
+                {{ /for }}
+            </div>
+            <div class="nav-right">
+                <button id="theme-switch" onclick="switchMode(this)" class="pull-right button outline">theme</button>
+            </div>
+        </div>
+    </nav>
+</header>

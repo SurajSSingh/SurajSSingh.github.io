@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{lang || 'en'}}">
+{{ include "head.vto" }}
+<body class="">
+  {{ include "header.vto" }}
+  <main id="content" class="is-full-screen container" role="main">
+    {{ for preItemName of preIncludeItems }}
+      {{ include `${preItemName}.vto` }}
+    {{ /for }}
+    {{ content }}
+    {{ for postItemName of postIncludeItems }}
+      {{ include `${postItemName}.vto` }}
+    {{ /for }}
+  </main>
+  {{ include "footer.vto" }}
+</body>
+</html>

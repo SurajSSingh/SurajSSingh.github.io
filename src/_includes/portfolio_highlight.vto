@@ -1,0 +1,38 @@
+<h2>Portfolio Highlights</h2>
+<p>Here are some projects I have worked on:</p>
+<section class="row">
+
+    {{#subsections}}
+
+    {{#pages}}
+    {{#on_home_page}}
+    {{>project_card.html}}
+    {{/on_home_page}}
+    {{/pages}}
+
+    {{#subsections}}
+
+    {{#pages}}
+    {{#on_home_page}}
+    {{>project_card.html}}
+    {{/on_home_page}}
+    {{/pages}}
+
+    {{#subsections}}
+
+    {{#pages}}
+    {{#on_home_page}}
+    {{>project_card.html}}
+    {{/on_home_page}}
+    {{/pages}}
+
+    {{/subsections}}
+
+    {{/subsections}}
+
+    {{/subsections}}
+
+    <div class="col-12"></div>
+#}}
+</section>
+<p>More projects can be found on my <a href="projects">projects page</a>.</p>
