@@ -1,8 +1,14 @@
-<article class="col card">
-    <a href="{{project_link}}">
+{{ if start_new_row && !ignore_row_div }}
+<div class="divider col-12"></div>
+{{ /if }}
+<article class="col card no-border">
+    {{ set link = project_link || link }}
+    {{ layout "link_wrap.vto" {link} }}
         <h3 class="is-center">{{title}}</h3>
         <img src="{{image}}" alt="{{alt}}" class="is-center" />
-    </a>
+    {{ /layout }}
     <p>{{summary}}</p>
-    <p><a href="{{permalink}}">Learn More...</a></p>
+    {{ if url }}
+        <p><a href="{{url}}">Learn More...</a></p>
+    {{ /if }}
 </article>

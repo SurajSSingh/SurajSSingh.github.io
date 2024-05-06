@@ -1,9 +1,12 @@
+org="coding-minds"
+
 [[student_project]]
 link="https://store.steampowered.com/app/1501920/Toewr_le_Fence__REMASTERED_coming_prob_not_soon/"
 name="Toewr_le_Fence"
 image="https://cdn.cloudflare.steamstatic.com/steam/apps/1501920/header.jpg?t=1677113417"
 alt="Toewr_le_Fence Logo"
 summary="A 3D/2D tower defense game using memes as the theme. Available on Steam."
+org="coding-minds"
 
 [[student_project]]
 link="https://store.steampowered.com/app/1547630/Bridge2Code/"
@@ -11,28 +14,32 @@ name="Bridge2Code"
 image="https://cdn.cloudflare.steamstatic.com/steam/apps/1547630/header.jpg?t=1618877916"
 alt="Bridge2Code Logo"
 summary="A 2D puzzle game where one writes a script to build a bridge. Available on <a href='https://ihdfbisblncselzkx.itch.io/bridge2code'>Itch.io</a> and Steam."
+org="coding-minds"
 
 [[student_project]]
 start_new_row=true
 link="https://play.google.com/store/apps/details/Pawdometer_Match_the_Dogs?id=com.Pawdometer.MatchProject&gl=US"
 name="Pawdometer: Match the Dogs"
-image="../../assets/images/mtd-logo.png"
+image="assets/images/mtd-logo.png"
 alt="Pawdometer: Match The Dog Logo"
 summary="A match 4-game with dog theming and with integration with a sibling app to monitor dog steps. Available on the Google Play store."
+org="coding-minds"
 
 [[student_project]]
 link="https://cchristinafu.github.io/Program1-Website/"
 name="StemSisters Program-1"
-image="../../assets/images/stem-sister.png"
+image="assets/images/stem-sister.png"
 alt="Program 1 screenshot"
 summary="A 2D coding farming that helps teach students about coding."
+org="coding-minds"
 
 [[student_project]]
 link="https://2131790781.github.io/simluator-project-website/"
 name="Escape from Emergency Simulator"
-image="../../assets/images/fire-emergency.png"
+image="assets/images/fire-emergency.png"
 alt="Fire Emergency Level"
 summary="A 3D first person simulation game that can be used to teach others how to react in an emergency situation, such as a fire."
+org="coding-minds"
 
 [[student_project]]
 start_new_row=true
@@ -41,17 +48,20 @@ name="Horde"
 image="https://img.itch.zone/aW1hZ2UvMTA2MTYxNS85NzE5NTEyLnBuZw==/original/m0YLN9.png"
 alt="Horde screenshot"
 summary="A 2D multiplayer co-op survival game where one is tasked with killing all the zombies and escaping with friends. Avilable on <a href='https://da-bank.itch.io/horde'>Itch.io</a>"
+org="coding-minds"
 
 [[student_project]]
 link="https://g47god3.itch.io/dungeon-project-summer-2021"
 name="Dungeon Project 1"
-image="../../assets/images/dungeon.png"
+image="assets/images/dungeon.png"
 alt="Dungeon Game Screenshot"
 summary="A 2D top-down shooter game where one has to kill all the enemies inside the level."
+org="coding-minds"
 
 [[student_project]]
 link="https://jasonzhu.itch.io/clean-up-crew"
 name="Clean Up Crew"
-image="../../assets/images/agent-cleanup.png"
+image="assets/images/agent-cleanup.png"
 alt="Agent #2"
 summary="A simple 3D game where one is tasked with controlling robots to move boxes from one area to the scoring zone."
+org="coding-minds"

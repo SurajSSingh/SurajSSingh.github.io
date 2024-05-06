@@ -1,48 +1,50 @@
+org = "coding-minds"
+
 [templates]
 unity = "Templates used as part of Unity curriculum."
 colab = "Some Google Colab notebooks for teaching concepts in Python."
 
-[[unity-templates]]
+[[unity_templates]]
 name = "Unity 2 - Old Platforming Template"
 link = "https://github.com/SurajSSingh/Unity-2-Platforming-Game"
 summary = "Template to help guide with developing a 2D Platformer. Used to help teach how to use Unity's tilemap system, understand 2D physics, and save data across levels."
 
-[[unity-templates]]
+[[unity_templates]]
 name = "Unity 2 - RTS Template"
 link = "https://github.com/SurajSSingh/Unity_2_RTS_Game"
 summary = "A simple RTS template to provide scaffolding for learning about inheritance and polymorphism."
 
-[[unity-templates]]
+[[unity_templates]]
 name = "Unity 2 - Tower Defense Template"
 link = "https://github.com/SurajSSingh/Unity-2-Tower-Defense-Template"
 summary = "A simple tower defense game used to help teach Unity's scriptable object. Modified from the Unity 2 RTS project to reduce the number of things students need to learn about the template and replaces it in the curriculum."
 
-[[unity-templates]]
+[[unity_templates]]
 name = "Unity 2 - New Platforming Template"
 link = "https://github.com/SurajSSingh/Unity-2-Platforming-Template"
 summary = "An updated 2D platform for Unity 2, focusing on improving assets and clearer lesson flow."
 
-[[unity-templates]]
+[[unity_templates]]
 name = "Unity 2 - Module 3 Exercises"
 link = "https://github.com/SurajSSingh/Unity-2-Module-3---Unity-Exercises"
 summary = "5 exercise scenes to help reinforce Unity concepts learned. Each exercise is a mini-game, including a UI-only guess the number game, 3D cannonball simulator, and 3D platformer."
 
-[[unity-templates]]
+[[unity_templates]]
 name = "Unity 3 - Module 1 Obstacle Course"
 link = "https://github.com/SurajSSingh/Obstacle-Course-Project"
 summary = "A simple 3D obstacle course that is used to teach Unity' new Input System and local computer multiplayer."
 
-[[unity-templates]]
+[[unity_templates]]
 name = "Unity 3 - Multiplayer Pong Template"
 link = "https://github.com/SurajSSingh/MultiplayerPongTemplate"
 summary = "A simple Pong setup framework to help teach multiplayer using Unity's Netcode for GameObjects."
 
-[[unity-templates]]
+[[unity_templates]]
 name = "Unity 3 - Steam NGO Example"
 link = "https://github.com/SurajSSingh/Steam_NGO_Example"
 summary = "A set of scenes showing how to combine Steam and Unity's Netcode for GameObject."
 
-[[unity-templates]]
+[[unity_templates]]
 name = "Unity 4 - ML-Agents Example"
 link = "https://github.com/SurajSSingh/ML-Agents-Example"
 summary = "A set of prefabs and scripts used to bootstrap working with [Unity's ML-Agents package](https://unity.com/products/machine-learning-agent)."
@@ -51,3 +53,8 @@ summary = "A set of prefabs and scripts used to bootstrap working with [Unity's 
 name = "Blockchain Example"
 link = "https://colab.research.google.com/drive/1x5A8c0nUoT0QhEjQWgMaQ5_7xYCpTE5V?usp=sharing"
 summary = "A very simple Python example of implementing a blockchain"
+
+[[colab-templates]]
+name = "Q-Learning Example"
+link = "https://colab.research.google.com/drive/1oQ8PATtrhJaEBZnUlIPViCH05cnMr7Th"
+summary = "A Python notebook going over how to use Q-Learning in OpenAI Gym"

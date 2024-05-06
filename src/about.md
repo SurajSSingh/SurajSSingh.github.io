@@ -48,6 +48,8 @@ experiences that not only entertain but also educate.
 Here is a short list of some things I am currently focusing my learning on:
 
 - Unity
+- Scrum/Agile development
+- XR development
 
 ## What I have worked on recently
 

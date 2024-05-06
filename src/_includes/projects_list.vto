@@ -1,0 +1,54 @@
+{{ layout "layout.vto" }}
+    <p>Below are projects that I have worked on in my personal time or during my time at <a href="https://www.p1vc.org">P1 Virtual Civilization.</a></p>
+    <section class="row">
+        {{ for post of search.pages("org=personal|p1", "weight") }}
+            {{ include "project_card.vto" {...post}}}
+        {{ /for }}
+    </section>
+
+    <hgroup>
+        <h2>Coding Minds:</h2>
+        <p>Below are projects I have done during my time at <a href="https://codingmindsacademy.com/">Coding Minds Academy</a>.</p>
+    </hgroup>
+    <section class="row">
+        {{ for post of search.pages("org=coding-minds", "weight") }}
+            {{ include "project_card.vto" {...post}}}
+        {{ /for }}
+    </section>
+
+    {{ if mentored }}
+        <hgroup>
+            <h3>Mentored:</h3>
+            <p>Student projects I have helped mentor, primarily done in Unity.</p>
+        </hgroup>
+        <section class="row">
+        {{ for projects of mentored.student_project }}
+            {{ include "project_card.vto" {...projects, title: projects.name, project_link: projects.link, url: false} }}
+        {{ /for }}
+        </section>
+    {{ /if }}
+    
+    {{ if curriculum_templates }}
+        <hgroup>
+            <h3>Curriculum Templates:</h3>
+            <p>Template projects I have made to help with Unity curriculum</p>
+        </hgroup>
+        <ul>
+            {{ for template of curriculum_templates.unity_templates }}
+                <li><a href="{{template.link}}">{{template.name}}</a>: {{template.summary}}
+                </li>
+            {{ /for }}
+        </ul>
+    {{ /if }}
+
+    <hgroup>
+        <h2>School Projects</h2>
+        <p>Projects I have worked on for school. This includes my undergraduate work at University of California: Irvine (UCI) and graduate work at University of Illinois Urbana-Champaign (UIUC)</p>
+    </hgroup>
+    <section class="row">
+        {{ for post of search.pages("org=uci|uiuc", "weight") }}
+            {{ include "project_card.vto" {...post}}}
+        {{ /for }}
+    </section>
+
+{{ /layout }}

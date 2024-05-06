@@ -5,7 +5,7 @@ const cms = lumeCMS();
 cms.storage("img", "assets/images");
 cms.collection(
     "projects: Here you add, edit or delete projects for the portfolio",
-    "src:project/*?/*.md",
+    "src:project/*.md",
     [        
         "title: text!",
         "summary: text",
