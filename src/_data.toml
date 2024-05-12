@@ -5,6 +5,9 @@ description = "Explore Suraj S Singh's projects"
 keywords = "portfolio, projects, unity, c#"
 assets = "/assets"
 
+email = "surajss_developer+contact@icloud.com"
+linkedin = "Suraj-S-Singh"
+
 [[header_nav]]
 name="Projects"
 link="/project"

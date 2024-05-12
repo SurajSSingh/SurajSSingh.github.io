@@ -8,6 +8,7 @@ project_link: "https://github.com/SurajSSingh/WASVD"
 weight: 3
 start_new_row: true
 org: personal
+on_home_page: true
 ---
 
 ## Overview

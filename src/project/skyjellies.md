@@ -6,7 +6,6 @@ alt: "SkyJellies screenshot"
 summary: "A cute adventure game about taking care of jelly creatures."
 project_link: "https://redeagle-p1.itch.io/skyjellies"
 weight: 0.5
-on_home_page: true
 org: p1
 ---
 

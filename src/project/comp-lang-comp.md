@@ -8,6 +8,7 @@ project_link: "https://github.com/SurajSSingh/comp-lang-comp.github.io"
 weight: 10
 start_new_row: true
 org: personal
+on_home_page: true
 ---
 
 ## Overview

@@ -16,7 +16,7 @@
     {{ /if }}
     {{ if linkedin }} 
         <div class="card col">
-            <a href="https://www.linkedin.com/in/{{linkedin}}/">
+            <a href="https://www.linkedin.com/in/{{linkedin |> toLowerCase}}/">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="24" preserveAspectRatio="xMinYMin"
                     class="jam-icon jam-3" fill="var(--color-primary)">
                     <path

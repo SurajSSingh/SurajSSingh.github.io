@@ -13,7 +13,6 @@ postIncludeItems:
 
 # Suraj S. Singh Portfolio
 
-Hello, I'm Suraj and welcome to website. Driven by a passion for creating
-immersive experiences, I am a software developer specializing in game
-development with Unity and C#. Explore the creative depth and technical prowess
-showcased in my portfolio below.
+Hello, I'm Suraj and welcome to website. I am a software developer specializing
+in game development with Unity and C#. Have a look through some cool projects
+I've work on below.
