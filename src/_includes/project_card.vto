@@ -9,13 +9,13 @@
     {{ /layout }}
     {{ if student }}
         {{ set student_link = student_page || student_github || '' }}
-        <h4> Student: 
+        <p><b>Student: 
             {{ if link }}
                 <a href="{{student_link}}">{{student}}</a>
             {{ else }}
                 <span>{{student}}</span>
             {{ /if }}
-        </h4>
+        </b></p>
     {{ /if }}
     <p>{{summary}}</p>
     {{ if url }}
