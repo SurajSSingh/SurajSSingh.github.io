@@ -17,14 +17,26 @@
         {{ /if }}
         </div>
         <div class="col-6">
+            <h4 class="text-center">Overview:</h4>
             {{ if project_info && project_info.summary}}
-                
+            <p class="text-center">{{project_info.summary}}</p>
             {{ else }}
-            <h4>Summary</h4>
-            <p>{{summary}}</p>
+            <p class="text-center">{{summary}}</p>
             {{ /if }}
-            {{ if url }}
-                <p><a href="{{url}}">Learn More...</a></p>
+            <hr />
+            <h4 class="text-center">Role:</h4>
+            <p class="text-center">{{project_info.role}}</p>
+            {{ if project_info.awards }}
+                <hr />
+                <h4 class="text-center">Awards:</h4>
+                <section class="row">
+                    {{ for image of project_info.awards }}
+                        <figure class="col text-center">
+                            <img src="{{assets}}/{{image.src}}" alt="{{image.alt}}" width=200>
+                            <figcaption>{{image.caption || image.alt}}</figcaption>
+                        </figure>
+                    {{ /for }}
+                </section>
             {{ /if }}
         </div>
     </div>
