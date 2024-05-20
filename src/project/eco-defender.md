@@ -14,9 +14,9 @@ project_info:
     summary: "A VR shooter game with crafting mechanics, initially created for the P1 April game. Specifically learned how to work with Unity's XR toolkit."
     awards:
         - src: "images/awards/Eco-AprilGameJamWinner.jpg"
-          alt: "Game Jam Winner Award"
+          alt: "Game Jam Winner Award (April)"
         - src: "images/awards/Eco-Innovative.png"
-          alt: "Most Innovative Award"
+          alt: "Most Innovative Award (April)"
     external_links:
         itch: "https://light-with-blocks.itch.io/eco-defender"
         github: "https://github.com/Team-Keito/Eco-Defender"
