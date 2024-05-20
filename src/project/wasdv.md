@@ -9,6 +9,8 @@ weight: 3
 start_new_row: true
 org: personal
 on_home_page: true
+project_info: 
+    demo_gif: "images/gifs/WASVD-Demo.gif"
 ---
 
 ## Overview
