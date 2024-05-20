@@ -16,6 +16,9 @@ project_info:
           alt: "Best Sound Award"
         - src: "images/awards/Most_Fun_Game_Keito.png"
           alt: "Most Fun Award"
+    external_links:
+        itch: "https://sam325.itch.io/keito-game"
+        github: "https://github.com/Team-Keito/Keito-Yarn-Game"
 ---
 
 ## Tagline

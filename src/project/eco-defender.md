@@ -17,6 +17,9 @@ project_info:
           alt: "Game Jam Winner Award"
         - src: "images/awards/Eco-Innovative.png"
           alt: "Most Innovative Award"
+    external_links:
+        itch: "https://light-with-blocks.itch.io/eco-defender"
+        github: "https://github.com/Team-Keito/Eco-Defender"
 ---
 
 ## Overview

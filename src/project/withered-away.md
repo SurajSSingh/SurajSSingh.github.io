@@ -11,6 +11,9 @@ org: uci
 project_info: 
     demo_gif: "images/gifs/Withered-Away-Demo.gif"
     role: Sound Designer and Unity Programmer
+    external_links:
+        itch: "https://team-alpha.itch.io/withered-away"
+        github: "https://github.com/SurajSSingh/Team-Alpha"
 ---
 
 ## Course
