@@ -5,9 +5,11 @@ image: "https://img.itch.zone/aW1nLzMxMTI4MDQucG5n/315x250%23c/ySWAdD.png"
 alt: "Withered Away Logo"
 summary: "A fast-paced 2D Adventure Platformer game where you control a lone king cursed to run or be consumed by the mist."
 project_link: "https://team-alpha.itch.io/withered-away"
-weight: 0
+weight: 1
 on_home_page: true
 org: uci
+project_info: 
+    demo_gif: "images/gifs/Withered-Away-Demo.gif"
 ---
 
 ## Course
