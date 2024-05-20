@@ -1,0 +1,18 @@
+<iframe 
+    {{ if width }}
+    width="{{width}}" 
+    {{ /if }}
+    {{ if height }}
+    height="{{height}}"     
+    {{ /if }}
+    {{ if link.includes("youtu") }}
+    src="{{link}}" 
+    {{ else }}
+    src="https://www.youtube-nocookie.com/embed/{{link}}" 
+    {{ /if }}
+    title="{{title}}" 
+    frameborder="0" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen
+>
+</iframe>

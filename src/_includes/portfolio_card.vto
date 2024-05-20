@@ -1,0 +1,36 @@
+<div class="divider col-12"></div>
+<article class="col no-border card">
+    {{ set link = project_link || link }}
+    <h3 class="is-center">{{title}}</h3>
+    <div class="row project-info">
+        <div class="col-6 is-center">
+        {{ if project_info }}
+                {{ if typeof project_info.trailer == "string" }}
+                    {{ include "youtube_embed.vto" {link: project_info.trailer, height: data_default?.image_height || 200, width: Math.round(data_default?.image_height/9 * 16) || 356} }}
+                {{ else }}
+                    {{ include "youtube_embed.vto" {...project_info.trailer} }}
+                {{ /if }}
+        {{ else }}
+            <img src="{{image}}" alt="{{alt}}" class="is-center" height="{{data_default?.image_height || 200 }}" />
+        {{ /if }}
+        </div>
+        <div class="col-6">
+            {{ if project_info && project_info.summary}}
+                
+            {{ else }}
+            <h4>Summary</h4>
+            <p>{{summary}}</p>
+            {{ /if }}
+            {{ if url }}
+                <p><a href="{{url}}">Learn More...</a></p>
+            {{ /if }}
+        </div>
+    </div>
+    <div class="row project-links">
+        <div class="col-5 padding">
+        </div>
+        <div class="col-5 padding">
+        </div>
+    </div>
+</article>
+<hr />
