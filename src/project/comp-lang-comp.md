@@ -11,6 +11,7 @@ org: personal
 on_home_page: true
 project_info: 
     demo_gif: "images/gifs/Comp-Lang-Comp-Demo.gif"
+    role: Primary Project Developer
 ---
 
 ## Overview

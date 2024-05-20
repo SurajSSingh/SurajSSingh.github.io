@@ -10,6 +10,7 @@ on_home_page: true
 org: uci
 project_info: 
     demo_gif: "images/gifs/Withered-Away-Demo.gif"
+    role: Sound Designer and Unity Programmer
 ---
 
 ## Course
@@ -27,9 +28,9 @@ UCI – ICS 169AB: Capstone Game Project
 
 ## Role
 
-- Level Designer and Developer
 - Music and Sound Designer
 - Assistant Programmer
+- Assistant Level Designer and Developer
 - Devlog Writer Assistant
 
 ## Overview

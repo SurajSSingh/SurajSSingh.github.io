@@ -11,6 +11,8 @@ org: personal
 on_home_page: true
 project_info: 
     demo_gif: "images/gifs/WASVD-Demo.gif"
+    role: Primary Developer
+    summary: "A simple stack visualizer to allow me to learn how WebAssembly (text) execution happens. Learned how to interoperate between Rust and TypeScript (via <a href='https://tauri.app'>Tauri</a>)."
 ---
 
 ## Overview

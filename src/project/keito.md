@@ -10,6 +10,12 @@ on_home_page: true
 org: p1
 project_info: 
     trailer: "https://www.youtube-nocookie.com/embed/u9BvzhMSJbw"
+    role: Project Lead and Mechanic Programmer
+    awards:
+        - src: "images/awards/bestsoundkeito.png"
+          alt: "Best Sound Award"
+        - src: "images/awards/Most_Fun_Game_Keito.png"
+          alt: "Most Fun Award"
 ---
 
 ## Tagline

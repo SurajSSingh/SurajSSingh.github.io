@@ -10,6 +10,13 @@ on_home_page: true
 org: p1
 project_info: 
     trailer: "https://www.youtube-nocookie.com/embed/1v0EbLTb9Pg"
+    role: Project Lead and Art Integrator
+    summary: "A VR shooter game with crafting mechanics, initially created for the P1 April game. Specifically learned how to work with Unity's XR toolkit."
+    awards:
+        - src: "images/awards/Eco-AprilGameJamWinner.jpg"
+          alt: "Game Jam Winner Award"
+        - src: "images/awards/Eco-Innovative.png"
+          alt: "Most Innovative Award"
 ---
 
 ## Overview
