@@ -62,7 +62,8 @@ Here is a short list of some things I am currently focusing my learning on:
 I **prefer use of my name** when ever possible (avoids confusion). However,
 these are acceptable pronouns:
 
-1. _**he/him/his**_: _Example: **He** went to open **his** book, which was
-   **his** as of last year and had been with **him** ever since._
-2. _**they/them/their/theirs**_: _Example: **They** went to open **their** book,
-   which was **theirs** as of last year and had been with **them** ever since._
+1. _**he/him/his**_: _Example: **His** book, which was **his** since **he** was
+   young, was not with **him**.
+
+2. _**they/them/their/theirs**_: _Example: **Their** book, which was **theirs**
+   since **they** were young, was not with **them**._
