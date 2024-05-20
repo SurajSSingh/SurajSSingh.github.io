@@ -8,6 +8,8 @@ project_link: "https://light-with-blocks.itch.io/eco-defender"
 weight: 0
 on_home_page: true
 org: p1
+project_info: 
+    trailer: "https://www.youtube-nocookie.com/embed/1v0EbLTb9Pg"
 ---
 
 ## Overview

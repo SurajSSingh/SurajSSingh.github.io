@@ -8,6 +8,8 @@ project_link: "https://sam325.itch.io/keito-game"
 weight: 0
 on_home_page: true
 org: p1
+project_info: 
+    trailer: "https://www.youtube-nocookie.com/embed/u9BvzhMSJbw"
 ---
 
 ## Tagline
