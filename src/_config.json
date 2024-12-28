@@ -1,0 +1,6 @@
+{
+  "src": "./src",
+  "dest": "./_site",
+  "location": "https://surajssingh.com",
+  "emptyDest": true
+}

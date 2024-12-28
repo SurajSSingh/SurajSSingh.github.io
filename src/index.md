@@ -1,5 +1,4 @@
 ---
-
 title: "Homepage"
 date: 2023-11-12
 summary: "Homepage of my website"
@@ -11,10 +10,9 @@ quick_about: "Hi, I'm Suraj, a creative software developer, focused on creating 
 priority: 1
 alternative_paths: ["home"]
 
-
-preIncludeItems: 
+preIncludeItems:
     - introduction
-postIncludeItems: 
+postIncludeItems:
     - skills_list
     - portfolio_highlight
     - contact

@@ -1,10 +1,9 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.1.4/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.3.10/"
+    "lume/": "https://deno.land/x/lume@v2.4.3/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.6.3/"
   },
   "tasks": {
-    // TODO: Refine permission
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s",

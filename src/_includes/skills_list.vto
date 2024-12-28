@@ -1,8 +1,9 @@
 <h2 class="text-center">Highlighted Skills</h2>
 <section class="row">
+
     {{ for skill of top_skills }}
         <a href="{{skill.homepage}}" class="col text-center">
-            <img src="{{assets}}/{{skill.icon}}" alt="{{skill.name}} Logo" width={{ skill.width || skill_info?.width || 40}}>        
+            <img src="{{`${skill.id}` |> icon("skill-icon") }}" alt="{{skill.name}} Icon" width={{ skill.width || skill_info?.width || 40}}>        
             <br />
             <strong>{{skill.name}}</strong>
         </a>

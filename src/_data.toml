@@ -79,30 +79,36 @@ icon="""<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="24"
 
 [[top_skills]]
 name="Unity"
+id="unity"
 homepage="https://unity.com"
 icon="images/skills/unity-color.svg"
 
 [[top_skills]]
 name="C#"
+id="cs"
 homepage="https://learn.microsoft.com/en-us/dotnet/csharp/"
 icon="images/skills/csharp-color.svg"
 
 [[top_skills]]
 name="Rust"
+id="rust"
 homepage="https://www.rust-lang.org/"
 icon="images/skills/rust-color.svg"
 
 [[top_skills]]
 name="Python"
+id="py"
 homepage="https://www.python.org/"
 icon="images/skills/python-color.svg"
 
 [[top_skills]]
 name="TypeScript"
+id="ts"
 homepage="https://www.typescriptlang.org/"
 icon="images/skills/typescript-color.svg"
 
 [[top_skills]]
 name="Svelte"
+id="svelte"
 homepage="https://svelte.dev/"
 icon="images/skills/svelte-color.svg"
