@@ -1,5 +1,6 @@
 import lume from "lume/mod.ts";
 import toml from "lume/plugins/toml.ts";
+import yaml from "lume/plugins/yaml.ts";
 import fff from "lume/plugins/fff.ts";
 import inline from "lume/plugins/inline.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
@@ -38,6 +39,7 @@ const site = lume({
 })
   .copy("assets", "assets")
   .use(toml())
+  .use(yaml())
   .use(fff({
     date: "published",
   }))
@@ -58,20 +60,8 @@ const site = lume({
     },
   }));
 
-// console.log(site.renderer.helpers);
+if (Deno.env.get("LUME_DRAFTS") != "true") {
+  site.ignore((path) => path.match(/^\/resumes/) !== null);
+}
 
-// site.use(icons(
-//   {
-//     catalogs: [
-//       {
-//         id: "skill-icon",
-//         src: "https://skillicons.dev/icons?i={name}&theme={variant}",
-//         variants: [
-//           "dark",
-//           "light",
-//         ],
-//       },
-//     ],
-//   },
-// ));
 export default site;

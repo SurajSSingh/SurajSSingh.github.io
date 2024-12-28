@@ -3,3 +3,5 @@
 *_ignore/
 _site
 _cache
+
+**/private_*

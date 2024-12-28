@@ -198,4 +198,26 @@ cms.document({
   ],
 });
 
+// Resume Items
+cms.document({
+  "name": "General Resume Data",
+  "description": "Information that is the same across resumes",
+  "store": "src/resumes/general_data.yml",
+  "fields": [],
+});
+
+cms.document({
+  "name": "Summaries",
+  "description": "List of summaries or career objective",
+  "store": "src/resumes/summary.yml",
+  "fields": [],
+});
+
+cms.collection({
+  "name": "Accomplishments",
+  "description": "List of accomplishments by organizations",
+  "store": "src/resumes/accomplishments/*.yml",
+  "fields": [],
+});
+
 export default cms;
