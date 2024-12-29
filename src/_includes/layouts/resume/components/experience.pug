@@ -1,0 +1,19 @@
+section#education
+    h2.text-center.text-xl Professional Experience
+    hr
+    //- TODO: Fix this nesting mess
+    each exp in general.experience
+        each role in exp.roles
+            hgroup 
+                h3.text-base #[strong= role.title]
+                p.text-right.text-sm.-mt-5 #{role.start.year}—#{role.end ? role.end.year : "Present"}
+                p.text-xs.text-left.pl-2=exp.company 
+                each aI in accomplishmentIndices
+                    if aI.role == role.key
+                        each included in aI.accomplishments
+                            each accomplishment in accomplishments 
+                                if accomplishment.key == role.key
+                                    ul.list-disc.list-inside.pl-4
+                                        each point, index in accomplishment.accomplishments
+                                                if index == included
+                                                    li.leading-tight= point.text

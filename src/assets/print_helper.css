@@ -1,0 +1,21 @@
+@media print {
+    @page {
+        size: letter;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body * {
+        visibility: hidden;
+        margin:0; padding:0;
+     }
+     main {
+        margin: 2em 3em;
+     }
+
+     main, main * { 
+        visibility: visible;
+     }
+}

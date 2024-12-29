@@ -9,6 +9,7 @@ import lightningCss from "lume/plugins/lightningcss.ts";
 import icons from "./plugins/icons.ts";
 import metas from "lume/plugins/metas.ts";
 import relations from "lume/plugins/relations.ts";
+import pug from "lume/plugins/pug.ts";
 
 const icon_catalogs = [
   {
@@ -40,6 +41,7 @@ const site = lume({
   .copy("assets", "assets")
   .use(toml())
   .use(yaml())
+  .use(pug())
   .use(fff({
     date: "published",
   }))

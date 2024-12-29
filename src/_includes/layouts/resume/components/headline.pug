@@ -1,0 +1,7 @@
+- var emailContact = private_contacts.email[headlineExtra.emailIndex || 0]
+
+section#headline
+    hgroup.text-center
+        h1.text-2xl=general.headline.name
+        p.text-sm #[a(href=general.headline.contact.website).underline=general.headline.contact.website.replace(/^https?\:\/\//i, "")] | #[a(href="mailto:"+emailContact).underline=emailContact] | #{private_contacts.phone[headlineExtra.phoneIndex || 0]}
+

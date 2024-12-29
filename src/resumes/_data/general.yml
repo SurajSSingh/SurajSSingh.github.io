@@ -1,0 +1,62 @@
+headline:
+  name: Suraj S. Singh
+  contact:
+    website: "https://surajssingh.com"
+    github: "https://github.com/SurajSSingh"
+    linkedin: "https://www.linkedin.com/in/suraj-s-singh/"
+    private: ./private_contacts.yml
+education:
+  - org: University of Illinois Urbana-Champaign
+    link: "https://illinois.edu"
+    abbr: UIUC
+    degrees:
+      - name: Masters of Computer Science
+        rank: M.S.
+    start:
+      year: 2021
+      month: "8"
+    grad:
+      year: 2022
+      month: "12"
+  - org: "University of California, Irvine"
+    link: "https://uci.edu"
+    abbr: UCI
+    degrees:
+      - name: Computer Game Science
+        rank: B.S.
+      - name: Education Sciences
+        rank: B.A.
+    start:
+      year: 2016
+      month: "7"
+    grad:
+      year: 2020
+      month: "6"
+experience:
+  - company: P1 Games
+    link: "https://p1games.com"
+    roles:
+      - title: Unity Team Lead
+        start:
+          year: 2024
+          month: "2"
+        key: p1Lead
+      - title: Unity Programmer
+        start:
+          year: 2023
+          month: "8"
+        end:
+          year: 2024
+          month: "1"
+        key: p1Dev
+  - company: Coding Minds Academy
+    link: "https://codingmind.com"
+    roles:
+      - title: Coding Instructor
+        start:
+          year: 2019
+          month: "9"
+        end:
+          year: 2023
+          month: "12"
+        key: cmaInstructor

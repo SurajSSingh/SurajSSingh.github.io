@@ -1,0 +1,9 @@
+section#education
+    h2.text-center.text-xl Education
+    hr
+    each edu in general.education
+        hgroup 
+            h3.text-sm
+                strong.text-left #{edu.degrees.map(d => `${d.name}, ${d.rank}`).join(" & ")}
+            p.text-right.text-xs.-mt-5 #[em= edu.grad.year]
+            p.text-xs.mt-1 #[em= edu.org]

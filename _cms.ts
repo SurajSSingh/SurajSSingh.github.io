@@ -1,4 +1,23 @@
+import { Entry } from "lume/core/fs.ts";
 import lumeCMS from "lume/cms/mod.ts";
+
+// Constant Data
+const RESUME_LAYOUTS_DIR = "/_includes/layouts/resume";
+const MONTHS = [
+  "",
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 const cms = lumeCMS();
 
@@ -200,24 +219,385 @@ cms.document({
 
 // Resume Items
 cms.document({
-  "name": "General Resume Data",
-  "description": "Information that is the same across resumes",
-  "store": "src/resumes/general_data.yml",
-  "fields": [],
+  name: "general-resume-data",
+  description: "Information that is the same across resumes",
+  store: "src:resumes/_data/general.yml",
+  fields: [
+    {
+      name: "headline",
+      type: "object",
+      fields: [
+        "name: text!",
+        {
+          name: "contact",
+          type: "object",
+          fields: [
+            "website: url",
+            "github: url",
+            "linkedin: url",
+            {
+              name: "private",
+              type: "hidden",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "education",
+      type: "object-list",
+      fields: [
+        "org: text!",
+        "link: url",
+        "abbr: text",
+        {
+          name: "degrees",
+          type: "object-list",
+          fields: [
+            "name: text!",
+            "rank: text!",
+            "link: url",
+          ],
+        },
+        {
+          name: "start",
+          type: "object",
+          attributes: {
+            required: true,
+          },
+          fields: [
+            "year: number!",
+            {
+              name: "month",
+              type: "select",
+              options: Array.from(MONTHS)
+                .map((month, index) => ({ label: month, value: index }))
+                .filter((item) => item.value > 0),
+            },
+          ],
+        },
+        {
+          name: "grad",
+          label: "Graduation",
+          type: "object",
+          fields: [
+            "year: number!",
+            {
+              name: "month",
+              type: "select",
+              options: Array.from(MONTHS)
+                .map((month, index) => ({ label: month, value: index }))
+                .filter((item) => item.value > 0),
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "experience",
+      type: "object-list",
+      fields: [
+        "company: text!",
+        "link: url",
+        {
+          name: "roles",
+          type: "object-list",
+          fields: [
+            "title: text!",
+            {
+              name: "start",
+              type: "object",
+              attributes: {
+                required: true,
+              },
+              fields: [
+                "year: number!",
+                {
+                  name: "month",
+                  type: "select",
+                  options: Array.from(MONTHS)
+                    .map((month, index) => ({ label: month, value: index }))
+                    .filter((item) => item.value > 0),
+                },
+              ],
+            },
+            {
+              name: "end",
+              type: "object",
+              fields: [
+                "year: number",
+                {
+                  name: "month",
+                  type: "select",
+                  options: Array.from(MONTHS)
+                    .map((month, index) => ({ label: month, value: index }))
+                    .filter((item) => item.value > 0),
+                },
+              ],
+            },
+            {
+              name: "key",
+              type: "hidden",
+            },
+          ],
+        },
+      ],
+    },
+  ],
 });
 
 cms.document({
-  "name": "Summaries",
+  "name": "resume-summaries",
   "description": "List of summaries or career objective",
-  "store": "src/resumes/summary.yml",
-  "fields": [],
+  "store": "src:resumes/_data/summary.yml",
+  "fields": [
+    {
+      name: "summaries",
+      type: "choose-list",
+      fields: [
+        {
+          name: "text",
+          label: "Simple Text",
+          type: "object",
+          fields: [
+            "text: text!",
+          ],
+        },
+        {
+          name: "markdown",
+          label: "Markdown Rendered Text",
+          type: "object",
+          fields: [
+            "text: markdown!",
+          ],
+        },
+        {
+          name: "dynamic",
+          label: "Dynamic Text Parts",
+          type: "object",
+          fields: [
+            "adjective: text",
+            "role: text!",
+            {
+              name: "experience",
+              description: "Years of experience",
+              type: "number",
+              attributes: {
+                min: 0.25,
+                step: 0.25,
+              },
+              value: 1,
+            },
+            "seeking: text!",
+          ],
+        },
+      ],
+    },
+  ],
+});
+
+cms.document({
+  "name": "resume-skills",
+  "description": "List of skills",
+  "store": "src:resumes/_data/skills.yml",
+  "fields": [
+    {
+      name: "skill",
+      type: "object-list",
+      fields: [
+        {
+          name: "name",
+          type: "text",
+          attributes: {
+            required: true,
+          },
+        },
+        {
+          name: "category",
+          type: "list",
+          // TODO: Init options from previous choices
+        },
+      ],
+    },
+  ],
+});
+
+cms.document({
+  "name": "accomplishments",
+  "description": "List of accomplishments by organizations",
+  "store": "src:resumes/_data/accomplishments.yml",
+  "fields": [
+    {
+      name: "[]",
+      type: "object-list",
+      fields: [
+        "key:text!",
+        {
+          name: "accomplishments",
+          type: "choose-list",
+          fields: [
+            {
+              name: "text",
+              label: "Simple Text",
+              type: "object",
+              fields: [
+                "text: text!",
+              ],
+              init(field) {
+                // ts-ignore
+              },
+            },
+            {
+              name: "markdown",
+              label: "Markdown Rendered Text",
+              type: "object",
+              fields: [
+                "text: markdown!",
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
 });
 
 cms.collection({
-  "name": "Accomplishments",
-  "description": "List of accomplishments by organizations",
-  "store": "src/resumes/accomplishments/*.yml",
-  "fields": [],
+  "name": "Resumes",
+  "description": "List of resumes generated",
+  "store": "src:resumes/*.md",
+  "fields": [
+    "title: text!",
+    {
+      name: "layout",
+      type: "select",
+      init: (field, content) => {
+        const possible_layouts = (Array.from(
+          content.data
+            .site.fs.entries
+            .get(RESUME_LAYOUTS_DIR)
+            .children.values(),
+        ) as unknown as Entry[])
+          .filter((c) => c.type === "file" && !c.name.startsWith("resume")).map(
+            (c) => {
+              return {
+                value: c.path,
+                label: c.name,
+              };
+            },
+          );
+        field.options = possible_layouts;
+      },
+    },
+    {
+      name: "headlineExtra",
+      type: "object",
+      fields: [
+        {
+          name: "emailIndex",
+          type: "number",
+          attributes: {
+            min: 0,
+          },
+          init(field, { data }) {
+            if (field.attributes) {
+              field.attributes.max =
+                data.site.source.data.get("/resumes").private_contacts.email
+                  .length - 1;
+            }
+          },
+        },
+        {
+          name: "phoneIndex",
+          type: "number",
+          attributes: {
+            min: 0,
+          },
+          init(field, { data }) {
+            if (field.attributes) {
+              field.attributes.max =
+                data.site.source.data.get("/resumes").private_contacts.phone
+                  .length - 1;
+            }
+          },
+        },
+      ],
+    },
+    {
+      name: "summaryIndex",
+      type: "number",
+      attributes: {
+        required: true,
+        min: 0,
+      },
+      init(field, { data }) {
+        if (field.attributes) {
+          field.attributes.max =
+            data.site.source.data.get("/resumes").summary.summaries.length - 1;
+        }
+      },
+    },
+    {
+      name: "accomplishmentIndices",
+      type: "object-list",
+      fields: [
+        {
+          name: "role",
+          type: "select",
+          attributes: {
+            required: true,
+          },
+          init(field, { data }) {
+            field.options = Array.from(
+              data.site.source.data.get("/resumes").general.experience,
+            ).flatMap((e) => e.roles).map((r) => r.key);
+          },
+        },
+        {
+          name: "accomplishments",
+          type: "list",
+          attributes: {
+            pattern: "[1-9]/d*|0",
+          },
+          // init(field, { data }) {
+          //   console.log(data);
+          //   // field.options =
+          // },
+        },
+      ],
+      // init: (field, content) => {
+      //   // const possible_layouts = (Array.from(
+      //   //   content.data
+      //   //     .site.fs.entries
+      //   //     .get(RESUME_LAYOUTS_DIR)
+      //   //     .children.values(),
+      //   // ) as unknown as Entry[])
+      //   //   .filter((c) => c.type === "file" && !c.name.startsWith("resume")).map(
+      //   //     (c) => {
+      //   //       return {
+      //   //         value: c.path,
+      //   //         label: c.name,
+      //   //       };
+      //   //     },
+      //   //   );
+      //   // field.options = possible_layouts;
+      // },
+    },
+    {
+      name: "skillSet",
+      type: "object-list",
+      fields: [
+        "category:text!",
+        {
+          name: "skills",
+          type: "list",
+          attributes: {
+            required: true,
+          },
+        },
+      ],
+    },
+  ],
 });
 
 export default cms;

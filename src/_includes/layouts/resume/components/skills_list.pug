@@ -1,0 +1,6 @@
+section#education
+    h2.text-center.text-xl Skills
+    hr
+    ul
+        each set in skillSet
+            li #[strong.text-right= set.category] #[span.pl-2= set.skills.join(', ')]
