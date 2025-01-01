@@ -2,11 +2,15 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="robots" content="noindex,nofollow")
     script(src="https://cdn.tailwindcss.com")
     link(rel="stylesheet", href=`${assets}/print_helper.css`)
-    title Resume 3
-  body 
-    main#content.font-sans
+    meta(name="author" content=general.headline.name)
+    meta(name="description" content=description||"Resume")
+    //- meta(name="keywords" content="HTML, CSS, JavaScript")
+    title=title
+  body(style="font-family: 'Lato', 'Open Sans';")
+    main#content
       block content
   

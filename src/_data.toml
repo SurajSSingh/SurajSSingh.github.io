@@ -8,6 +8,12 @@ assets = "/assets"
 base_url = "https://surajssingh.com"
 linkedin = "Suraj-S-Singh"
 
+[license]
+name = "CC BY-ND 4.0"
+link = "https://https://creativecommons.org/licenses/by-nd/4.0/"
+full = " Creative Commons Attribution-NoDerivatives 4.0 International"
+icon = '<img style="height:20px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:20px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:20px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a>'
+
 [data_default]
 image_height = 300
 

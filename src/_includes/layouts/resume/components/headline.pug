@@ -1,7 +1,32 @@
-- var emailContact = private_contacts.email[headlineExtra.emailIndex || 0]
+- let emailContact = private_contacts.email[headlineExtra.emailIndex || 0]
+
+mixin add_contact_element(contact)
+    case contact
+        when "email"
+            a(href="mailto:"+emailContact).underline.underline-offset-4="Email: "+emailContact
+        when "phone"
+            ="Phone: "+private_contacts.phone[headlineExtra.phoneIndex || 0]
+        when "github"
+            a(href=general.headline.contact.github).underline.underline-offset-4="GitHub: "+general.headline.contact.github.replace(/^https?\:\/\/(?:www\.)?github.com\//i, "GitHub: ")
+        when "linkedin"
+            a(href=general.headline.contact.linkedin).underline.underline-offset-4="LinkedIn: "+general.headline.contact.linkedin.replace(/^https?\:\/\/(?:www\.)?linkedin.com\/in\//i, "LinkedIn: ")
+        when "website"
+            a(href=general.headline.contact.website).underline.underline-offset-4="Website: "+general.headline.contact.website.replace(/^https?\:\/\//i, "")
+        default
+            span=headlineExtra.contactOrder
 
 section#headline
     hgroup.text-center
-        h1.text-2xl=general.headline.name
-        p.text-sm #[a(href=general.headline.contact.website).underline=general.headline.contact.website.replace(/^https?\:\/\//i, "")] | #[a(href="mailto:"+emailContact).underline=emailContact] | #{private_contacts.phone[headlineExtra.phoneIndex || 0]}
+        h1.text-3xl.font-semibold=general.headline.name
+        - let allContactsExceptEnd = headlineExtra.contactOrder.slice(0, -1);
+        - let lastContact = headlineExtra.contactOrder.slice(-1)[0];
+        .flex.justify-evenly
+            each contact in allContactsExceptEnd
+                p.text-sm.text-emerald-900 
+                    +add_contact_element(contact)
+            if lastContact
+                p.text-sm.text-emerald-900
+                    +add_contact_element(lastContact, "")
+            
+                
 

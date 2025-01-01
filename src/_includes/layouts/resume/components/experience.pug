@@ -1,19 +1,21 @@
 section#education
-    h2.text-center.text-xl Professional Experience
-    hr
-    //- TODO: Fix this nesting mess
+    h2.text-center.text-lg.font-medium.bg-emerald-50 Professional Experience
+    hr.border-emerald-100.mb-1
     each exp in general.experience
         each role in exp.roles
-            hgroup 
-                h3.text-base #[strong= role.title]
-                p.text-right.text-sm.-mt-5 #{role.start.year}—#{role.end ? role.end.year : "Present"}
-                p.text-xs.text-left.pl-2=exp.company 
-                each aI in accomplishmentIndices
-                    if aI.role == role.key
-                        each included in aI.accomplishments
-                            each accomplishment in accomplishments 
-                                if accomplishment.key == role.key
-                                    ul.list-disc.list-inside.pl-4
-                                        each point, index in accomplishment.accomplishments
-                                                if index == included
-                                                    li.leading-tight= point.text
+            - let roleAccomplishments = private_accomplishments.filter(accList => accList.key === role.key).flatMap(accList => accList.accomplishments);
+            - let indices = includedAccomplishmentLists.filter(indList => indList.role === role.key).flatMap(indList => indList.indices);
+            - let accomplishments = indices.map(i => roleAccomplishments[i])
+            hgroup
+                h3.text-base.mt-2 #[strong= role.title]
+                p.text-right.text-sm.-mt-5: em= role.start.year + " — " + (role.end ? role.end.year : "Present")
+                p.text-xs.text-left.pl-2 
+                    if exp.link
+                        //- a(href=exp.link).underline.underline-offset-4=exp.company
+                        a.text-emerald-900(href=exp.link): b=exp.company
+                    else
+                        span.text-emerald-950=exp.company
+            ul.list-disc.list-inside
+            each accomplishment in accomplishments
+                //- TODO: Switch based on accomplishment type
+                li.leading-tight.mb-1.pl-2.text-sm: span.-ml-1= accomplishment.text

@@ -349,7 +349,7 @@ cms.document({
 cms.document({
   "name": "resume-summaries",
   "description": "List of summaries or career objective",
-  "store": "src:resumes/_data/summary.yml",
+  "store": "src:resumes/_data/private_summary.yml",
   "fields": [
     {
       name: "summaries",
@@ -425,7 +425,7 @@ cms.document({
 cms.document({
   "name": "accomplishments",
   "description": "List of accomplishments by organizations",
-  "store": "src:resumes/_data/accomplishments.yml",
+  "store": "src:resumes/_data/private_accomplishments.yml",
   "fields": [
     {
       name: "[]",
@@ -468,6 +468,7 @@ cms.collection({
   "store": "src:resumes/*.md",
   "fields": [
     "title: text!",
+    "description: text!",
     {
       name: "layout",
       type: "select",
@@ -493,6 +494,18 @@ cms.collection({
       name: "headlineExtra",
       type: "object",
       fields: [
+        {
+          name: "contactOrder",
+          type: "list",
+          value: ["website", "email", "phone"],
+          options: [
+            "email",
+            "phone",
+            "website",
+            "github",
+            "linkedin",
+          ],
+        },
         {
           name: "emailIndex",
           type: "number",
@@ -533,12 +546,13 @@ cms.collection({
       init(field, { data }) {
         if (field.attributes) {
           field.attributes.max =
-            data.site.source.data.get("/resumes").summary.summaries.length - 1;
+            data.site.source.data.get("/resumes").private_summary.summaries
+              .length - 1;
         }
       },
     },
     {
-      name: "accomplishmentIndices",
+      name: "includedAccomplishmentLists",
       type: "object-list",
       fields: [
         {
@@ -554,7 +568,7 @@ cms.collection({
           },
         },
         {
-          name: "accomplishments",
+          name: "indices",
           type: "list",
           attributes: {
             pattern: "[1-9]/d*|0",

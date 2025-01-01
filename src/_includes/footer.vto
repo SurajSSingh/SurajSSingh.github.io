@@ -2,5 +2,13 @@
     <p><a href="#top">Back to Top</a></p>
     <p>Made with <a href="https://lume.land">Lume</a> and styling with <a
             href="https://jenil.github.io/chota/">Chota</a>, <a href="https://jam-icons.com/">Jam Icons</a>, and <a href="https://simpleicons.org">Simple Icons</a></p>
-    <p>Copyright © 2024 {{author}}. All rights reserved.</p>
+    <p>Copyright © {{Date.now() |> date("CAL_YEAR")}} by {{author}}. Licensed under 
+    {{ if license }}
+        <a href="{{license.link}}">
+            <abbr title="{{license.full}}">{{license.name}} {{license.icon}}</abbr>
+        </a>
+    {{ else }}
+    All Rights Reserved.
+    {{ /if }}
+    </p>
 </footer>

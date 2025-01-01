@@ -10,6 +10,7 @@ import icons from "./plugins/icons.ts";
 import metas from "lume/plugins/metas.ts";
 import relations from "lume/plugins/relations.ts";
 import pug from "lume/plugins/pug.ts";
+import date from "lume/plugins/date.ts";
 
 const icon_catalogs = [
   {
@@ -39,6 +40,14 @@ const site = lume({
   location: new URL("https://surajssingh.com"),
 })
   .copy("assets", "assets")
+  .use(date(
+    {
+      formats: {
+        "CAL_YEAR": "yyyy",
+        "LOC_YEAR": "YYYY",
+      },
+    },
+  ))
   .use(toml())
   .use(yaml())
   .use(pug())
@@ -64,6 +73,8 @@ const site = lume({
 
 if (Deno.env.get("LUME_DRAFTS") != "true") {
   site.ignore((path) => path.match(/^\/resumes/) !== null);
+} else {
+  // TODO: When drafting, regenerate encrypted resume file for Git
 }
 
 export default site;

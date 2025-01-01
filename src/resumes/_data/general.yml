@@ -3,12 +3,13 @@ headline:
   contact:
     website: "https://surajssingh.com"
     github: "https://github.com/SurajSSingh"
-    linkedin: "https://www.linkedin.com/in/suraj-s-singh/"
+    linkedin: "https://www.linkedin.com/in/suraj-s-singh"
     private: ./private_contacts.yml
 education:
   - org: University of Illinois Urbana-Champaign
     link: "https://illinois.edu"
     abbr: UIUC
+    gpa: 4.0
     degrees:
       - name: Masters of Computer Science
         rank: M.S.
@@ -21,11 +22,14 @@ education:
   - org: "University of California, Irvine"
     link: "https://uci.edu"
     abbr: UCI
+    gpa: 3.834
     degrees:
       - name: Computer Game Science
         rank: B.S.
+        honors: ["Cum Laude"]
       - name: Education Sciences
         rank: B.A.
+        honors: ["Cum Laude"]
     start:
       year: 2016
       month: "7"
