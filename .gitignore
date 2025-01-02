@@ -5,4 +5,4 @@ _site
 _cache
 
 **/private_*
-**/resumes/*.md
+**/resumes/private/*.md
