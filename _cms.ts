@@ -90,7 +90,7 @@ cms.collection(
       description: "Cover Image of the project",
       type: "object",
       fields: [
-        "link: url!",
+        "file: file",
         "alt_text: text!",
       ],
     },
@@ -99,7 +99,7 @@ cms.collection(
       description: "Other images related to the project",
       type: "object-list",
       fields: [
-        "link: url!",
+        "link: file",
         "alt_text: text!",
         {
           "name": "is_award",
@@ -128,6 +128,7 @@ cms.collection(
         "trailer: url",
       ],
     },
+    "highlighted_project: checkbox",
     "content: markdown",
   ],
 );
@@ -465,7 +466,7 @@ cms.document({
 cms.collection({
   "name": "Resumes",
   "description": "List of resumes generated",
-  "store": "src:resumes/*.md",
+  "store": "src:resumes/private/*.md",
   "fields": [
     "title: text!",
     "description: text!",

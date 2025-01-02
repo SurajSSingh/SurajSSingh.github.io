@@ -22,13 +22,8 @@ const icon_catalogs = [
     ],
   },
   {
-    id: "devicon",
-    src:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{name}/{name}-{variant}",
-    variants: [
-      "dark",
-      "light",
-    ],
+    id: "simpleicons",
+    src: "https://cdn.jsdelivr.net/npm/simple-icons@13.20.0/icons/{name}.svg",
   },
 ];
 
@@ -60,7 +55,9 @@ const site = lume({
       catalogs: icon_catalogs,
     },
   ))
-  .use(inline())
+  .use(inline({
+    copyAttributes: ["title", /^data-/, "fill"],
+  }))
   .use(lightningCss())
   .use(metas())
   .use(relations({
