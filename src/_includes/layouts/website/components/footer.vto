@@ -1,7 +1,13 @@
 <footer class="hide-pr text-center">
     <p><a href="#top">Back to Top</a></p>
-    <p>Made with <a href="https://lume.land">Lume</a> and styling with <a
-            href="https://jenil.github.io/chota/">Chota</a>, <a href="https://jam-icons.com/">Jam Icons</a>, and <a href="https://simpleicons.org">Simple Icons</a></p>
+    <p>Made with <a href="{{footer.ssg.link}}">{{footer.ssg.name}}</a> and styled with 
+        {{ for item of footer.stylings.slice(0,-1) }}
+            <a href="{{item.link}}">{{item.name}}</a>, 
+        {{ /for }}
+        {{ for item of footer.stylings.slice(-1) }}
+            and <a href="{{item.link}}">{{item.name}}</a>
+        {{ /for }}
+    </p>
     <p>Copyright © {{Date.now() |> date("CAL_YEAR")}} by {{author}}. Licensed under 
     {{ if license }}
         <a href="{{license.link}}">

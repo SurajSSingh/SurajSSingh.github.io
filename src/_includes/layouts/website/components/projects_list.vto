@@ -2,7 +2,7 @@
     <p>Below are projects that I have worked on in my personal time or during my time at <a href="https://www.p1vc.org">P1 Virtual Civilization.</a></p>
     <section class="row">
         {{ for post of search.pages("org=personal|p1", "weight") }}
-            {{ include "project_card.vto" {...post}}}
+            {{ include "layouts/website/components/project_card.vto" {...post}}}
         {{ /for }}
     </section>
 
@@ -12,7 +12,7 @@
     </hgroup>
     <section class="row">
         {{ for post of search.pages("org=coding-minds", "weight") }}
-            {{ include "project_card.vto" {...post}}}
+            {{ include "layouts/website/components/project_card.vto" {...post}}}
         {{ /for }}
     </section>
 
@@ -23,7 +23,7 @@
         </hgroup>
         <section class="row">
         {{ for projects of mentored.student_project }}
-            {{ include "project_card.vto" {...projects, title: projects.name, project_link: projects.link, url: false} }}
+            {{ include "layouts/website/components/project_card.vto" {...projects, title: projects.name, project_link: projects.link, url: false} }}
         {{ /for }}
         </section>
     {{ /if }}
@@ -47,7 +47,7 @@
     </hgroup>
     <section class="row">
         {{ for post of search.pages("org=uci|uiuc", "weight") }}
-            {{ include "project_card.vto" {...post}}}
+            {{ include "layouts/website/components/project_card.vto" {...post}}}
         {{ /for }}
     </section>
 

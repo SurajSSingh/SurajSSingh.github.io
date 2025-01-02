@@ -3,7 +3,7 @@
 
     {{ for skill of top_skills }}
         <a href="{{skill.homepage}}" class="col text-center">
-            <img src="{{`${skill.id}` |> icon("skill-icon") }}" alt="{{skill.name}} Icon" width={{ skill.width || skill_info?.width || 40}}>        
+            <img src="{{`${skill.id}` |> icon("skill-icon") }}" alt="{{skill.name}} Icon" width={{ skill.width || skill_info?.width || 40}}>
             <br />
             <strong>{{skill.name}}</strong>
         </a>

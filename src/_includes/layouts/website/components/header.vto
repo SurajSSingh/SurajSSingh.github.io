@@ -3,9 +3,9 @@
         <div class="container">
             <div class="nav-left">
                 {{ if !exclude_brand }}
-                    <a href="/" class="brand text-primary">{{brand || author}}</a>
+                    <a href="/" class="brand text-primary text-center">{{brand || author}}</a>
                 {{ else }}
-                    <span class="brand text-grey">{{brand || author}}</span>
+                    <span class="brand text-grey text-center">{{brand || author}}</span>
                 {{ /if }}
             </div>
             <div class="nav-center tabs">

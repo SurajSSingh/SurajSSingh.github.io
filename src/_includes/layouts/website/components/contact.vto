@@ -1,7 +1,7 @@
 <h2 class="text-center">Contact Me:</h2>
 <div class="row is-center">
-    {{ include "contact_me.vto" }}
-    {{ if email }}
+    {{ include "./contact_me.vto" }}
+    {{# {{ if email }}
         <div class="card">
             <a href="mailto:{{email}}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="24" preserveAspectRatio="xMinYMin"
@@ -14,7 +14,7 @@
                 Email Address: {{email}}
             </a>
         </div>
-    {{ /if }}
+    {{ /if }} #}}
     {{# {{ if linkedin }} 
         <div class="card col">
             {{ set link = "https://www.linkedin.com/in/" + (linkedin |> toLowerCase) }}

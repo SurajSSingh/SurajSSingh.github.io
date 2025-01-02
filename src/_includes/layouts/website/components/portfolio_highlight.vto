@@ -1,8 +1,8 @@
 <h2 class="text-center">Select Projects</h2>
 <p class="text-center">Here are a small selection of projects I have worked on:</p>
 <section class="row">
-    {{ for post of search.pages("on_home_page=true", "weight") }}
-        {{ include "portfolio_card.vto" {...post}}}
+    {{ for post of search.pages("highlighted_project=true", "weight") }}
+        {{ include "layouts/website/components/portfolio_card.vto" {...post}}}
     {{ /for }}
 </section>
 <p class="text-center">More projects can be found on my <a href="project">projects page</a>.</p>
