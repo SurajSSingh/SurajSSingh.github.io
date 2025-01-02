@@ -1,0 +1,11 @@
+skill:
+  - name: Svelte
+    category:
+      - web-technologies
+      - templating-language
+  - name: 'C#'
+    category:
+      - programming-language
+  - name: Unity
+    category:
+      - game-engine

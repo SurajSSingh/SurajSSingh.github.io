@@ -1,0 +1,20 @@
+<footer class="hide-pr text-center">
+    <p><a href="#top">Back to Top</a></p>
+    <p>Made with <a href="{{footer.ssg.link}}">{{footer.ssg.name}}</a> and styled with 
+        {{ for item of footer.stylings.slice(0,-1) }}
+            <a href="{{item.link}}">{{item.name}}</a>, 
+        {{ /for }}
+        {{ for item of footer.stylings.slice(-1) }}
+            and <a href="{{item.link}}">{{item.name}}</a>
+        {{ /for }}
+    </p>
+    <p>Copyright © {{Date.now() |> date("CAL_YEAR")}} by {{author}}. Licensed under 
+    {{ if license }}
+        <a href="{{license.link}}">
+            <abbr title="{{license.full}}">{{license.name}} {{license.icon}}</abbr>
+        </a>
+    {{ else }}
+    All Rights Reserved.
+    {{ /if }}
+    </p>
+</footer>

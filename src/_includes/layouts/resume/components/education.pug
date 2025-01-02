@@ -1,0 +1,14 @@
+section#education
+    h2.text-center.text-lg.font-medium.bg-emerald-50 Education
+    hr.border-emerald-100.mb-1
+    each edu in general.education
+        hgroup.mb-1
+            h3.text-sm
+                strong.text-left #{edu.degrees.map(d => `${d.name}, ${d.rank}`).join(" & ")}
+            p.text-right.text-sm.-mt-5: em= edu.grad.year
+            p.text-xs.pl-2
+                if edu.link
+                    //- em: a(href=edu.link).underline.underline-offset-4= edu.org
+                    a.text-emerald-900(href=edu.link)= edu.org
+                else
+                    span.text-emerald-950= edu.org

@@ -1,12 +1,31 @@
 ---
-title: "Tymeit"
-date: 2023-11-12
-image: "/assets/images/tymeit.png"
-alt: "Example of Tymeit use"
-summary: "A privacy respecting time tracker for yourself. Heavily inspired by <a href: 'https://nomie.app/'>Nomie</a>."
-project_link: "https://github.com/SurajSSingh/Tymeit"
+title: Tymeit
+date: '2023-11-12T00:00:00.000Z'
+image: /assets/images/tymeit.png
+alt: Example of Tymeit use
+summary: >-
+  A privacy respecting time tracker for yourself. Heavily inspired by <a href:
+  'https://nomie.app/'>Nomie</a>.
+project_link: 'https://github.com/SurajSSingh/Tymeit'
 weight: 6
 org: personal
+last_modified: 2025-01-02T05:25:00.000Z
+links:
+  - name: GitHub Repo
+    link: 'https://github.com/SurajSSingh/Tymeit'
+cover_image:
+  file: /assets/images/tymeit.png
+  alt_text: Example of Tymeit use
+additional_image: []
+tech_stack:
+  - Svelte
+  - TypeScript
+  - Skeleton UI
+skills: []
+project_info:
+  role: Primary Developer
+highlighted_project: false
+start_new_row: true
 ---
 
 ## Overview

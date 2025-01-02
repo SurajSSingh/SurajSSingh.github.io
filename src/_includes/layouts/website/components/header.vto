@@ -1,0 +1,24 @@
+<header id="top" class="hide-pr">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-left">
+                {{ if !exclude_brand }}
+                    <a href="/" class="brand text-primary text-center">{{brand || author}}</a>
+                {{ else }}
+                    <span class="brand text-grey text-center">{{brand || author}}</span>
+                {{ /if }}
+            </div>
+            <div class="nav-center tabs">
+                {{ for nav of header_nav }}
+                    <a href="{{nav.link}}" class="is-center">
+                        {{nav.icon || ""}}
+                        <span class="text-center">{{nav.name}}</span>
+                    </a>
+                {{ /for }}
+            </div>
+            <div class="nav-right">
+                <button id="theme-switch" onclick="switchMode(this)" class="pull-right button bg-grey bd-dark">theme</button>
+            </div>
+        </div>
+    </nav>
+</header>

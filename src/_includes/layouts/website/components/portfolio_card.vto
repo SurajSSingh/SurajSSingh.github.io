@@ -1,0 +1,88 @@
+<div class="divider col-12"></div>
+<article class="col no-border card">
+    {{ set link = project_link || link }}
+    <h3 class="is-center">{{title}}</h3>
+    <div class="row project-info">
+        <div class="col-6 is-center">
+        {{ if project_info?.trailer }}
+                {{ if typeof project_info.trailer == "string" }}
+                    {{ include "layouts/website/components/youtube_embed.vto" {link: project_info.trailer, height: data_default?.image_height || 200, width: Math.round(data_default?.image_height/9 * 16) || 356} }}
+                {{ else }}
+                    {{ include "layouts/website/components/youtube_embed.vto" {...project_info.trailer} }}
+                {{ /if }}
+        {{ else if project_info?.demo_gif}}
+            <img src="{{assets}}/{{project_info.demo_gif}}" alt="Demo of {{title}}" class="is-center" height="{{data_default?.image_height || 200 }}" />
+        {{ else }}
+            <img src="{{image}}" alt="{{alt}}" class="is-center" height="{{data_default?.image_height || 200 }}" />
+        {{ /if }}
+        </div>
+        <div class="col-6">
+            <h4 class="text-center overview">Overview:</h4>
+            {{ if project_info && project_info.summary}}
+            <p class="text-center">{{project_info.summary}}</p>
+            {{ else }}
+            <p class="text-center">{{summary}}</p>
+            {{ /if }}
+            <hr />
+            <h4 class="text-center role">Role:</h4>
+            <p class="text-center">{{project_info.role}}</p>
+            {{ if project_info.awards }}
+                <hr />
+                <h4 class="text-center">Awards:</h4>
+                <section class="awards">
+                    {{ for image of project_info.awards.slice(0,1) }}
+                        <figure class="col text-center">
+                            <img src="{{assets}}/{{image.src}}" alt="{{image.alt}}" width=200>
+                            <figcaption>{{image.caption || image.alt}}</figcaption>
+                        </figure>    
+                    {{ /for }}
+                    <div class="row">
+                    {{ for image of project_info.awards.slice(1) }}
+                        <figure class="col text-center">
+                            <img src="{{assets}}/{{image.src}}" alt="{{image.alt}}" width=200>
+                            <figcaption>{{image.caption || image.alt}}</figcaption>
+                        </figure>    
+                    {{ /for }}
+                    </div>
+                </section>
+            {{ /if }}
+            {{ if project_info.external_links }}
+                <hr />
+                {{ set links = project_info.external_links }}
+                <h4 class="text-center">Links:</h4>
+                <section class="row is-center links">
+                    <div class="pad col-1"></div>
+                    {{ if links.main }}
+                        <a href="{{links.main}}" class="col text-center">
+                            <img src='{{"homepage" |> icon("simpleicons")}}' alt="Homepage" width=24 fill="var(--color-primary)" inline>
+                            <br/>
+                            <span>Homepage</span>
+                        </a>
+                    {{ /if }}
+                    {{ if links.itch }}
+                        <a href="{{links.itch}}" class="col text-center">
+                            <img src='{{"itchdotio" |> icon("simpleicons")}}' alt="Itch.io Icon" width=24 fill="var(--color-primary)" inline>
+                            <br/>
+                            <span>Itch.io</span>
+                        </a>
+                    {{ /if }}
+                    {{ if links.github }}
+                        <a href="{{links.github}}" class="col text-center">
+                            <img src='{{"github" |> icon("simpleicons")}}' alt="GitHub Icon" width=24 fill="var(--color-primary)" inline>
+                            <br/>
+                            <span>GitHub</span>
+                        </a>
+                    {{ /if }}
+                    <div class="pad col-1"></div>
+                </section>
+            {{ /if }}
+        </div>
+    </div>
+    <div class="row project-links">
+        <div class="col-5 padding">
+        </div>
+        <div class="col-5 padding">
+        </div>
+    </div>
+</article>
+<hr />

@@ -1,4 +1,4 @@
-preIncludeItems = ["title_group"]
+preIncludeItems = ["layouts/website/components/title_group"]
 
 [curriculum_templates]
 org = "coding-minds"

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{lang || 'en'}}">
-{{ include "head.vto" }}
+{{ include "layouts/website/components/head.vto" }}
 <body class="">
-  {{ include "header.vto" }}
+  {{ include "layouts/website/components/header.vto" }}
   <main id="content" class="is-full-screen container" role="main">
     {{ for preItemName of preIncludeItems }}
       {{ include `${preItemName}.vto` }}
@@ -12,6 +12,6 @@
       {{ include `${postItemName}.vto` }}
     {{ /for }}
   </main>
-  {{ include "footer.vto" }}
+  {{ include "layouts/website/components/footer.vto" }}
 </body>
 </html>

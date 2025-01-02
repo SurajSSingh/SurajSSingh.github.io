@@ -3,3 +3,6 @@
 *_ignore/
 _site
 _cache
+
+**/private_*
+**/resumes/private/*.md
