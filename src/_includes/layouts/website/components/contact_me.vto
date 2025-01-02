@@ -2,23 +2,24 @@
 <div class="card col-6 text-center">
 <h3 class="text-center">Send Me a Message:</h3>
 <form id="contact-me" action="https://api.staticforms.xyz/submit" method="post">
-    {{# <!-- Replace with accesKey sent to your email --> #}}
-    <input type="hidden" name="accessKey" value="a351fa43-4913-4468-81f2-075a0fb0fc06">
-    <label for="cmname"><strong>Name:</strong></label>
-    <input type="text" name="cmname" placeholder="Your Name" minlength=3 required>
-    <label for="cmemail"><strong>Email Address:</strong></label>
-    <input type="text" name="cmemail" placeholder="Your Email" required> 
+    <label for="name"><strong>Name:</strong></label>
+    <input type="text" name="name" placeholder="Your Name" minlength=3 required>
+    <label for="email"><strong>Email Address:</strong></label>
+    <input type="text" name="email" placeholder="Your Email" required> 
     <label for="subject"><em>Subject (optional):</em></label>
     <input type="text" name="subject" placeholder="Subject" maxlength=60>
-    <label for="$humanAnswer"><strong><em>Optional (recommended) check: What is your 3rd favorite color?</em></strong></label>
-    <input type="text" name="honeypot" style="display: none;">
-    <input type="text" name="$humanAnswer" placeholder="Your Answer" maxlength=30>
     <label for="message"><strong>Message:</strong></label>
+    <input type="text" name="honeypot" style="display: none;">
     <textarea name="message" placeholder="Your Message" required></textarea>
+    <br />
+    <label for="$humanAnswer"><strong><em>Optional (recommended) check: What is your 3rd favorite color?</em></strong></label>
+    <input type="text" name="$humanAnswer" placeholder="Your Answer" maxlength=30 >
     {{# <!-- If you want replyTo to be set to specific email --> #}}
     {{# <input type="text" name="replyTo" value="myreplytoemail@example.com"> <!-- Optional --> #}}
     {{# <!-- Specify @ as reply to value if you want it to be customers email --> #}}
     <input type="hidden" name="replyTo" value="@"> <!-- Optional -->
+    {{# <!-- Replace with accesKey sent to your email --> #}}
+    <input type="hidden" name="accessKey" value="a351fa43-4913-4468-81f2-075a0fb0fc06">
     {{# <!-- If you want form to redirect to a specific url after submission --> #}}
     <input type="hidden" name="redirectTo" value="{{base_url}}/contact/success">
     <hr />
