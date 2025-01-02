@@ -1,25 +1,52 @@
 ---
-title: "Eco Defender VR"
-date: 2024-05-05
-image: "/assets/images/EcoDefenderThumbnailSmall.png"
-alt: "Eco Defender VR logo"
-summary: "Harness the power of chemistry and plants to craft seed pods in your lab to protect the environment in this VR puzzle shooter hybrid."
-project_link: "https://light-with-blocks.itch.io/eco-defender"
-weight: 0
-on_home_page: true
+title: Eco Defender VR
+date: '2024-05-05T00:00:00.000Z'
+image: /assets/images/EcoDefenderThumbnailSmall.png
+alt: Eco Defender VR logo
+summary: >-
+  Harness the power of chemistry and plants to craft seed pods in your lab to
+  protect the environment in this VR puzzle shooter hybrid.
+project_link: 'https://light-with-blocks.itch.io/eco-defender'
+weight: -5
+highlighted_project: true
 org: p1
-project_info: 
-    trailer: "https://www.youtube-nocookie.com/embed/1v0EbLTb9Pg"
-    role: Project Lead and Art Integrator
-    summary: "A VR shooter game with crafting mechanics, initially created for the P1 April game. Specifically learned how to work with Unity's XR toolkit."
-    awards:
-        - src: "images/awards/Eco-AprilGameJamWinner.jpg"
-          alt: "Game Jam Winner Award (April)"
-        - src: "images/awards/Eco-Innovative.png"
-          alt: "Most Innovative Award (April)"
-    external_links:
-        itch: "https://light-with-blocks.itch.io/eco-defender"
-        github: "https://github.com/Team-Keito/Eco-Defender"
+project_info:
+  trailer: 'https://www.youtube-nocookie.com/embed/1v0EbLTb9Pg'
+  role: Project Lead and Art Integrator
+  summary: >-
+    A VR shooter game with crafting mechanics, initially created for the P1
+    April game. Specifically learned how to work with Unity's XR toolkit.
+  awards:
+    - src: images/awards/Eco-AprilGameJamWinner.jpg
+      alt: Game Jam Winner Award (April)
+    - src: images/awards/Eco-Innovative.png
+      alt: Most Innovative Award (April)
+  external_links:
+    itch: 'https://light-with-blocks.itch.io/eco-defender'
+    github: 'https://github.com/Team-Keito/Eco-Defender'
+last_modified: 2025-01-02T04:46:00.000Z
+links:
+  - name: Itch.io
+    link: 'https://light-with-blocks.itch.io/eco-defender'
+  - name: GitHub Repo
+    link: 'https://github.com/Team-Keito/Eco-Defender'
+cover_image:
+  file: /assets/images/EcoDefenderThumbnailSmall.png
+  alt_text: Eco Defender VR logo
+additional_image:
+  - link: /assets/images/Eco-AprilGameJamWinner.jpg
+    alt_text: Game Jam Winner Award (April)
+    is_award: true
+  - link: /assets/images/Eco-Innovative.png
+    alt_text: Most Innovative Award (April)
+    is_award: true
+tech_stack:
+  - Unity
+  - 'C#'
+  - XR Toolkit
+skills:
+  - Oculus 3
+  - HTC Vive
 ---
 
 ## Overview

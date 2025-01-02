@@ -1,19 +1,34 @@
 ---
-title: "Withered Away by Team Alpha"
-date: 2023-11-06
-image: "https://img.itch.zone/aW1nLzMxMTI4MDQucG5n/315x250%23c/ySWAdD.png"
-alt: "Withered Away Logo"
-summary: "A fast-paced 2D Adventure Platformer game where you control a lone king cursed to run or be consumed by the mist."
-project_link: "https://team-alpha.itch.io/withered-away"
-weight: 1
-on_home_page: true
+title: Withered Away by Team Alpha
+date: '2023-11-06T00:00:00.000Z'
+image: 'https://img.itch.zone/aW1nLzMxMTI4MDQucG5n/315x250%23c/ySWAdD.png'
+alt: Withered Away Logo
+summary: >-
+  A fast-paced 2D Adventure Platformer game where you control a lone king cursed
+  to run or be consumed by the mist.
+project_link: 'https://team-alpha.itch.io/withered-away'
+weight: 3
+highlighted_project: true
 org: uci
-project_info: 
-    demo_gif: "images/gifs/Withered-Away-Demo.gif"
-    role: Sound Designer and Unity Programmer
-    external_links:
-        itch: "https://team-alpha.itch.io/withered-away"
-        github: "https://github.com/SurajSSingh/Team-Alpha"
+project_info:
+  demo_gif: images/gifs/Withered-Away-Demo.gif
+  role: Sound Engineer and Unity Programmer
+  external_links:
+    itch: 'https://team-alpha.itch.io/withered-away'
+    github: 'https://github.com/SurajSSingh/Team-Alpha'
+last_modified: 2025-01-02T05:30:00.000Z
+links:
+  - name: Itch.io
+    link: 'https://team-alpha.itch.io/withered-away'
+cover_image:
+  file: 'https://img.itch.zone/aW1nLzMxMTI4MDQucG5n/315x250%23c/ySWAdD.png'
+  alt_text: Withered Away Logo
+additional_image:
+  - link: images/gifs/Withered-Away-Demo.gif
+    alt_text: Demo of gameplay
+    is_award: false
+tech_stack: []
+skills: []
 ---
 
 ## Course

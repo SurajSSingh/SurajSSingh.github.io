@@ -1,12 +1,27 @@
 ---
-title: "SkyJellies"
-date: 2024-03-17
-image: "https://img.itch.zone/aW1hZ2UvMTIyMTUyMC8xMTMwNDE4OS5wbmc=/original/UL0N1A.png"
-alt: "SkyJellies screenshot"
-summary: "A cute adventure game about taking care of jelly creatures."
-project_link: "https://redeagle-p1.itch.io/skyjellies"
-weight: 0.5
+title: SkyJellies
+date: '2024-03-17T00:00:00.000Z'
+image: 'https://img.itch.zone/aW1hZ2UvMTIyMTUyMC8xMTMwNDE4OS5wbmc=/original/UL0N1A.png'
+alt: SkyJellies screenshot
+summary: A cute adventure game about taking care of jelly creatures.
+project_link: 'https://redeagle-p1.itch.io/skyjellies'
+weight: 11
 org: p1
+last_modified: 2025-01-02T05:07:00.000Z
+links:
+  - name: Itch.io
+    link: 'https://redeagle-p1.itch.io/skyjellies'
+cover_image:
+  file: >-
+    https://img.itch.zone/aW1hZ2UvMTIyMTUyMC8xMTMwNDE4OS5wbmc=/original/UL0N1A.png
+  alt_text: SkyJellies screenshot
+additional_image: []
+tech_stack:
+  - Unity
+  - 'C#'
+skills: []
+project_info:
+  role: Unity Programmer
 ---
 
 ## Overview

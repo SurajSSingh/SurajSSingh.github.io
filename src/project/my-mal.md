@@ -1,12 +1,29 @@
 ---
-title: "Make A Lisp Implementation"
-date: 2023-11-12
-image: "https://raw.githubusercontent.com/kanaka/mal/master/process/stepA_mal.png"
-alt: "Make-A-Lisp Step A Diagram"
-summary: "A Rust implementation of <a href='https://github.com/kanaka/mal'>mal - Make a Lisp</a> (a Clojure inspired lisp)."
-project_link: "https://github.com/SurajSSingh/make_a_lisp_typed_and_readable"
+title: Make A Lisp Implementation
+date: '2023-11-12T00:00:00.000Z'
+image: 'https://raw.githubusercontent.com/kanaka/mal/master/process/stepA_mal.png'
+alt: Make-A-Lisp Step A Diagram
+summary: >-
+  A Rust implementation of <a href='https://github.com/kanaka/mal'>mal - Make a
+  Lisp</a> (a Clojure inspired lisp).
+project_link: 'https://github.com/SurajSSingh/make_a_lisp_typed_and_readable'
 weight: 11
 org: personal
+last_modified: 2025-01-02T05:04:00.000Z
+links:
+  - name: GitHub Repo
+    link: 'https://github.com/SurajSSingh/make_a_lisp_typed_and_readable'
+cover_image:
+  file: 'https://raw.githubusercontent.com/kanaka/mal/master/process/stepA_mal.png'
+  alt_text: Make-A-Lisp Step A Diagram
+additional_image: []
+tech_stack:
+  - Rust
+skills: []
+project_info:
+  role: Primary Developer
+highlighted_project: false
+start_new_row: true
 ---
 
 ## Overview

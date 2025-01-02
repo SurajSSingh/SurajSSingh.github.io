@@ -1,8 +1,9 @@
 ---
+# Move to new_index.toml eventually, since .md not needed
 title: "Projects"
 date: 2023-11-05
 summary: "A list of projects I have worked on."
-layout: "projects_list.vto"
+layout: "layouts/website/components/projects_list.vto"
 
 #gallery_template: "gallery.html"
 page_template: "project-page.html"
