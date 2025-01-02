@@ -11,9 +11,9 @@ priority: 1
 alternative_paths: ["home"]
 
 preIncludeItems:
-    - introduction
+    - layouts/website/components/introduction
 postIncludeItems:
-    - skills_list
-    - portfolio_highlight
-    - contact
+    - layouts/website/components/skills_list
+    - layouts/website/components/portfolio_highlight
+    - layouts/website/components/contact
 ---
