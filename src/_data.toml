@@ -20,7 +20,7 @@ generator = true
 
 [license]
 name = "CC BY-ND 4.0"
-link = "https://https://creativecommons.org/licenses/by-nd/4.0/"
+link = "https://creativecommons.org/licenses/by-nd/4.0/"
 full = " Creative Commons Attribution-NoDerivatives 4.0 International"
 icon = '<img style="height:20px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:20px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:20px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a>'
 
@@ -31,9 +31,10 @@ image_height = 300
 name="Projects"
 link="/project"
 
-[[header_nav]]
-name="Skills"
-link="/skills"
+# TODO
+# [[header_nav]]
+# name="Skills"
+# link="/skills"
 
 [[header_nav]]
 name="About"
@@ -79,16 +80,19 @@ icon="images/skills/svelte-color.svg"
 ssg = {name = "Lume", link = "https://lume.land"}
 
 [[footer.nav]]
-name="Blog"
-link="https://surajssingh.github.io/Tech-Tree-Blog/"
-
-[[footer.nav]]
 name="GitHub"
 link="https://github.com/SurajSSingh"
+icon={catalog="simpleicons", name="github", alt="GitHub Logo"}
 
 [[footer.nav]]
 name="LinkedIn"
 link="https://www.linkedin.com/in/suraj-s-singh/"
+icon={catalog="simpleicons", name="linkedin", alt="LinkedIn Logo"}
+
+[[footer.nav]]
+name="Blog"
+link="https://thetechtreeblog.com"
+icon = {catalog="assets", name="images/tech-tree-blog-icon.svg", alt="Tech Tree Blog Logo", width=24}
 
 [[footer.stylings]]
 name = "Chota"

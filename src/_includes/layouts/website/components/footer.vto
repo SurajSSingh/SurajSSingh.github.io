@@ -1,5 +1,17 @@
 <footer class="hide-pr text-center">
     <p><a href="#top">Back to Top</a></p>
+    <div>
+        <p>Some places you can find me: </p>
+        {{ for item of footer.nav }}
+            <a href="{{item.link}}">
+                {{ if item.icon.catalog === "assets" }}
+                    <img src="{{assets}}/{{item.icon.name}}" title="{{item.name}}" alt="{{item.alt}}" width={{item.icon.width || 24}}>
+                {{ else }}
+                    <img src="{{item.icon.name |> icon(item.icon.catalog)}}" title="{{item.name}}" alt="{{item.alt}}" width={{item.icon.width || 24}} fill="var(--color-primary)" inline>
+                {{ /if }}
+            </a>
+        {{ /for }}
+    </div>
     <p>Made with <a href="{{footer.ssg.link}}">{{footer.ssg.name}}</a> and styled with 
         {{ for item of footer.stylings.slice(0,-1) }}
             <a href="{{item.link}}">{{item.name}}</a>, 
