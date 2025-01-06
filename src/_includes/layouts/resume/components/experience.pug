@@ -5,7 +5,7 @@ section#education
         each role in exp.roles
             - let roleAccomplishments = private_accomplishments.filter(accList => accList.key === role.key).flatMap(accList => accList.accomplishments);
             - let indices = includedAccomplishmentLists.filter(indList => indList.role === role.key).flatMap(indList => indList.indices);
-            - let accomplishments = indices.map(i => roleAccomplishments[i])
+            - let accomplishments = indices.map(i => roleAccomplishments[i] || `NOTHING @ INDEX #${i}`)
             hgroup
                 h3.text-base.mt-2 #[strong= role.title]
                 p.text-right.text-sm.-mt-5: em= role.start.year + " — " + (role.end ? role.end.year : "Present")

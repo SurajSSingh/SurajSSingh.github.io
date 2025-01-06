@@ -9,7 +9,7 @@ html(lang="en")
     meta(name="author" content=general.headline.name)
     meta(name="description" content=description||"Resume")
     //- meta(name="keywords" content="HTML, CSS, JavaScript")
-    title=title
+    title=general.headline.name.replaceAll(/\.|\s+/g, '')+"-"+title
   body(style="font-family: 'Lato', 'Open Sans';")
     main#content
       block content
