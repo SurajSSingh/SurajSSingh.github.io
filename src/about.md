@@ -2,7 +2,6 @@
 title: About Me
 summary: Learn more about me
 ---
-
 # About me
 
 ## Who I am
@@ -47,15 +46,15 @@ experiences that not only entertain but also educate.
 
 Here is a short list of some things I am currently focusing my learning on:
 
-- Unity
-- Scrum/Agile development
-- XR development
+- [Unity](https://unity.com) and [Godot](https://godotengine.org)
+- [SvelteKit](https://svelte.dev/docs/kit/introduction) and [Astro](https://astro.build)
+- [Rust](https://www.rust-lang.org)
 
 ## What I have worked on recently
 
-- [Eco Defender](https://github.com/Team-Keito/Eco-Defender)
 - [Keito Yarn Game](https://github.com/Team-Keito/Keito-Yarn-Game)
-- [Exercism 48-in-24](https://exercism.org/challenges/48in24)
+- [Blue Square Legion Website](https://blue-square-legion.github.io)
+- Helping advise team at P1 as they work on their own projects
 
 ## Preferred Pronouns
 
