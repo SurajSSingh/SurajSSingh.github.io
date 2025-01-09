@@ -612,6 +612,7 @@ cms.collection({
         },
       ],
     },
+    "content:markdown",
   ],
 });
 
