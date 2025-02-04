@@ -442,7 +442,7 @@ cms.document({
               label: "Simple Text",
               type: "object",
               fields: [
-                "text: text!",
+                "text: textarea!",
               ],
               init(field) {
                 // ts-ignore
@@ -490,6 +490,24 @@ cms.collection({
           );
         field.options = possible_layouts;
       },
+    },
+    {
+      name: "style",
+      type: "object",
+      fields: [
+        {
+          name: "headlineSize",
+          type: "select",
+          value: "md",
+          options: [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+        },
+      ],
     },
     {
       name: "headlineExtra",
@@ -553,6 +571,10 @@ cms.collection({
       },
     },
     {
+      name: "summaryText",
+      type: "textarea",
+    },
+    {
       name: "includedAccomplishmentLists",
       type: "object-list",
       fields: [
@@ -568,12 +590,11 @@ cms.collection({
             ).flatMap((e) => e.roles).map((r) => r.key);
           },
         },
+        "alterateRoleName:text",
         {
           name: "indices",
           type: "list",
-          attributes: {
-            pattern: "[1-9]/d*|0",
-          },
+          attributes: {},
           // init(field, { data }) {
           //   console.log(data);
           //   // field.options =

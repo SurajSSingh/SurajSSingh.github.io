@@ -83,11 +83,13 @@ ssg = {name = "Lume", link = "https://lume.land"}
 name="GitHub"
 link="https://github.com/SurajSSingh"
 icon={catalog="simpleicons", name="github", alt="GitHub Logo"}
+top_include=true
 
 [[footer.nav]]
 name="LinkedIn"
 link="https://www.linkedin.com/in/suraj-s-singh/"
 icon={catalog="simpleicons", name="linkedin", alt="LinkedIn Logo"}
+top_include=true
 
 [[footer.nav]]
 name="Blog"
