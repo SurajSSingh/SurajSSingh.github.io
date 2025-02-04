@@ -12,5 +12,10 @@ html(lang="en")
     title=general.headline.name.replaceAll(/\.|\s+/g, '')+"-"+title
   body(style="font-family: 'Lato', 'Open Sans';")
     main#content
+      //- Style variables
+      - let headlineColor = style?.color?.background ?? "gray-0"
+      - let lightBorder = style?.color?.border.light ?? "gray-0"
+      - let darkBorder = style?.color?.border.dark ?? "gray-0"
+      - let barSize = style?.barWidth ?? 1
       block content
   

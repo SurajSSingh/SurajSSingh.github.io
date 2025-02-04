@@ -7,9 +7,9 @@ mixin add_contact_element(contact)
         when "phone"
             ="Phone: "+private_contacts.phone[headlineExtra.phoneIndex || 0]
         when "github"
-            a(href=general.headline.contact.github).underline-offset-4="GitHub: "+general.headline.contact.github.replace(/^https?\:\/\/(?:www\.)?github.com\//i, "GitHub: ")
+            a(href=general.headline.contact.github).underline-offset-4="GitHub: "+general.headline.contact.github.replace(/^https?\:\/\/(?:www\.)?github.com\//i, "")
         when "linkedin"
-            a(href=general.headline.contact.linkedin).underline-offset-4="LinkedIn: "+general.headline.contact.linkedin.replace(/^https?\:\/\/(?:www\.)?linkedin.com\/in\//i, "LinkedIn: ")
+            a(href=general.headline.contact.linkedin).underline-offset-4="LinkedIn: "+general.headline.contact.linkedin.replace(/^https?\:\/\/(?:www\.)?linkedin.com\/in\//i, "")
         when "website"
             a(href=general.headline.contact.website).underline-offset-4="Website: "+general.headline.contact.website.replace(/^https?\:\/\//i, "")
         default
