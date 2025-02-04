@@ -84,15 +84,17 @@ name="GitHub"
 link="https://github.com/SurajSSingh"
 icon={catalog="simpleicons", name="github", alt="GitHub Logo"}
 top_include=true
+top_icon={catalog="skill-icon", name="github", alt="GitHub Logo", width=20}
 
 [[footer.nav]]
 name="LinkedIn"
 link="https://www.linkedin.com/in/suraj-s-singh/"
 icon={catalog="simpleicons", name="linkedin", alt="LinkedIn Logo"}
 top_include=true
+top_icon={catalog="skill-icon", name="linkedin", alt="LinkedIn Logo", width=20}
 
 [[footer.nav]]
-name="Blog"
+name="My Blog"
 link="https://thetechtreeblog.com"
 icon = {catalog="assets", name="images/tech-tree-blog-icon.svg", alt="Tech Tree Blog Logo", width=24}
 

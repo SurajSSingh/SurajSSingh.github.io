@@ -15,6 +15,19 @@
                         <span class="text-center">{{nav.name}}</span>
                     </a>
                 {{ /for }}
+                {{ for nav of footer.nav }}
+                {{ if nav.top_include }}
+                    <a href="{{nav.link}}" class="is-center">
+                    {{ if nav.top_icon }}
+                        <img src="{{`${nav.top_icon.name}` |> icon(nav.top_icon.catalog) }}" alt="{{nav.top_icon.alt}} Icon" width={{ nav.top_icon.width || skill_info?.width || 40}} class="icon">
+                    {{ else if nav.icon.use_top }}
+                        <img src="{{`${nav.icon.name}` |> icon(nav.icon.catalog) }}" alt="{{nav.icon.alt}} Icon" width={{ nav.icon.width || skill_info?.width || 40}} class="icon">
+                    {{ /if }}
+                        <span class="text-center ">{{nav.name}}</span>
+                    </a>
+                {{ /if }}
+                {{ /for }}
+
             </div>
             <div class="nav-right">
                 <button id="theme-switch" onclick="switchMode(this)" class="pull-right button bg-primary bd-dark">theme</button>
