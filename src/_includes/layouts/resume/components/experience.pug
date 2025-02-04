@@ -1,13 +1,15 @@
 section#education
     h2.text-center.text-lg.font-medium.bg-emerald-50 Professional Experience
-    hr.border-emerald-100.mb-1
+    hr.border-emerald-100.mb-1(class=`border-${barSize}`)
     each exp in general.experience
         each role in exp.roles
             - let roleAccomplishments = private_accomplishments.filter(accList => accList.key === role.key).flatMap(accList => accList.accomplishments);
-            - let indices = includedAccomplishmentLists.filter(indList => indList.role === role.key).flatMap(indList => indList.indices);
-            - let accomplishments = indices.map(i => roleAccomplishments[i] || `NOTHING @ INDEX #${i}`)
+            - let currentRoleList = includedAccomplishmentLists.filter(indList => indList.role === role.key);
+            - let currentRole = currentRoleList[0];
+            - let indices = currentRoleList.flatMap(indList => indList.indices);
+            - let accomplishments = indices.map(i => {const n = +i; return Number.isInteger(n) ? roleAccomplishments[n] : {text: i};})
             hgroup
-                h3.text-base.mt-2 #[strong= role.title]
+                h3.text-base.mt-2 #[strong= currentRole.alterateRoleName || role.title]
                 p.text-right.text-sm.-mt-5: em= role.start.year + " — " + (role.end ? role.end.year : "Present")
                 p.text-xs.text-left.pl-2 
                     if exp.link

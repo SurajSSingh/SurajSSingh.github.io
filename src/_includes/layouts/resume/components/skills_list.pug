@@ -1,6 +1,6 @@
 section#education
     h2.text-center.text-lg.font-medium.bg-emerald-50 Key Skills
-    hr.border-emerald-100.mb-1
+    hr.border-emerald-100.mb-1(class=`border-${barSize}`)
     ul.text-sm.grid.grid-cols-2.grid-flow-row.justify-stretch.mt-1
         each set in skillSet
             li #[strong.text-right= set.category]:#[span.pl-1= set.skills.join(', ')]

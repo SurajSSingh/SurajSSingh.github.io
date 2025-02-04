@@ -12,7 +12,7 @@ highlighted_project: true
 org: p1
 project_info:
   trailer: 'https://www.youtube-nocookie.com/embed/u9BvzhMSJbw'
-  role: Project Lead and Mechanic Programmer
+  role: Lead Mechanics Programmer (Unity and C#)
   awards:
     - src: images/awards/Keito-9-Ignite_Champion.jpg
       alt: "Ignite #9 Winner"

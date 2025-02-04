@@ -1,13 +1,14 @@
 extends resume_layout.pug
 
 block content
-    include ./components/headline
-    hr
-    include ./components/summary
-    hr
+    .bg-emerald-0
+        include ./components/headline
+        hr.border-1.my-1.border-emerald-300
+        include ./components/summary
+    hr.border-2.border-emerald-200
     include ./components/skills_list
-    hr
-    include ./components/education
-    hr
+    hr.border-2.border-emerald-200
     include ./components/experience
+    hr.border-2.border-emerald-200
+    include ./components/education
 
