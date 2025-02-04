@@ -12,7 +12,7 @@ highlighted_project: true
 org: p1
 project_info:
   trailer: 'https://www.youtube-nocookie.com/embed/1v0EbLTb9Pg'
-  role: Project Lead and Art Integrator
+  role: Project Lead, Unity/C# Programmer, Art Integrator
   summary: >-
     A VR shooter game with crafting mechanics, initially created for the P1
     April game. Specifically learned how to work with Unity's XR toolkit.
