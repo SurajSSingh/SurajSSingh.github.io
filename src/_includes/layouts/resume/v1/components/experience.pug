@@ -10,7 +10,7 @@ section#education
             - let accomplishments = indices.map(i => {const n = +i; return Number.isInteger(n) ? roleAccomplishments[n] : {text: i};})
             hgroup
                 h3.text-base.mt-2 #[strong= currentRole.alterateRoleName || role.title]
-                p.text-right.text-sm.-mt-5: em= role.start.year + " — " + (role.end ? role.end.year : "Present")
+                p.text-right.text-sm.-mt-5: em= (includeMonth ? `${role.start.month.padStart(2, "0")}/${role.start.year}`: role.start.year) + " — " + (!usePresent && role.end ? (includeMonth ? `${role.end.month.padStart(2, "0")}/${role.end.year}`: role.end.year) : "Present")
                 p.text-xs.text-left.pl-2 
                     if exp.link
                         //- a(href=exp.link).underline.underline-offset-4=exp.company

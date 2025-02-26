@@ -11,6 +11,8 @@ import metas from "lume/plugins/metas.ts";
 import relations from "lume/plugins/relations.ts";
 import pug from "lume/plugins/pug.ts";
 import date from "lume/plugins/date.ts";
+import unocss from "lume/plugins/unocss.ts";
+import purgecss from "lume/plugins/purgecss.ts";
 
 const icon_catalogs = [
   {
@@ -66,7 +68,11 @@ const site = lume({
       skill: "skill_id",
       organization: "org_id",
     },
-  }));
+  }))
+  .use(unocss({
+    cssFile: false,
+  }))
+  .use(purgecss());
 
 if (Deno.env.get("LUME_DRAFTS") != "true") {
   site.ignore((path) => path.match(/^\/resumes/) !== null);
