@@ -5,10 +5,12 @@ section#education
         hgroup.mb-1
             h3.text-sm
                 strong.text-left #{edu.degrees.map(d => `${d.name}, ${d.rank}`).join(" & ")}
-            p.text-right.text-sm.-mt-5: em= edu.grad.year
+            p.text-right.text-sm.-mt-5: em= includeMonth ? `${edu.grad.month.padStart(2, "0")}/${edu.grad.year}`: edu.grad.year
             p.text-xs.pl-2
                 if edu.link
                     //- em: a(href=edu.link).underline.underline-offset-4= edu.org
                     a.text-emerald-900(href=edu.link)= edu.org
                 else
                     span.text-emerald-950= edu.org
+            if includeGPA
+                p.text-right.text-xs.-mt-5: em= "GPA: " + edu.gpa.toLocaleString(undefined, {minimumFractionDigits:1, maximumFractionDigits:1})
