@@ -44,6 +44,9 @@ experience:
         start:
           year: 2024
           month: "2"
+        end:
+          year: 2025
+          month: "2"
         key: p1Lead
       - title: Unity Programmer
         start:

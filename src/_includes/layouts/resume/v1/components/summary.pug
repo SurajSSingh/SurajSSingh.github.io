@@ -1,0 +1,5 @@
+- let summary = summaryText || private_summary.summaries[summaryIndex]?.text
+if summary
+    section#summary.text-center
+        //- Current Summary text (TODO: change based on type)
+        p.text-emerald-950.mb-1(class=`text-${style && style.headlineSize || 'md'}`)= summary
