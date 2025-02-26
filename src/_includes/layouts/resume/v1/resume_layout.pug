@@ -8,6 +8,8 @@ html(lang="en")
     link(rel="stylesheet", href=`${assets}/print_helper.css`)
     meta(name="author" content=general.headline.name)
     meta(name="description" content=description||"Resume")
+    link(rel="preconnect" href="https://fonts.bunny.net")
+    link(href="https://fonts.bunny.net/css?family=lato:400,400i,700" rel="stylesheet")
     //- meta(name="keywords" content="HTML, CSS, JavaScript")
     title=general.headline.name.replaceAll(/\.|\s+/g, '')+"-"+title
   body(style="font-family: 'Lato', 'Open Sans';")
@@ -17,5 +19,8 @@ html(lang="en")
       - let lightBorder = style?.color?.border.light ?? "gray-0"
       - let darkBorder = style?.color?.border.dark ?? "gray-0"
       - let barSize = style?.barWidth ?? 1
+      - let includeGPA = style?.includeGPA ?? false
+      - let skillsSize = style?.skillsSize ?? "sm"
+      - let includeMonth = style?.includeMonth ?? false
       block content
   
