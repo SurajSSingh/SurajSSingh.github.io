@@ -2,7 +2,7 @@ import { Entry } from "lume/core/fs.ts";
 import lumeCMS from "lume/cms/mod.ts";
 
 // Constant Data
-const RESUME_LAYOUTS_DIR = "/_includes/layouts/resume";
+const RESUME_LAYOUTS_DIR = "/_includes/layouts/resume/v1";
 const MONTHS = [
   "",
   "January",
