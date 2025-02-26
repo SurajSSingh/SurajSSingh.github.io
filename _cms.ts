@@ -464,9 +464,9 @@ cms.document({
 });
 
 cms.collection({
-  "name": "Resumes",
-  "description": "List of resumes generated",
-  "store": "src:resumes/private/*.md",
+  "name": "V1 Resumes",
+  "description": "List of resumes generated following V1 format",
+  "store": "src:resumes/v1/*.md",
   "fields": [
     "title: text!",
     "description: text!",
@@ -507,6 +507,20 @@ cms.collection({
             "xl",
           ],
         },
+        {
+          name: "skillsSize",
+          type: "select",
+          value: "sm",
+          options: [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+        },
+        "includeGPA:checkbox",
+        "includeMonth:checkbox",
       ],
     },
     {
@@ -560,7 +574,7 @@ cms.collection({
       type: "number",
       attributes: {
         required: true,
-        min: 0,
+        min: -1,
       },
       init(field, { data }) {
         if (field.attributes) {
@@ -591,6 +605,7 @@ cms.collection({
           },
         },
         "alterateRoleName:text",
+        "usePresent:checkbox",
         {
           name: "indices",
           type: "list",
