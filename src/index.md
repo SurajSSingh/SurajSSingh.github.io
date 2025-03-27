@@ -1,7 +1,7 @@
 ---
-title: "Homepage"
+title: "Suraj S. Singh Homepage"
 date: 2023-11-12
-summary: "Homepage of my website"
+summary: "Homepage of Suraj's website"
 
 exclude_brand: true
 headline: "Suraj S. Singh Portfolio"
