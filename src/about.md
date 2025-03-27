@@ -2,6 +2,7 @@
 title: About Me
 summary: Learn more about me
 ---
+
 # About me
 
 ## Who I am
@@ -11,27 +12,65 @@ am eager to build interactive learning experiences that simplifies complex ideas
 and enhances learning by connecting students to the content they learn. My hope
 is to make knowledge accessible to as many people as possible.
 
-Graduated from UCI with a dual degree in Computer Game Science (B.S.) and
+I am currently working as a freelance software developer. My current work is on
+a tool that uses Whisper AI to transcribe voice to text from just their mouse.
+You can find it here: <https://github.com/SurajSSingh/SuperMouseAI>
+
+I graduated from UCI with a dual degree in Computer Game Science (B.S.) and
 Education Science (B.A.) and UIUC with a Masters of Computer Science; through my
 academic journey, I have worked through the video game development process,
 learned about how people learn, and built connections between the theoretical
 and application sides of computer science.
 
-Working as a coding instructor at Coding Minds Academy, I have provided guidance
-to K-12 students through the world of STEM using project-based lessons. Applying
-what I learned through my academic work, I passed on that knowledge and mentored
-students through development of their projects, from helping with writing a
-machine learning programming in Python, to developing video games with Unity and
-helping them release their game online.
+During my academic course work, I also worked as a coding instructor at Coding
+Minds Academy, where I provided guidance to K-12 students through the world of
+STEM using project-based lessons. Applying what I learned through my coursework,
+I passed on that knowledge and mentored students through development of their
+projects, from helping with writing a machine learning programming in Python, to
+developing video games with Unity and helping them release their game online.
 
 I have volunteered time as a Unity programmer at P1 Virtual Civilization, an
 organization dedicated to building ethical virtual worlds. My contribution
 focused on fixing bugs and implementing features for the player-NPC interaction
-in the Skyjellies game. As new volunteers joined our organization, I have helped
-out with getting them oriented and ready to contribute.
+in the [Skyjellies game](https://redeagle-p1.itch.io/skyjellies). As new
+volunteers joined our organization, I have helped out with getting them oriented
+and ready to contribute.
+
+Later on at P1, I became a team leader/lead programmer and help my team develop
+project from design sketches to working prototype demos within a couple of
+weeks. These are two game I lead development of: [Keito](../project/keito) and
+[Eco Defender](../project/eco-defender). Also, I served as lead adviser for
+other team, helping mentor them to produce awesome games. These includes:
+[Runes vs Robots](https://chiferito.itch.io/project-tower) and
+[License Master](https://mugwanezamanzi.itch.io/license-master).
 
 ## Interests
 
+Here are (a very small subset) of things I find interesting:
+
+- Game Development:
+  - Unity
+  - Godot
+  - Bevy
+- Software Development:
+  - Rust
+  - Python
+  - C#
+- Web Technologies:
+  - HTML
+  - CSS
+  - JavaScript/TypeScript
+  - Svelte
+- Open Source Development
+- Education
+  - Teaching Methodologies
+  - Learning Psychology
+  - Education Policy
+
+<details>
+<summary>
+What an LLM summurizes my interests as
+</summary>
 I have a passion for game development and education, and exploring the dynamic
 intersection where creativity meets learning. My curiosity is boundless, diving
 deep into a wide array of subjects—from the intricacies of mathematics and
@@ -41,20 +80,21 @@ a variety of mediums. I am particularly drawn to the power of open source
 technologies, which not only enrich my projects but also foster a sense of
 community and innovation. This blend of interests driving me to create immersive
 experiences that not only entertain but also educate.
+</details>
 
 ## What I am Learning
 
 Here is a short list of some things I am currently focusing my learning on:
 
 - [Unity](https://unity.com) and [Godot](https://godotengine.org)
-- [SvelteKit](https://svelte.dev/docs/kit/introduction) and [Astro](https://astro.build)
+- [SvelteKit](https://svelte.dev/docs/kit/introduction) and
+  [Astro](https://astro.build)
 - [Rust](https://www.rust-lang.org)
 
 ## What I have worked on recently
 
-- [Keito Yarn Game](https://github.com/Team-Keito/Keito-Yarn-Game)
-- [Blue Square Legion Website](https://blue-square-legion.github.io)
-- Helping advise team at P1 as they work on their own projects
+- [Super Mouse AI](https://github.com/SurajSSingh/SuperMouseAI)
+- Nearly daily SILT (Something I Learned Today) on BlueSky and Mastodon
 
 ## Preferred Pronouns
 
