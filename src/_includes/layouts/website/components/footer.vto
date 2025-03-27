@@ -3,7 +3,7 @@
     <div>
         <p>Addtional places you can find me: </p>
         {{ for item of footer.nav }}
-            <a href="{{item.link}}">
+            <a href="{{item.link}}" {{if item.rel}}rel="{{item.rel}}"{{/if}}>
                 {{ if item.icon.catalog === "assets" }}
                     <img src="{{assets}}/{{item.icon.name}}" title="{{item.name}}" alt="{{item.alt}}" width={{item.icon.width || 24}}>
                 {{ else }}

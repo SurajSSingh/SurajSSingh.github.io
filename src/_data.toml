@@ -94,6 +94,18 @@ top_include=true
 top_icon={catalog="skill-icon", name="linkedin", alt="LinkedIn Logo", width=20}
 
 [[footer.nav]]
+name="Mastodon"
+link="https://mastodon.social/@surajssingh"
+icon={catalog="simpleicons", name="mastodon", alt="Mastodon Logo"}
+rel="me"
+
+[[footer.nav]]
+name="Bluesky"
+link="https://bsky.app/profile/surajssingh.bsky.social"
+icon={catalog="simpleicons", name="bluesky", alt="Bluesky Logo"}
+rel="me"
+
+[[footer.nav]]
 name="My Blog"
 link="https://thetechtreeblog.com"
 icon = {catalog="assets", name="images/tech-tree-blog-icon.svg", alt="Tech Tree Blog Logo", width=24}
