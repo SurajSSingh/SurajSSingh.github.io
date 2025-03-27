@@ -3,17 +3,43 @@
 <h3 class="text-center">Send Me a Message:</h3>
 <form id="contact-me" action="https://api.staticforms.xyz/submit" method="post">
     <label for="name"><strong>Name:</strong></label>
-    <input type="text" name="name" placeholder="Your Name" minlength=3 required>
+    <input type="text" id="name" name="name" placeholder="Your Name" minlength=3 required>
     <label for="email"><strong>Email Address:</strong></label>
-    <input type="text" name="email" placeholder="Your Email" required> 
+    <input type="text" id="email" name="email" placeholder="Your Email" required> 
+    <label for="$subjectOption"><em>What would you like to contact me about?</em></label>
+    <select name="$subjectOption" id="subject-options">
+        <option value="" selected>--Select one and/or give a custom subject below--</option>
+        <optgroup label="Business & Professional Inquiries">
+            <option value="opportunity">Career Opportunity</option>
+            <option value="freelance">Freelancing Info</option>
+            <option value="research">Research Collaboration</option>
+            <option value="consultation">Consultation Request</option>
+            <option value="project">Project Proposal</option>
+        </optgroup>
+        <optgroup label="Other Subjects">
+            <option value="collab">Collaboration</option>
+            <option value="request">Request</option>
+            <option value="general">General Inquiry</option>
+            <option value="question">Other Questions</option>
+        </optgroup>
+        <optgroup label="Feedback & Suggestions">
+            <option value="suggestion">I have a suggestion</option>
+            <option value="broken">Something is broken</option>
+            <option value="typo">You have a typo</option>
+            <option value="feedback">Other feedback</option>
+        </optgroup>
+        <optgroup label="Not Recommended (Junk or Spam)">
+            <option value="bot">I am a bot, beep boop.</option>
+            <option value="scam">Scam Likely (most definately)</option>
+            <option value="what">I don't want to contact you</option>
+        </optgroup>
+    </select>
     <label for="subject"><em>Subject (optional):</em></label>
     <input type="text" name="subject" placeholder="Subject" maxlength=60>
     <label for="message"><strong>Message:</strong></label>
     <input type="text" name="honeypot" style="display: none;">
     <textarea name="message" placeholder="Your Message" required></textarea>
     <br />
-    <label for="$humanAnswer"><strong><em>Optional (recommended) check: What is your 3rd favorite color?</em></strong></label>
-    <input type="text" name="$humanAnswer" placeholder="Your Answer" maxlength=30 >
     {{# <!-- If you want replyTo to be set to specific email --> #}}
     {{# <input type="text" name="replyTo" value="myreplytoemail@example.com"> <!-- Optional --> #}}
     {{# <!-- Specify @ as reply to value if you want it to be customers email --> #}}
@@ -22,6 +48,12 @@
     <input type="hidden" name="accessKey" value="a351fa43-4913-4468-81f2-075a0fb0fc06">
     {{# <!-- If you want form to redirect to a specific url after submission --> #}}
     <input type="hidden" name="redirectTo" value="{{base_url}}/contact/success">
+    <!-- reCAPTCHA integration -->
+    <noscript>
+        <p><small>Note: JavaScript is disabled, you are required to pass a CAPTHCHA in order to submit</small></p>
+    </noscript>
+    <div class="g-recaptcha" data-sitekey="6Lfd5f4qAAAAAFnb5x1tehgya1pfskoxR4NHyQXF"></div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <hr />
     <input type="submit" value="Submit" class="is-full-width" />
 </form>
