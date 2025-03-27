@@ -94,7 +94,7 @@ Here is a short list of some things I am currently focusing my learning on:
 ## What I have worked on recently
 
 - [Super Mouse AI](https://github.com/SurajSSingh/SuperMouseAI)
-- Nearly daily SILT (Something I Learned Today) on BlueSky and Mastodon
+- Nearly daily SILT (Something I Learned Today) on Bluesky and Mastodon
 
 ## Preferred Pronouns
 

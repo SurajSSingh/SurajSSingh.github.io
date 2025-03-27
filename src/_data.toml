@@ -100,9 +100,9 @@ icon={catalog="simpleicons", name="mastodon", alt="Mastodon Logo"}
 rel="me"
 
 [[footer.nav]]
-name="BlueSky"
+name="Bluesky"
 link="https://bsky.app/profile/surajssingh.bsky.social"
-icon={catalog="simpleicons", name="bluesky", alt="BlueSky Logo"}
+icon={catalog="simpleicons", name="bluesky", alt="Bluesky Logo"}
 rel="me"
 
 [[footer.nav]]
