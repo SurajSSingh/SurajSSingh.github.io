@@ -69,23 +69,27 @@ const site = lume({
       skill: "skill_id",
       organization: "org_id",
     },
-  }))
-  .use(unocss({
-    cssFile: false,
-    options: {
-      presets: [
-        presetWind3,
-        presetAttributify,
-        presetWind4,
-      ],
-    },
-  }))
-  .use(purgecss());
+  }));
 
 if (Deno.env.get("LUME_DRAFTS") != "true") {
+  // Production
   site.ignore((path) => path.match(/^\/resumes/) !== null);
 } else {
   // TODO: When drafting, regenerate encrypted resume file for Git
+  // Development
+  if (Deno.env.get("UNO_STYLE")) {
+    site.use(unocss({
+      cssFile: false,
+      options: {
+        presets: [
+          presetWind3,
+          presetAttributify,
+          presetWind4,
+        ],
+      },
+    }))
+      .use(purgecss());
+  }
 }
 
 export default site;
