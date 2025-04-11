@@ -5,6 +5,8 @@ summary: Learn more about me
 
 # About me
 
+Just a little page about me.
+
 ## Who I am
 
 A life-long learner curious about the world and driven to help others learn. I
@@ -44,7 +46,18 @@ other team, helping mentor them to produce awesome games. These includes:
 [Runes vs Robots](https://chiferito.itch.io/project-tower) and
 [License Master](https://mugwanezamanzi.itch.io/license-master).
 
-## Interests
+### Preferred Pronouns
+
+I **prefer use of my name** when ever possible (avoids confusion). However,
+these are acceptable pronouns:
+
+1. _**he/him/his**_: _Example: **His** book, which was **his** since **he** was
+   young, was not with **him**.
+
+2. _**they/them/their/theirs**_: _Example: **Their** book, which was **theirs**
+   since **they** were young, was not with **them**._
+
+### Interests
 
 Here are (a very small subset) of things I find interesting:
 
@@ -82,27 +95,23 @@ community and innovation. This blend of interests driving me to create immersive
 experiences that not only entertain but also educate.
 </details>
 
-## What I am Learning
+### What I am Learning
 
 Here is a short list of some things I am currently focusing my learning on:
 
-- [Unity](https://unity.com) and [Godot](https://godotengine.org)
-- [SvelteKit](https://svelte.dev/docs/kit/introduction) and
-  [Astro](https://astro.build)
+- [Tauri](https://v2.tauri.app)
+- [SvelteKit](https://svelte.dev/docs/kit/introduction)
 - [Rust](https://www.rust-lang.org)
+- [Whisper.cpp](https://github.com/ggml-org/whisper.cpp)
 
-## What I have worked on recently
+### What I have worked on recently
 
 - [Super Mouse AI](https://github.com/SurajSSingh/SuperMouseAI)
 - Nearly daily SILT (Something I Learned Today) on Bluesky and Mastodon
 
-## Preferred Pronouns
+### Small scale personal projects
 
-I **prefer use of my name** when ever possible (avoids confusion). However,
-these are acceptable pronouns:
-
-1. _**he/him/his**_: _Example: **His** book, which was **his** since **he** was
-   young, was not with **him**.
-
-2. _**they/them/their/theirs**_: _Example: **Their** book, which was **theirs**
-   since **they** were young, was not with **them**._
+- Expanded a college project on a robotic small-scale self-driving car, which
+  used Python and Electron
+- Built a couple of computers, including making a laptop (not exactly difficult
+  as [Framework](https://frame.work) makes it easy)
