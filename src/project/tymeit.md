@@ -25,7 +25,6 @@ skills: []
 project_info:
   role: Primary Developer
 highlighted_project: false
-start_new_row: true
 ---
 
 ## Overview
