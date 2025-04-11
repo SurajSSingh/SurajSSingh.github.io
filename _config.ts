@@ -13,6 +13,7 @@ import pug from "lume/plugins/pug.ts";
 import date from "lume/plugins/date.ts";
 import unocss from "lume/plugins/unocss.ts";
 import purgecss from "lume/plugins/purgecss.ts";
+import { presetAttributify, presetWind3, presetWind4 } from "npm:unocss";
 
 const icon_catalogs = [
   {
@@ -71,6 +72,13 @@ const site = lume({
   }))
   .use(unocss({
     cssFile: false,
+    options: {
+      presets: [
+        presetWind3,
+        presetAttributify,
+        presetWind4,
+      ],
+    },
   }))
   .use(purgecss());
 
