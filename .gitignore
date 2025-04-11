@@ -7,3 +7,4 @@ _cache
 **/private_*
 **/resumes/private/*.md
 **/resumes/v*/*.md
+**/resumes/v*/*.yml

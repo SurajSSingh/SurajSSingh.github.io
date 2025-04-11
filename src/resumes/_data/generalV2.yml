@@ -1,0 +1,81 @@
+headline:
+  name: Suraj S. Singh
+  contact:
+    private: ./private_contacts.yml
+education:
+  - org: University of Illinois Urbana-Champaign
+    link: "https://illinois.edu"
+    abbr: UIUC
+    degrees:
+      - name: Masters of Computer Science
+        rank: M.S.
+        gpa: 4.0
+    start:
+      year: 2021
+      month: "8"
+    grad:
+      year: 2022
+      month: "12"
+  - org: "University of California, Irvine"
+    link: "https://uci.edu"
+    abbr: UCI
+    gpa: 3.834
+    degrees:
+      - name: Computer Game Science
+        rank: B.S.
+        honors: ["Cum Laude"]
+        # start
+        # end
+      - name: Education Sciences
+        rank: B.A.
+        honors: ["Cum Laude"]
+    start:
+      year: 2016
+      month: "7"
+    grad:
+      year: 2020
+      month: "6"
+experience:
+  - company: Freelancing
+    roles:
+      - title: Freelance Software Developer
+        start:
+          year: 2025
+          month: "2"
+        location: Remote
+        key: FSE25
+  - company: P1 Games
+    link: "https://p1games.com"
+    roles:
+      - title: Unity Team Lead
+        start:
+          year: 2024
+          month: "2"
+        end:
+          year: 2025
+          month: "2"
+        location: Remote
+        key: p1Lead
+      - title: Unity Programmer
+        start:
+          year: 2023
+          month: "8"
+        end:
+          year: 2024
+          month: "1"
+        location: Remote
+        key: p1Dev
+  - company: Coding Minds Academy
+    link: "https://codingmind.com"
+    roles:
+      - title: Coding Instructor
+        start:
+          year: 2019
+          month: "9"
+        end:
+          year: 2023
+          month: "12"
+        location:
+          - Irvine, CA
+          - Remote
+        key: cmaInstructor
