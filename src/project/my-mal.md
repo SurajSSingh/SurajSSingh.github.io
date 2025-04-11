@@ -7,7 +7,7 @@ summary: >-
   A Rust implementation of <a href='https://github.com/kanaka/mal'>mal - Make a
   Lisp</a> (a Clojure inspired lisp).
 project_link: 'https://github.com/SurajSSingh/make_a_lisp_typed_and_readable'
-weight: 11
+weight: 9
 org: personal
 last_modified: 2025-01-02T05:04:00.000Z
 links:

@@ -1,7 +1,17 @@
 {{ layout "layout.vto" }}
-    <p>Below are projects that I have worked on in my personal time or during my time at <a href="https://p1games.com">P1 Games.</a></p>
+    <p>Below are projects that I have worked on freelancing or in my personal time.</p>
     <section class="row">
-        {{ for post of search.pages("org=personal|p1", "weight") }}
+        {{ for post of search.pages("org=personal|freelance", "weight") }}
+            {{ include "layouts/website/components/project_card.vto" {...post}}}
+        {{ /for }}
+    </section>
+    
+    <hgroup>
+        <h2>P1 Games:</h2>
+        <p>Below are projects I have done during my time at <a href="https://p1games.com">P1 Games.</p>
+    </hgroup>
+    <section class="row">
+        {{ for post of search.pages("org=p1", "weight") }}
             {{ include "layouts/website/components/project_card.vto" {...post}}}
         {{ /for }}
     </section>
