@@ -8,8 +8,8 @@ html(lang="en")
     link(rel="stylesheet", href=`${assets}/print_helper.css`)
     meta(name="author" content=gv2.headline.name)
     meta(name="description" content=`Suraj's Resume for ${job_info.role} role at ${job_info.company}`)
-    link(rel="preconnect" href="https://fonts.bunny.net")
-    link(href="https://fonts.bunny.net/css?family=lato:400,400i,700" rel="stylesheet")
+    //- link(rel="preconnect" href="https://fonts.bunny.net")
+    //- link(href="https://fonts.bunny.net/css?family=lato:400,400i,700" rel="stylesheet")
     //- meta(name="keywords" content="HTML, CSS, JavaScript")
     title=gv2.headline.name.replaceAll(/\.|\s+/g, '')+"-"+job_info.role.replaceAll(" ", "")+"-"+metadata.last_modified.toISOString().substring(2, 10)
     style 
@@ -21,15 +21,55 @@ html(lang="en")
       - const lightBorder = style?.color?.border.light ?? "gray-0"
       - const darkBorder = style?.color?.border.dark ?? "gray-0"
       - const barSize = style?.barWidth ?? 1
-      - const includeGPA = style?.includeGPA ?? false
+      - const includeGPA = style?.includeGPA ?? true
       - const skillsSize = style?.skillsSize ?? "sm"
       - const includeMonth = style?.includeMonth ?? false
+      - const expFontSize = style?.expFontSize ?? "md"
+      - const gridGapSize = style?.gridGapSize ?? 1
+      - const gridGapSizeX = style?.gridGapSizeX ?? gridGapSize
+      - const gridGapSizeY = style?.gridGapSizeY ?? gridGapSize
+      - const splitDegrees = style?.splitDegrees ?? false
       //- Content Variables
       - const contacts = content.resume.contactOrder ?? ["website", "email", "phone"]
       block content
         if structure.includeCoverLetter
-            p#cover-letter TODO: Insert Cover Letter
-        #resume(grid=`~ cols-${structure.numberOfColumns || 1}` gap=1)
+            hgroup(mb=3) 
+                h1(text="3xl" col=`span-${spanNum}` mb=2 font="semibold")=gv2.headline.name
+                for entry in Array.from(content.coverLetter.contacts.entries())
+                    - const index = entry[0]
+                    - const contact = entry[1]
+                    case contact
+                        when "email"
+                            - const emailContact = private_contacts.email[content.resume.emailIndex || 0];
+                            p(text="sm") #[em #[a(href="mailto:" + emailContact )=emailContact]]
+                        when "phone"
+                            p(text="sm") #[em=private_contacts.phone[content.resume.phoneIndex || 0]]
+                        when "address"
+                            p(text="sm") #[em=private_contacts.address[content.resume.addressIndex || 0]]
+                        when "github"
+                            - const github = footer.nav.find(n => n.name.toLowerCase() === "github")
+                            if github
+                                a(href=github.link underline="~ offset-4" decoration="from-font")="GitHub: "+github.link.replace(/^https?\:\/\/(?:www\.)?github.com\//i, "")
+                        when "linkedin"
+                            - const linkedin = footer.nav.find(n => n.name.toLowerCase() === "linkedin")
+                            if linkedin
+                                a(href=linkedin.link underline="~ offset-4" decoration="from-font")="LinkedIn: "+linkedin.link.replace(/^https?\:\/\/(?:www\.)?linkedin.com\/in\//i, "")
+                        when "website"
+                            a(href=base_url underline="~ offset-4" decoration="from-font")="Website: "+base_url.replace(/^https?\:\/\//i, "")
+                        default
+                            span=contact
+            
+            p(text="sm")=(new Date()).toLocaleDateString('en-US',{day: '2-digit', month: 'long', year: 'numeric'})
+
+            div#cover-letter(my=4)
+                p(mb=2)=content.coverLetter.greeting
+                //- TODO: Allow basic markdown rendering
+                for paragraph in content.coverLetter.content.split("\n")
+                    p(mb=1 indent=4)=paragraph.replace(/[\r\n]+/g,"")
+                p(mt=3)=content.coverLetter.signature
+                p=gv2.headline.name
+            div.break-after-page
+        #resume(grid=`~ cols-${structure.numberOfColumns || 1}` gap=`x-${gridGapSizeX} y-${gridGapSizeY}`)
             for rBlock in structure.resumeOrder
                 - const spanNum = rBlock.span && rBlock.span > 0 && rBlock.span < structure.numberOfColumns ? rBlock.span : structure.numberOfColumns
                 case rBlock.type
@@ -73,31 +113,37 @@ html(lang="en")
                                 div(flex="~ row wrap" mb=1)
                                     h3(text="lg" basis="3/4" font="medium")=expInfo.altTitle || expInfo.title
                                     - const endDate = expInfo.isCurrent || expInfo.end === undefined ? "Present" : `${expInfo.end.month.padStart(2, "0")}/${expInfo.end.year}`
-                                    p(text="sm right" basis="1/4") #[em= `${expInfo.start.month.padStart(2, "0")}/${expInfo.start.year}-${endDate}`]
+                                    p(text="sm right" basis="1/4" pt="2") #[em= `${expInfo.start.month.padStart(2, "0")}/${expInfo.start.year} – ${endDate}`]
                                     div.basis-full
                                     p(text="sm" basis="full" pl=2) #[strong=expInfo.company] (#[em= typeof expInfo.location === "string" ? expInfo.location : expInfo.location.join(" / ")])
                                     if expInfo.summary
                                         p(basis="full" pl=2)= expInfo.summary
                                 ul.list-disc.list-inside.ml-2.font-normal.mb-3
                                     for accomplishment in expInfo.accomplishments
-                                        li(leading="tight" mb=0 ml=0)= accomplishment.content
+                                        li(leading="tight" mb=0 ml=0 text=`${expFontSize    }`)= accomplishment.content.replace(/[\r\n]+/g," ")
                     when "education"
                         div(col=`span-${spanNum}` mb=2)
                             h2(text="2xl center") Education
                             for edu in gv2.education
                                 div(flex="~ row wrap" mb=1)
-                                    h3(text="lg" flex="grow" basis="3/4")=edu.org
-                                    p(text="sm right" basis="1/4") #[em= `${edu.grad.month.padStart(2, "0")}/${edu.grad.year}`]
+                                    h3(text="lg" flex="grow" basis="3/4" font="medium")=edu.org
+                                    p(text="sm right" basis="1/4" pt="2") #[em= `${edu.grad.month.padStart(2, "0")}/${edu.grad.year}`]
                                     div.basis-full
-                                    - const degreeName = edu.degrees.map(degree => `${degree.name}, ${degree.rank}`).join("  &  ")
+                                    - const degrees = edu.degrees.map(degree => `${degree.name}, ${degree.rank}`)
                                     - const gpa = Math.max(...edu.degrees.filter(degree => degree.gpa).map(degree => degree.gpa), edu.gpa || 0)
-                                    p(flex="grow" basis="3/4" text="sm")=degreeName
-                                    if gpa
+                                    p(flex="grow" basis="3/4" text="sm")
+                                        if splitDegrees
+                                            for degree in degrees
+                                                span=degree
+                                                br
+                                        else
+                                            = degrees.join("  &  ")
+                                    if gpa && includeGPA
                                         p(text="xs right" basis="1/4")=`GPA: ${gpa.toLocaleString(undefined, {minimumFractionDigits:1, maximumFractionDigits:1})}`
                     when "skills"
                         div(col=`span-${spanNum}`)
                             h2(text="2xl center" pb=1) Key Skills
-                            div(flex="~ wrap" gap=2)
+                            div(flex="~ wrap" gap="x-2")
                                 for skillList in content.resume.skills
                                     div(flex="auto" text="sm")
                                         strong=`${skillList.category}: `
@@ -105,9 +151,14 @@ html(lang="en")
 
                     when "projects"
                         div(col=`span-${spanNum}`)
-                            h2(text="2xl center") Highlighted Projects
-                            //- TODO
-                            p(col=`span-${spanNum}`) Projects
+                            h2(text="2xl center" pb=1) Highlighted Projects
+                            for project in content.resume.projects
+                                div(flex="~ row wrap" mb=1)
+                                    h3(text="lg" flex="grow" basis="3/4" font="medium")=project.title
+                                    p(text="sm right" basis="1/4" pt="2") #[em= `${project.start.replace(/(\d{4})-(\d{2}).*/g, "$2/$1")} – ${project.current ? "Ongoing" : project.end.replace(/(\d{4})-(\d{2}).*/g, "$2/$1")}`]
+                                    p(text="xs" underline="~ offset-2" basis="full" mb=2) #[strong Link: #[a(href=project.link)=project.link]]
+                                    for text in (project.description || "").split("\n")
+                                        p(text="sm" basis="full")=text
                     when "divider"
                         hr
                     default

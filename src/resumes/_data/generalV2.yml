@@ -1,9 +1,16 @@
 headline:
-  name: Suraj S. Singh
+  # NOTE: "S." Middle initial was removed after 2025-04-21
+  name: Suraj Singh
+  nameComponent:
+    givenName: Suraj
+    middle:
+      type: initial
+      initial: S.
+    surname: Singh
   contact:
     private: ./private_contacts.yml
 education:
-  - org: University of Illinois Urbana-Champaign
+  - org: University of Illinois Urbana‑Champaign
     link: "https://illinois.edu"
     abbr: UIUC
     degrees:

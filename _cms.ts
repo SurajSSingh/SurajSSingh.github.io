@@ -794,7 +794,9 @@ const CONTENT_FIELDS: FieldArray = [
           "address",
         ],
       },
+      "greeting:text",
       "content:markdown",
+      "signature:textarea",
     ],
   },
   // Resume: object
@@ -805,6 +807,7 @@ const CONTENT_FIELDS: FieldArray = [
       //  - ContactOrder: list
       "emailIndex:number",
       "phoneIndex:number",
+      "addressIndex:number",
       {
         name: "contactOrder",
         description: "List of contacts to appear on cover letter",
