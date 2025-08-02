@@ -59,7 +59,7 @@ these are acceptable pronouns:
 
 ### Interests
 
-Here are (a very small subset) of things I find interesting:
+Here are (a very small subset of) things I am interested in:
 
 - Game Development:
   - Unity
@@ -97,17 +97,21 @@ experiences that not only entertain but also educate.
 
 ### What I am Learning
 
-Here is a short list of some things I am currently focusing my learning on:
+Here is a short list of some things I am currently focusing on:
 
 - [Tauri](https://v2.tauri.app)
 - [SvelteKit](https://svelte.dev/docs/kit/introduction)
-- [Rust](https://www.rust-lang.org)
-- [Whisper.cpp](https://github.com/ggml-org/whisper.cpp)
+- Open Source ASR technologies:
+  [Whisper](https://github.com/ggml-org/whisper.cpp),
+  [Kyutai SST](https://kyutai.org/next/stt),
+  [Nvidia NeMo models](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/asr/models.html)
 
 ### What I have worked on recently
 
+- [Speakflow](https://www.speakflow.com/) Desktop App
 - [Super Mouse AI](https://github.com/SurajSSingh/SuperMouseAI)
-- Nearly daily SILT (Something I Learned Today) on Bluesky and Mastodon
+- Nearly daily SILT (Something I Learned Today) on Bluesky and weekly TWIL (This
+  Week I Learned) on Mastodon
 
 ### Small scale personal projects
 
@@ -115,3 +119,4 @@ Here is a short list of some things I am currently focusing my learning on:
   used Python and Electron
 - Built a couple of computers, including making a laptop (not exactly difficult
   as [Framework](https://frame.work) makes it easy)
+- Worked with creating a little home server on a Raspberry Pi
