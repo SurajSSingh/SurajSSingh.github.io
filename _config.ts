@@ -62,7 +62,6 @@ const site = lume({
     copyAttributes: ["title", /^data-/, "fill"],
   }))
   .use(lightningCss())
-  .use(metas())
   .use(relations({
     foreignKeys: {
       project: "project_id",
@@ -74,6 +73,7 @@ const site = lume({
 if (Deno.env.get("LUME_DRAFTS") != "true") {
   // Production
   site.ignore((path) => path.match(/^\/resumes/) !== null);
+  site.use(metas());
 } else {
   // TODO: When drafting, regenerate encrypted resume file for Git
   // Development
