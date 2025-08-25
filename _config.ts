@@ -58,10 +58,6 @@ const site = lume({
       catalogs: icon_catalogs,
     },
   ))
-  .use(inline({
-    copyAttributes: ["title", /^data-/, "fill"],
-  }))
-  .use(lightningCss())
   .use(relations({
     foreignKeys: {
       project: "project_id",
@@ -87,9 +83,13 @@ if (Deno.env.get("LUME_DRAFTS") != "true") {
           presetWind4,
         ],
       },
-    }))
-      .use(purgecss());
+    }));
   }
 }
 
+site.use(lightningCss())
+  .use(purgecss())
+  .use(inline({
+    copyAttributes: ["title", /^data-/, "fill"],
+  }));
 export default site;

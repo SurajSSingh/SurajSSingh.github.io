@@ -8,3 +8,4 @@ _cache
 **/resumes/private/*.md
 **/resumes/v*/*.md
 **/resumes/v*/*.yml
+node_modules
