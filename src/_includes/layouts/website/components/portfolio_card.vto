@@ -1,17 +1,8 @@
 <div class="divider col-12"></div>
 <article class="col no-border card">
-    {{ set link = project_link || link }}
-    <h3 class="is-center">{{title}}</h3>
-    <div class="row project-info">
-        <div class="col-6 is-center">
-        {{ if project_info?.trailer }}
-                {{ if typeof project_info.trailer == "string" }}
-                    {{ include "layouts/website/components/youtube_embed.vto" {link: project_info.trailer, height: data_default?.image_height || 200, width: Math.round(data_default?.image_height/9 * 16) || 356} }}
-                {{ else }}
-                    {{ include "layouts/website/components/youtube_embed.vto" {...project_info.trailer} }}
-                {{ /if }}
-        {{ else if project_info?.demo_gif}}
-            <img src="{{assets}}/{{project_info.demo_gif}}" alt="Demo of {{title}}" class="is-center" height="{{data_default?.image_height || 200 }}" />
+  {{ set link = project_link || link }}
+  <h3 class="is-center"><a href="{{url}}">{{ title }}</a></h3>
+  <div class="row project-info">
     <div class="col-6 is-center">
       {{ if project_info?.trailer }}
         {{ if typeof project_info.trailer == "string" }}
