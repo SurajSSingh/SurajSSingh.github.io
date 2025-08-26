@@ -1,17 +1,17 @@
 ---
 title: Keito Yarn Game
-date: '2024-03-17T00:00:00.000Z'
+date: "2024-03-17T00:00:00.000Z"
 image: /assets/images/keito_logo.png
 alt: Keito Yarn Game logo
 summary: >-
   A 3D yarn tossing game where you toss, bounce, and combine yarn balls to a cat
   and earn points as quickly as you can.
-project_link: 'https://sam325.itch.io/keito-game'
+project_link: "https://sam325.itch.io/keito-game"
 weight: -10
 highlighted_project: true
 org: p1
 project_info:
-  trailer: 'https://www.youtube-nocookie.com/embed/u9BvzhMSJbw'
+  trailer: "https://www.youtube-nocookie.com/embed/u9BvzhMSJbw"
   role: Lead Mechanics Programmer (Unity and C#)
   awards:
     - src: images/awards/Keito-9-Ignite_Champion.jpg
@@ -23,14 +23,14 @@ project_info:
     - src: images/awards/keito-9-sound.jpg
       alt: Best Soundtrack Award
   external_links:
-    itch: 'https://sam325.itch.io/keito-game'
-    github: 'https://github.com/Team-Keito/Keito-Yarn-Game'
-last_modified: 2025-01-02T05:02:00.000Z
+    itch: "https://sam325.itch.io/keito-game"
+    github: "https://github.com/Team-Keito/Keito-Yarn-Game"
+last_modified: 2025-08-26T00:00:00.000Z
 links:
   - name: Itch.io
-    link: 'https://sam325.itch.io/keito-game'
+    link: "https://sam325.itch.io/keito-game"
   - name: GitHub Repo
-    link: 'https://github.com/Team-Keito/Keito-Yarn-Game'
+    link: "https://github.com/Team-Keito/Keito-Yarn-Game"
 cover_image:
   file: /assets/images/keito_logo.png
   alt_text: Keito Logo
@@ -43,7 +43,7 @@ additional_image:
     is_award: true
 tech_stack:
   - Unity
-  - 'C#'
+  - "C#"
   - GitHub
   - Trello
 skills: []
@@ -74,5 +74,5 @@ same page, and get everyone's changes merged in.
 
 ## Current Status
 
-New team continuing to develop game, with me serving as an adviser. Looking to
-continue development and release the game.
+New team continuing to develop game, with me serving as an adviser. The team is
+aiming to release the game on Steam.

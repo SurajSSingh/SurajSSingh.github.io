@@ -1,13 +1,13 @@
 ---
 title: Super Mouse AI
-date: '2025-04-04T00:00:00.000Z'
-last_modified: 2025-04-11T05:21:00.000Z
+date: "2025-04-04T00:00:00.000Z"
+last_modified: 2025-08-26T00:00:00.000Z
 summary: A tool to transcribe your voice with a click of your mouse
-weight: 5
+weight: 1
 org: freelance
 links:
   - name: GitHub Repo
-    link: 'https://github.com/SurajSSingh/SuperMouseAI'
+    link: "https://github.com/SurajSSingh/SuperMouseAI"
 cover_image:
   file: /assets/images/Super-Mouse-AI-1.png
   alt_text: Screenshot of Super Mouse AI running
@@ -23,10 +23,13 @@ skills:
   - GitHub
   - GitHub Actions
   - GitHub Projects
+highlighted_project: true
+project_link: "https://github.com/SurajSSingh/SuperMouseAI"
 project_info:
+  demo_gif: images/Super-Mouse-AI-1.png
   role: Lead Developer
-highlighted_project: false
-project_link: 'https://github.com/SurajSSingh/SuperMouseAI'
+  external_links:
+    github: "https://github.com/SurajSSingh/SuperMouseAI"
 ---
 
 ## What is it
@@ -35,7 +38,9 @@ It is an app that let's your transcribe your voice locally using
 [Whisper.cpp](https://github.com/ggml-org/whisper.cpp).
 
 I started development as a freelace developer after my work at P1 came to a
-close. The client reached out to me about developing an app.
+close. The client reached out to me about developing an app. We are currently
+looking for business partners to help with reaching out to potential users of
+the app to help get it off the ground.
 
 ### Tools, Framework, and Libraries used
 
@@ -60,5 +65,5 @@ close. The client reached out to me about developing an app.
 
 ## Status
 
-Presently in alpha, still being development, aiming for Late-April/Early May for
-public beta
+Presently in alpha, still being development, working in new repository to get a
+beta version out
