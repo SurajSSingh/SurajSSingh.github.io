@@ -1,20 +1,20 @@
 ---
 title: Make A Lisp Implementation
-date: '2023-11-12T00:00:00.000Z'
-image: 'https://raw.githubusercontent.com/kanaka/mal/master/process/stepA_mal.png'
+date: "2023-11-12T00:00:00.000Z"
+image: "https://raw.githubusercontent.com/kanaka/mal/master/process/stepA_mal.png"
 alt: Make-A-Lisp Step A Diagram
 summary: >-
   A Rust implementation of <a href='https://github.com/kanaka/mal'>mal - Make a
   Lisp</a> (a Clojure inspired lisp).
-project_link: 'https://github.com/SurajSSingh/make_a_lisp_typed_and_readable'
+project_link: "https://github.com/SurajSSingh/make_a_lisp_typed_and_readable"
 weight: 9
 org: personal
-last_modified: 2025-01-02T05:04:00.000Z
+last_modified: 2025-08-26T00:00:00.000Z
 links:
   - name: GitHub Repo
-    link: 'https://github.com/SurajSSingh/make_a_lisp_typed_and_readable'
+    link: "https://github.com/SurajSSingh/make_a_lisp_typed_and_readable"
 cover_image:
-  file: 'https://raw.githubusercontent.com/kanaka/mal/master/process/stepA_mal.png'
+  file: "https://raw.githubusercontent.com/kanaka/mal/master/process/stepA_mal.png"
   alt_text: Make-A-Lisp Step A Diagram
 additional_image: []
 tech_stack:
@@ -45,5 +45,5 @@ improvements such as adding a
 
 ## Current Status
 
-Hiatus, learning more about other Lisps to see what I can bring into the
-language.
+Finished main steps from the guide, learning more about other Lisps to see what
+I can bring into the language.

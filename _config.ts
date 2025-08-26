@@ -58,11 +58,6 @@ const site = lume({
       catalogs: icon_catalogs,
     },
   ))
-  .use(inline({
-    copyAttributes: ["title", /^data-/, "fill"],
-  }))
-  .use(lightningCss())
-  .use(metas())
   .use(relations({
     foreignKeys: {
       project: "project_id",
@@ -74,6 +69,7 @@ const site = lume({
 if (Deno.env.get("LUME_DRAFTS") != "true") {
   // Production
   site.ignore((path) => path.match(/^\/resumes/) !== null);
+  site.use(metas());
 } else {
   // TODO: When drafting, regenerate encrypted resume file for Git
   // Development
@@ -87,9 +83,13 @@ if (Deno.env.get("LUME_DRAFTS") != "true") {
           presetWind4,
         ],
       },
-    }))
-      .use(purgecss());
+    }));
   }
 }
 
+site.use(lightningCss())
+  .use(purgecss())
+  .use(inline({
+    copyAttributes: ["title", /^data-/, "fill"],
+  }));
 export default site;

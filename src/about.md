@@ -59,7 +59,7 @@ these are acceptable pronouns:
 
 ### Interests
 
-Here are (a very small subset) of things I find interesting:
+Here are (a very small subset of) things I am interested in:
 
 - Game Development:
   - Unity
@@ -80,38 +80,29 @@ Here are (a very small subset) of things I find interesting:
   - Learning Psychology
   - Education Policy
 
-<details>
-<summary>
-What an LLM summurizes my interests as
-</summary>
-I have a passion for game development and education, and exploring the dynamic
-intersection where creativity meets learning. My curiosity is boundless, diving
-deep into a wide array of subjects—from the intricacies of mathematics and
-technology to the rich tapestry of art and history. I always strive to pick up
-how others teach so that I may be better able to help others understand through
-a variety of mediums. I am particularly drawn to the power of open source
-technologies, which not only enrich my projects but also foster a sense of
-community and innovation. This blend of interests driving me to create immersive
-experiences that not only entertain but also educate.
-</details>
-
 ### What I am Learning
 
-Here is a short list of some things I am currently focusing my learning on:
+Here is a short list of some things I am currently focusing on:
 
 - [Tauri](https://v2.tauri.app)
 - [SvelteKit](https://svelte.dev/docs/kit/introduction)
-- [Rust](https://www.rust-lang.org)
-- [Whisper.cpp](https://github.com/ggml-org/whisper.cpp)
+- Open Source ASR technologies:
+  [Whisper](https://github.com/ggml-org/whisper.cpp),
+  [Kyutai SST](https://kyutai.org/next/stt),
+  [Nvidia NeMo models](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/asr/models.html)
 
 ### What I have worked on recently
 
+- [Speakflow](https://www.speakflow.com/) Desktop App
 - [Super Mouse AI](https://github.com/SurajSSingh/SuperMouseAI)
-- Nearly daily SILT (Something I Learned Today) on Bluesky and Mastodon
+- Nearly daily SILT (Something I Learned Today) on Bluesky and weekly TWIL (This
+  Week I Learned) on Mastodon
 
 ### Small scale personal projects
 
 - Expanded a college project on a robotic small-scale self-driving car, which
   used Python and Electron
-- Built a couple of computers, including making a laptop (not exactly difficult
-  as [Framework](https://frame.work) makes it easy)
+- Built a couple of computers, including making a laptop (thanks to
+  [Framework](https://frame.work) for making it easy)
+- Worked on creating a little home server on a Raspberry Pi using a custom
+  Debian system

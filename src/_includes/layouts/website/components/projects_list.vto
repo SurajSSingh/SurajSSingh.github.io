@@ -2,7 +2,7 @@
     <p>Below are projects that I have worked on freelancing or in my personal time.</p>
     <section class="row">
         {{ for post of search.pages("org=personal|freelance", "weight") }}
-            {{ include "layouts/website/components/project_card.vto" {...post}}}
+            {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
     
@@ -12,7 +12,7 @@
     </hgroup>
     <section class="row">
         {{ for post of search.pages("org=p1", "weight") }}
-            {{ include "layouts/website/components/project_card.vto" {...post}}}
+            {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
 
@@ -22,7 +22,7 @@
     </hgroup>
     <section class="row">
         {{ for post of search.pages("org=coding-minds", "weight") }}
-            {{ include "layouts/website/components/project_card.vto" {...post}}}
+            {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
 
@@ -57,7 +57,7 @@
     </hgroup>
     <section class="row">
         {{ for post of search.pages("org=uci|uiuc", "weight") }}
-            {{ include "layouts/website/components/project_card.vto" {...post}}}
+            {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
 
