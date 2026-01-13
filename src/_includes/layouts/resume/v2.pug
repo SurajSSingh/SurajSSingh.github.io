@@ -29,6 +29,7 @@ html(lang="en")
       - const gridGapSizeX = style?.gridGapSizeX ?? gridGapSize
       - const gridGapSizeY = style?.gridGapSizeY ?? gridGapSize
       - const splitDegrees = style?.splitDegrees ?? false
+      - const degreeTextSize = style?.degreeTextSize ?? "sm"
       //- Content Variables
       - const contacts = content.resume.contactOrder ?? ["website", "email", "phone"]
       block content
@@ -131,7 +132,7 @@ html(lang="en")
                                     div.basis-full
                                     - const degrees = edu.degrees.map(degree => `${degree.name}, ${degree.rank}`)
                                     - const gpa = Math.max(...edu.degrees.filter(degree => degree.gpa).map(degree => degree.gpa), edu.gpa || 0)
-                                    p(flex="grow" basis="3/4" text="sm")
+                                    p(flex="grow" basis="3/4" text=degreeTextSize)
                                         if splitDegrees
                                             for degree in degrees
                                                 span=degree
