@@ -1,0 +1,3 @@
+[submodule "external-ref/lume"]
+	path = external-ref/lume
+	url = https://github.com/lumeland/lume.land
