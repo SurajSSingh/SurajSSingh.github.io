@@ -275,15 +275,163 @@ cms.collection({
     "content: markdown",
   ],
 });
-cms.document(
-  "about-page: Edit the content of the about page",
-  "src:about.md",
-  [
+cms.document({
+  name: "about-page",
+  description: "Edit the content of the about page",
+  store: "src:about.md",
+  fields: [
+    // ── Meta ──
     "title: text!",
     "summary: text",
-    "content: markdown",
+
+    // ── Page intro ──
+    {
+      name: "intro",
+      type: "textarea",
+      label: "Page Intro",
+      description: "Short intro line shown at the top of the page",
+    },
+
+    // ── Who I am ──
+    {
+      name: "who_i_am",
+      type: "markdown",
+      label: "Who I Am",
+      description: "Biographical paragraphs for the 'Who I am' section",
+    },
+
+    // ── Pronouns ──
+    {
+      name: "pronouns_intro",
+      type: "textarea",
+      label: "Pronouns Introduction",
+      description: "Introductory sentence before the pronouns list",
+    },
+    {
+      name: "pronouns",
+      type: "object-list",
+      label: "Pronouns",
+      description: "Acceptable pronouns with usage examples",
+      fields: [
+        {
+          name: "pronoun",
+          type: "text",
+          label: "Pronoun Set",
+          description: "e.g. he/him/his",
+          attributes: { required: true },
+        },
+        {
+          name: "example",
+          type: "textarea",
+          label: "Example Sentence",
+          description: "Example sentence showing pronoun usage",
+        },
+      ],
+    },
+
+    // ── Interests ──
+    {
+      name: "interests_intro",
+      type: "textarea",
+      label: "Interests Introduction",
+      description: "Introductory sentence before the interests list",
+    },
+    {
+      name: "interests",
+      type: "object-list",
+      label: "Interests",
+      description: "Interest categories with individual items",
+      fields: [
+        {
+          name: "category",
+          type: "text",
+          label: "Category Name",
+          attributes: { required: true },
+        },
+        {
+          name: "items",
+          type: "list",
+          label: "Items",
+          description: "List of specific interests in this category",
+        },
+      ],
+    },
+
+    // ── What I am Learning ──
+    {
+      name: "learning_intro",
+      type: "textarea",
+      label: "Learning Introduction",
+      description: "Introductory sentence before the learning list",
+    },
+    {
+      name: "learning",
+      type: "object-list",
+      label: "What I am Learning",
+      description: "Things currently being learned, with optional links",
+      fields: [
+        {
+          name: "label",
+          type: "text",
+          label: "Label",
+          attributes: { required: true },
+        },
+        {
+          name: "url",
+          type: "url",
+          label: "URL",
+          description: "Link to resource (optional)",
+        },
+      ],
+    },
+
+    // ── Recent Work ──
+    {
+      name: "recent_work_intro",
+      type: "textarea",
+      label: "Recent Work Introduction",
+      description: "Introductory sentence before the recent work list",
+    },
+    {
+      name: "recent_work",
+      type: "object-list",
+      label: "What I have worked on recently",
+      description: "Recent projects/work with optional links",
+      fields: [
+        {
+          name: "label",
+          type: "text",
+          label: "Label",
+          attributes: { required: true },
+        },
+        {
+          name: "url",
+          type: "url",
+          label: "URL",
+          description: "Link to the work (optional)",
+        },
+      ],
+    },
+
+    // ── Personal Projects ──
+    {
+      name: "personal_projects",
+      type: "list",
+      label: "Small Scale Personal Projects",
+      description:
+        "Short bullet descriptions of personal projects (markdown supported)",
+    },
+
+    // ── Extra content ──
+    {
+      name: "content",
+      type: "markdown",
+      label: "Extra Content",
+      description:
+        "Any additional markdown content appended after all structured sections",
+    },
   ],
-);
+});
 cms.document(
   "portfolio-page: Edit the content of the portfolio page",
   "src:portfolio.yml",
