@@ -61,15 +61,22 @@ const site = lume({
   .use(relations({
     foreignKeys: {
       project: "project_id",
-      skill: "skill_id",
-      organization: "org_id",
+      skill: {
+        foreignKey: "skill_id",
+        relationKey: "skill",
+        pluralRelationKey: "skills_rel",
+      },
+      organization: {
+        foreignKey: "org_id",
+        relationKey: "organization",
+        pluralRelationKey: "organizations",
+      },
     },
   }));
 
 if (Deno.env.get("LUME_DRAFTS") != "true") {
   // Production
   site.ignore((path) => path.match(/^\/resumes/) !== null);
-  site.use(metas());
 } else {
   // TODO: When drafting, regenerate encrypted resume file for Git
   // Development
@@ -89,6 +96,7 @@ if (Deno.env.get("LUME_DRAFTS") != "true") {
 
 site.use(lightningCss())
   .use(purgecss())
+  .use(metas())
   .use(inline({
     copyAttributes: ["title", /^data-/, "fill"],
   }));

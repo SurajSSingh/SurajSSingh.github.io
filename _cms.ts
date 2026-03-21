@@ -26,54 +26,139 @@ cms.storage("img", "assets/images");
 
 cms.upload("images: Manage a all images here.", "src:assets/images");
 
-cms.collection(
-  "projects: Here you add, edit or delete projects for the portfolio",
-  "src:project/*.md",
-  [
+// --- Skills Collection ---
+cms.collection({
+  name: "skills",
+  description: "Skills that can be associated with projects",
+  store: "src:skill/*.md",
+  documentName: "{title}.md",
+  fields: [
     "title: text!",
+    {
+      name: "id",
+      type: "text",
+      label: "Unique ID",
+      description:
+        "Unique identifier for relations (e.g. 'unity', 'typescript')",
+      attributes: { required: true },
+    },
+    {
+      name: "type",
+      type: "hidden",
+      value: "skill",
+    },
+    "summary: text",
+    {
+      name: "category",
+      type: "select",
+      description: "Skill category",
+      options: [
+        "Language",
+        "Framework",
+        "Engine",
+        "Tool",
+        "Platform",
+        "Methodology",
+        "Soft Skill",
+        "Other",
+      ],
+    },
+    {
+      name: "icon",
+      type: "text",
+      description: "Icon identifier (e.g. simpleicons name or skill-icon name)",
+      view: "details",
+    },
+    {
+      name: "url",
+      type: "url",
+      description: "Official website or documentation link",
+      view: "details",
+    },
+    "content: markdown",
+  ],
+});
+
+// --- Organizations Collection ---
+cms.collection({
+  name: "organizations",
+  description: "Organizations associated with projects",
+  store: "src:org/*.md",
+  documentName: "{title}.md",
+  fields: [
+    "title: text!",
+    {
+      name: "id",
+      type: "text",
+      label: "Unique ID",
+      description: "Unique identifier for relations (e.g. 'p1', 'uci')",
+      attributes: { required: true },
+    },
+    {
+      name: "type",
+      type: "hidden",
+      value: "organization",
+    },
+    "summary: text",
+    {
+      name: "url",
+      type: "url",
+      description: "Organization website",
+    },
+    {
+      name: "logo",
+      type: "file",
+      description: "Organization logo",
+      view: "details",
+    },
+    "content: markdown",
+  ],
+});
+
+// --- Projects Collection ---
+cms.collection({
+  name: "projects",
+  description: "Here you add, edit or delete projects for the portfolio",
+  store: "src:project/*.md",
+  documentName: "{title}.md",
+  fields: [
+    // ── Basics (always visible) ──
+    "title: text!",
+    "summary: text",
+    {
+      name: "id",
+      type: "text",
+      label: "Unique ID",
+      description:
+        "Unique identifier for relations (e.g. 'keito', 'eco-defender')",
+      attributes: { required: true },
+    },
+    {
+      name: "type",
+      type: "hidden",
+      value: "project",
+    },
     {
       name: "date",
       label: "First Created",
       type: "date",
-      attributes: {
-        required: true,
-      },
+      attributes: { required: true },
     },
     {
       name: "last_modified",
       type: "current-datetime",
-      attributes: {
-        readonly: true,
-      },
-    },
-    "summary: text",
-    {
-      "name": "weight",
-      "type": "number",
-      "value": 1000,
+      attributes: { readonly: true },
     },
     {
-      "name": "org",
-      "type": "text",
-      options: [
-        "personal",
-        "p1",
-        "uci",
-        "uiuc",
-      ],
-    },
-    {
-      "name": "links",
-      "description": "List of public links",
-      "type": "object-list",
+      name: "links",
+      description: "List of public links (at least one recommended)",
+      type: "object-list",
       fields: [
         {
-          "name": "name",
-          "type": "select",
-          "attributes": {
-            "required": true,
-          },
-          "options": [
+          name: "name",
+          type: "select",
+          attributes: { required: true },
+          options: [
             "Home",
             "Itch.io",
             "GitHub Repo",
@@ -86,10 +171,56 @@ cms.collection(
         "link: url!",
       ],
     },
+
+    // ── Relations (always visible) ──
+    {
+      name: "org_id",
+      label: "Organization",
+      description: "Organization this project belongs to",
+      type: "relation",
+      collection: "organizations",
+      option: ({ label, flags }) => ({ label, value: flags?.id ?? "" }),
+    },
+    {
+      name: "org",
+      label: "Organization (legacy)",
+      description: "Legacy org field — use Organization relation instead",
+      type: "text",
+      view: "legacy",
+      options: [
+        "personal",
+        "p1",
+        "uci",
+        "uiuc",
+      ],
+    },
+    {
+      name: "skill_id",
+      label: "Skills",
+      description: "Skills associated with this project",
+      type: "relation-list",
+      collection: "skills",
+      option: ({ label, flags }) => ({ label, value: flags?.id ?? "" }),
+    },
+    {
+      name: "skills",
+      type: "list",
+      description: "Skills (legacy free-text list)",
+      view: "legacy",
+    },
+    {
+      name: "tech_stack",
+      type: "list",
+      description: "List of technology associated with the project",
+    },
+    "highlighted_project: checkbox",
+
+    // ── Images (view: media) ──
     {
       name: "cover_image",
       description: "Cover Image of the project",
       type: "object",
+      view: "media",
       fields: [
         "file: file",
         "alt_text: text!",
@@ -97,58 +228,72 @@ cms.collection(
     },
     {
       name: "additional_image",
-      description: "Other images related to the project",
+      description: "Other images related to the project (gallery)",
       type: "object-list",
+      view: "media",
       fields: [
         "link: file",
         "alt_text: text!",
         {
-          "name": "is_award",
-          "type": "checkbox",
-          "label": "Is Award?",
-          "description": "Is this image of an award or honor",
+          name: "is_award",
+          type: "checkbox",
+          label: "Is Award?",
+          description: "Is this image of an award or honor",
         },
       ],
     },
+
+    // ── Project Details (view: details) ──
     {
-      name: "tech_stack",
-      type: "list",
-      description: "List of technology associated with the project",
-    },
-    {
-      name: "skills",
-      type: "list",
-      description: "List of skills associated with the project",
+      name: "weight",
+      type: "number",
+      value: 1000,
+      description: "Sort weight (lower = higher priority)",
+      view: "details",
     },
     {
       name: "project_info",
-      description: "Direct Info of the project",
+      description: "Additional project information",
       type: "object",
+      view: "details",
       fields: [
         "role: text",
         "trailer: url",
+        {
+          name: "status",
+          type: "select",
+          description: "Current status of the project",
+          options: [
+            "In Progress",
+            "Completed",
+            "On Hold",
+            "Archived",
+            "Maintained",
+          ],
+        },
+        {
+          name: "team_size",
+          type: "number",
+          description: "Number of people on the team",
+          attributes: { min: 1 },
+        },
+        {
+          name: "start_date",
+          type: "date",
+          label: "Project Start Date",
+        },
+        {
+          name: "end_date",
+          type: "date",
+          label: "Project End Date",
+        },
       ],
     },
-    "highlighted_project: checkbox",
+
+    // ── Content (always visible) ──
     "content: markdown",
   ],
-);
-cms.collection(
-  "skills: Here you add, edit or delete skills associated with a project",
-  "src:skill/*.md",
-  [
-    "title: text!",
-    "content: markdown",
-  ],
-);
-cms.collection(
-  "organizations: Here you add, edit or delete organizations associated with a project",
-  "src:org/*.md",
-  [
-    "title: text!",
-    "content: markdown",
-  ],
-);
+});
 cms.document(
   "about-page: Edit the content of the about page",
   "src:about.md",
