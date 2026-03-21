@@ -17,8 +17,8 @@
       "description": "Run and serve the site for development",
       "command": "deno task lume -s"
     },
-    "cms": "deno task lume cms",
-    "resume": "UNO_STYLE=1 deno task lume cms"
+    "cms": "deno task lume -s",
+    "resume": "UNO_STYLE=1 deno task lume -s"
   },
   "compilerOptions": {
     "types": [
