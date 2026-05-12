@@ -1,0 +1,35 @@
+{{ layout "layout.vto" }}
+<article class="org-page">
+    <header class="card">
+        <hgroup>
+            {{ if logo }}
+            <img src="{{ logo }}" alt="{{ title }} logo" class="org-logo" />
+            {{ /if }}
+            <h1>{{ title }}</h1>
+            {{ if summary }}
+            <p>{{ summary }}</p>
+            {{ /if }}
+        </hgroup>
+        {{ if org_url }}
+        <p><a href="{{ org_url }}" target="_blank" rel="noopener noreferrer">Visit {{ title }}</a></p>
+        {{ /if }}
+        {{ if content }}
+        <div class="org-description">{{ content }}</div>
+        {{ /if }}
+    </header>
+
+    <section class="org-projects">
+        <h2>Related Projects</h2>
+        {{ set org_projects = search.pages("org=" + id, "weight") }}
+        {{ if org_projects.length > 0 }}
+        <div class="row">
+            {{ for post of org_projects }}
+                {{ include "layouts/website/components/project_card.vto" {...post} }}
+            {{ /for }}
+        </div>
+        {{ else }}
+        <p>No projects found for this organization.</p>
+        {{ /if }}
+    </section>
+</article>
+{{ /layout }}

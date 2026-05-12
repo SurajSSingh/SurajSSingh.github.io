@@ -81,18 +81,18 @@ if (Deno.env.get("LUME_DRAFTS") != "true") {
   // TODO: When drafting, regenerate encrypted resume file for Git
   // Development
   if (Deno.env.get("UNO_STYLE")) {
-    site.use(unocss({
-      cssFile: false,
-      options: {
-        presets: [
-          presetWind3,
-          presetAttributify,
-          presetWind4,
-        ],
-      },
-    }));
   }
 }
+site.use(unocss({
+  cssFile: false,
+  options: {
+    presets: [
+      presetWind3,
+      presetAttributify,
+      presetWind4,
+    ],
+  },
+}));
 
 site.use(lightningCss())
   .use(purgecss())

@@ -28,6 +28,11 @@ cms.collection({
       type: "hidden",
       value: "skill",
     },
+    {
+      name: "layout",
+      type: "hidden",
+      value: "layouts/website/skill_page.vto",
+    },
     "summary: text",
     {
       name: "category",
@@ -79,6 +84,11 @@ cms.collection({
       name: "type",
       type: "hidden",
       value: "organization",
+    },
+    {
+      name: "layout",
+      type: "hidden",
+      value: "layouts/website/org_page.vto",
     },
     "summary: text",
     {

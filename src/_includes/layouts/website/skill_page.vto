@@ -1,0 +1,38 @@
+{{ layout "layout.vto" }}
+<article class="skill-page">
+    <header class="card">
+        <hgroup>
+            {{ if icon || image }}
+            <img src="{{ icon || image }}" alt="{{ title }} icon" class="skill-icon" />
+            {{ /if }}
+            <h1>{{ title }}</h1>
+            {{ if category }}
+            <p class="skill-category"><em>{{ category }}</em></p>
+            {{ /if }}
+            {{ if summary }}
+            <p>{{ summary }}</p>
+            {{ /if }}
+        </hgroup>
+        {{ if skills_url }}
+        <p><a href="{{ skills_url }}" target="_blank" rel="noopener noreferrer">Learn more about {{ title }}</a></p>
+        {{ /if }}
+        {{ if content }}
+        <div class="skill-description">{{ content }}</div>
+        {{ /if }}
+    </header>
+
+    <section class="skill-projects">
+        <h2>Related Projects</h2>
+        {{ set skill_projects = search.pages("skills=" + id, "weight") }}
+        {{ if skill_projects.length > 0 }}
+        <div class="row">
+            {{ for post of skill_projects }}
+                {{ include "layouts/website/components/project_card.vto" {...post} }}
+            {{ /for }}
+        </div>
+        {{ else }}
+        <p>No projects found using this skill.</p>
+        {{ /if }}
+    </section>
+</article>
+{{ /layout }}
