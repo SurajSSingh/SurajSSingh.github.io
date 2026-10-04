@@ -10,9 +10,7 @@ import icons from "lume/plugins/icons.ts";
 import metas from "lume/plugins/metas.ts";
 import relations from "lume/plugins/relations.ts";
 import date from "lume/plugins/date.ts";
-import unocss from "lume/plugins/unocss.ts";
 import purgecss from "lume/plugins/purgecss.ts";
-import { presetAttributify, presetWind3, presetWind4 } from "npm:unocss";
 
 const icon_catalogs = [
   {
@@ -71,17 +69,6 @@ const site = lume({
       },
     },
   }));
-
-site.use(unocss({
-  cssFile: false,
-  options: {
-    presets: [
-      presetWind3,
-      presetAttributify,
-      presetWind4,
-    ],
-  },
-}));
 
 site.use(lightningCss())
   .use(purgecss())
