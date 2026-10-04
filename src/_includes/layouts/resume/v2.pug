@@ -128,7 +128,7 @@ html(lang="en")
                             for edu in gv2.education
                                 div(flex="~ row wrap" mb=1)
                                     h3(text="lg" flex="grow" basis="3/4" font="medium")=edu.org
-                                    p(text="sm right" basis="1/4" pt="2") #[em= `${edu.grad.month.padStart(2, "0")}/${edu.grad.year}`]
+                                    p(text="sm right" basis="1/4" pt="2" pr="2") #[em= `${edu.grad.month.padStart(2, "0")}/${edu.grad.year}`]
                                     div.basis-full
                                     - const degrees = edu.degrees.map(degree => `${degree.name}, ${degree.rank}`)
                                     - const gpa = Math.max(...edu.degrees.filter(degree => degree.gpa).map(degree => degree.gpa), edu.gpa || 0)
@@ -140,7 +140,7 @@ html(lang="en")
                                         else
                                             = degrees.join("  &  ")
                                     if gpa && includeGPA
-                                        p(text="xs right" basis="1/4")=`GPA: ${gpa.toLocaleString(undefined, {minimumFractionDigits:1, maximumFractionDigits:1})}`
+                                        p(text="xs right" basis="1/4" pr="2")=`GPA: ${gpa.toLocaleString(undefined, {minimumFractionDigits:1, maximumFractionDigits:1})}`
                     when "skills"
                         div(col=`span-${spanNum}`)
                             h2(text="2xl center" pb=1) Key Skills
@@ -156,7 +156,7 @@ html(lang="en")
                             for project in content.resume.projects
                                 div(flex="~ row wrap" mb=1)
                                     h3(text="lg" flex="grow" basis="3/4" font="medium")=project.title
-                                    p(text="sm right" basis="1/4" pt="2") #[em= `${project.start.replace(/(\d{4})-(\d{2}).*/g, "$2/$1")} – ${project.current ? "Ongoing" : project.end.replace(/(\d{4})-(\d{2}).*/g, "$2/$1")}`]
+                                    p(text="sm right" basis="1/4" pt="2") #[em= `${project.start.toString().replaceAll(/(\d{4})-(\d{2}).*/g, "$2/$1")} – ${project.current ? "Ongoing" : project.end.toString().replace(/(\d{4})-(\d{2}).*/g, "$2/$1")}`]
                                     p(text="xs" underline="~ offset-2" basis="full" mb=2) #[strong Link: #[a(href=project.link)=project.link]]
                                     for text in (project.description || "").split("\n")
                                         p(text="sm" basis="full")=text
