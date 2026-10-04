@@ -23,7 +23,7 @@
 
     <section class="skill-projects">
         <h2>Related Projects</h2>
-        {{ set skill_projects = search.pages("skills=" + id, "weight") }}
+        {{ set skill_projects = search.pages("", "weight").filter(post => post.skill_id?.includes(id) || post.skills?.includes(id) || post.skills?.includes(title)) }}
         {{ if skill_projects.length > 0 }}
         <div class="row">
             {{ for post of skill_projects }}

@@ -20,7 +20,7 @@
 
     <section class="org-projects">
         <h2>Related Projects</h2>
-        {{ set org_projects = search.pages("org=" + id, "weight") }}
+        {{ set org_projects = search.pages("", "weight").filter(post => (post.org_id || post.org) === id) }}
         {{ if org_projects.length > 0 }}
         <div class="row">
             {{ for post of org_projects }}
