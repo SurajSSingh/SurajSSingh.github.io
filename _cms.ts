@@ -1,5 +1,5 @@
 import lumeCMS from "lume/cms/mod.ts";
-import { registerResumeCMS } from "./_resume.ts";
+// import { registerResumeCMS } from "./_resume.ts";
 
 const cms = lumeCMS();
 
@@ -504,6 +504,6 @@ cms.document({
 });
 
 // --- Resume Items (registered from _resume.ts) ---
-registerResumeCMS(cms);
+// registerResumeCMS(cms);
 
 export default cms;
