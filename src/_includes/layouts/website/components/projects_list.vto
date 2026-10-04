@@ -1,7 +1,8 @@
 {{ layout "layout.vto" }}
+    {{ set projects = search.pages("", "weight") }}
     <p>Below are projects that I have worked on freelancing or in my personal time.</p>
     <section class="row">
-        {{ for post of search.pages("org=personal|freelance", "weight") }}
+        {{ for post of projects.filter(post => ["personal", "freelance"].includes(post.org_id || post.org)) }}
             {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
@@ -11,7 +12,7 @@
         <p>Below are projects I have done during my time at <a href="https://p1games.com">P1 Games.</p>
     </hgroup>
     <section class="row">
-        {{ for post of search.pages("org=p1", "weight") }}
+        {{ for post of projects.filter(post => (post.org_id || post.org) === "p1") }}
             {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
@@ -21,7 +22,7 @@
         <p>Below are projects I have done during my time at <a href="https://codingmindsacademy.com/">Coding Minds Academy</a>.</p>
     </hgroup>
     <section class="row">
-        {{ for post of search.pages("org=coding-minds", "weight") }}
+        {{ for post of projects.filter(post => (post.org_id || post.org) === "coding-minds") }}
             {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
@@ -56,9 +57,18 @@
         <p>Projects I have worked on for school. This includes my undergraduate work at University of California: Irvine (UCI) and graduate work at University of Illinois Urbana-Champaign (UIUC)</p>
     </hgroup>
     <section class="row">
-        {{ for post of search.pages("org=uci|uiuc", "weight") }}
+        {{ for post of projects.filter(post => ["uci", "uiuc"].includes(post.org_id || post.org)) }}
             {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
 
+    {{ set other_projects = projects.filter(post => (post.org_id || post.org) && !["personal", "freelance", "p1", "coding-minds", "uci", "uiuc"].includes(post.org_id || post.org)) }}
+    {{ if other_projects.length > 0 }}
+        <h2>Other Projects</h2>
+        <section class="row">
+            {{ for post of other_projects }}
+                {{ include "layouts/website/components/project_card.vto" {...post} }}
+            {{ /for }}
+        </section>
+    {{ /if }}
 {{ /layout }}

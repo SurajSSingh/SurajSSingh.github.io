@@ -1,0 +1,113 @@
+---
+layout: layout.vto
+---
+
+<article class="about-page">
+  <h1>{{ title }}</h1>
+
+  {{ if intro }}
+  <p>{{ intro }}</p>
+  {{ /if }}
+
+  {{ if who_i_am }}
+  <section class="about-section" id="who-i-am">
+    <h2>Who I am</h2>
+    {{ who_i_am |> md }}
+  </section>
+  {{ /if }}
+
+  {{ if pronouns }}
+  <section class="about-section" id="pronouns">
+    <h3>Preferred Pronouns</h3>
+    {{ if pronouns_intro }}
+    <p>{{ pronouns_intro |> md(true) }}</p>
+    {{ /if }}
+    <ol>
+      {{ for item of pronouns }}
+      <li>
+        <em><strong>{{ item.pronoun }}</strong></em>:
+        <em>Example: {{ item.example |> md(true) }}</em>
+      </li>
+      {{ /for }}
+    </ol>
+  </section>
+  {{ /if }}
+
+  {{ if interests }}
+  <section class="about-section" id="interests">
+    <h3>Interests</h3>
+    {{ if interests_intro }}
+    <p>{{ interests_intro }}</p>
+    {{ /if }}
+    <ul>
+      {{ for group of interests }}
+      <li>
+        {{ group.category }}
+        {{ if group.items.length > 0 }}
+        <ul>
+          {{ for item of group.items }}
+          <li>{{ item }}</li>
+          {{ /for }}
+        </ul>
+        {{ /if }}
+      </li>
+      {{ /for }}
+    </ul>
+  </section>
+  {{ /if }}
+
+  {{ if learning }}
+  <section class="about-section" id="learning">
+    <h3>What I am Learning</h3>
+    {{ if learning_intro }}
+    <p>{{ learning_intro }}</p>
+    {{ /if }}
+    <ul>
+      {{ for item of learning }}
+      <li>
+        {{ if item.url }}
+        <a href="{{ item.url }}">{{ item.label }}</a>
+        {{ else }}
+        {{ item.label }}
+        {{ /if }}
+      </li>
+      {{ /for }}
+    </ul>
+  </section>
+  {{ /if }}
+
+  {{ if recent_work }}
+  <section class="about-section" id="recent-work">
+    <h3>What I have worked on recently</h3>
+    {{ if recent_work_intro }}
+    <p>{{ recent_work_intro }}</p>
+    {{ /if }}
+    <ul>
+      {{ for item of recent_work }}
+      <li>
+        {{ if item.url }}
+        <a href="{{ item.url }}">{{ item.label }}</a>
+        {{ else }}
+        {{ item.label }}
+        {{ /if }}
+      </li>
+      {{ /for }}
+    </ul>
+  </section>
+  {{ /if }}
+
+  {{ if personal_projects }}
+  <section class="about-section" id="personal-projects">
+    <h3>Small scale personal projects</h3>
+    <ul>
+      {{ for item of personal_projects }}
+      <li>{{ item |> md(true) }}</li>
+      {{ /for }}
+    </ul>
+  </section>
+  {{ /if }}
+
+  {{ if content }}
+  {{ content }}
+  {{ /if }}
+</article>

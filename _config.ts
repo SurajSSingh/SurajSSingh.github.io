@@ -9,7 +9,6 @@ import lightningCss from "lume/plugins/lightningcss.ts";
 import icons from "lume/plugins/icons.ts";
 import metas from "lume/plugins/metas.ts";
 import relations from "lume/plugins/relations.ts";
-import pug from "lume/plugins/pug.ts";
 import date from "lume/plugins/date.ts";
 import unocss from "lume/plugins/unocss.ts";
 import purgecss from "lume/plugins/purgecss.ts";
@@ -48,7 +47,6 @@ const site = lume({
   ))
   .use(toml())
   .use(yaml())
-  .use(pug())
   .use(fff({
     date: "published",
   }))
@@ -61,34 +59,33 @@ const site = lume({
   .use(relations({
     foreignKeys: {
       project: "project_id",
-      skill: "skill_id",
-      organization: "org_id",
+      skill: {
+        foreignKey: "skill_id",
+        relationKey: "skill",
+        pluralRelationKey: "skills_rel",
+      },
+      organization: {
+        foreignKey: "org_id",
+        relationKey: "organization",
+        pluralRelationKey: "organizations",
+      },
     },
   }));
 
-if (Deno.env.get("LUME_DRAFTS") != "true") {
-  // Production
-  site.ignore((path) => path.match(/^\/resumes/) !== null);
-  site.use(metas());
-} else {
-  // TODO: When drafting, regenerate encrypted resume file for Git
-  // Development
-  if (Deno.env.get("UNO_STYLE")) {
-    site.use(unocss({
-      cssFile: false,
-      options: {
-        presets: [
-          presetWind3,
-          presetAttributify,
-          presetWind4,
-        ],
-      },
-    }));
-  }
-}
+site.use(unocss({
+  cssFile: false,
+  options: {
+    presets: [
+      presetWind3,
+      presetAttributify,
+      presetWind4,
+    ],
+  },
+}));
 
 site.use(lightningCss())
   .use(purgecss())
+  .use(metas())
   .use(inline({
     copyAttributes: ["title", /^data-/, "fill"],
   }));
