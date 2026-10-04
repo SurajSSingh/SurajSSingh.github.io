@@ -2,6 +2,24 @@ import lumeCMS from "lume/cms/mod.ts";
 
 const cms = lumeCMS();
 
+async function initRelationOptions(
+  field: Lume.CMS.Fields["relation"] | Lume.CMS.Fields["relation-list"],
+  content: Lume.CMS.Content,
+) {
+  const collection = content.collections[field.collection];
+  const options: { label: string; value: string }[] = [];
+
+  // Collection metadata does not include frontmatter IDs.
+  for await (const { name, label } of collection) {
+    const { root } = await collection.get(name).read();
+    if (typeof root.id === "string" && root.id.trim()) {
+      options.push({ label, value: root.id });
+    }
+  }
+
+  field.options = options.sort((a, b) => a.label.localeCompare(b.label));
+}
+
 cms.storage("img", "assets/images");
 
 cms.upload("images: Manage a all images here.", "src:assets/images");
@@ -169,7 +187,7 @@ cms.collection({
       description: "Organization this project belongs to",
       type: "relation",
       collection: "organizations",
-      option: ({ label, flags }) => ({ label, value: flags?.id ?? "" }),
+      init: initRelationOptions,
     },
     {
       name: "org",
@@ -190,7 +208,7 @@ cms.collection({
       description: "Skills associated with this project",
       type: "relation-list",
       collection: "skills",
-      option: ({ label, flags }) => ({ label, value: flags?.id ?? "" }),
+      init: initRelationOptions,
     },
     {
       name: "skills",
