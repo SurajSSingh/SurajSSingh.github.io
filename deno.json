@@ -17,7 +17,8 @@
       "description": "Run and serve the site for development",
       "command": "deno task lume -s"
     },
-    "cms": "deno task lume -s"
+    "cms": "deno task lume -s",
+    "test": "deno test -A tests"
   },
   "compilerOptions": {
     "types": [
