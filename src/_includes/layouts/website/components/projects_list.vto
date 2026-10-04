@@ -1,5 +1,6 @@
 {{ layout "layout.vto" }}
-    {{ set projects = search.pages("", "weight") }}
+    {{ content }}
+    {{ set projects = search.pages("type=project", "weight") }}
     <p>Below are projects that I have worked on freelancing or in my personal time.</p>
     <section class="row">
         {{ for post of projects.filter(post => ["personal", "freelance"].includes(post.org_id || post.org)) }}
@@ -9,7 +10,7 @@
     
     <hgroup>
         <h2>P1 Games:</h2>
-        <p>Below are projects I have done during my time at <a href="https://p1games.com">P1 Games.</p>
+        <p>Below are projects I have done during my time at <a href="https://p1games.com">P1 Games</a>.</p>
     </hgroup>
     <section class="row">
         {{ for post of projects.filter(post => (post.org_id || post.org) === "p1") }}
@@ -62,7 +63,7 @@
         {{ /for }}
     </section>
 
-    {{ set other_projects = projects.filter(post => (post.org_id || post.org) && !["personal", "freelance", "p1", "coding-minds", "uci", "uiuc"].includes(post.org_id || post.org)) }}
+    {{ set other_projects = projects.filter(post => !["personal", "freelance", "p1", "coding-minds", "uci", "uiuc"].includes(post.org_id || post.org)) }}
     {{ if other_projects.length > 0 }}
         <h2>Other Projects</h2>
         <section class="row">

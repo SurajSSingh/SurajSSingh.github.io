@@ -1,6 +1,10 @@
 <div class="divider col-12"></div>
 <article class="col no-border card">
   {{ set link = project_link || link }}
+  {{ set card_links = (links || []).filter(item => item.link) }}
+  {{ set cover = cover_image?.file || image }}
+  {{ set current_awards = (additional_image || []).filter(image => image.is_award && image.link) }}
+  {{ set awards = current_awards.length ? current_awards : (project_info?.awards || []).filter(image => image.src) }}
   <h3 class="is-center"><a href="{{url}}">{{ title }}</a></h3>
   <div class="row project-info">
     <div class="col-6 is-center">
@@ -25,10 +29,10 @@
           class="is-center"
           height="{{data_default?.image_height || 200 }}"
         />
-      {{ else }}
+      {{ else if cover }}
         <img
-          src="{{image}}"
-          alt="{{alt}}"
+          src="{{cover}}"
+          alt="{{cover_image?.alt_text || alt || title}}"
           class="is-center"
           height="{{data_default?.image_height || 200 }}"
         />
@@ -42,37 +46,62 @@
         <p class="text-center">{{ summary }}</p>
       {{ /if }}
       <hr />
-      <h4 class="text-center role">Role:</h4>
-      <p class="text-center">{{ project_info.role }}</p>
-      {{ if project_info.awards }}
+      {{ if project_info?.role }}
+        <h4 class="text-center role">Role:</h4>
+        <p class="text-center">{{ project_info.role }}</p>
+      {{ /if }}
+      {{ if awards.length }}
         <hr />
         <h4 class="text-center">Awards:</h4>
         <section class="awards">
-          {{ for image of project_info.awards.slice(0,1) }}
+          {{ for image of awards.slice(0,1) }}
             <figure class="col text-center">
               <img
-                src="{{assets}}/{{image.src}}"
-                alt="{{image.alt}}"
+                src="{{image.link || `${assets}/${image.src}`}}"
+                alt="{{image.alt_text || image.alt}}"
                 width="200"
               >
-              <figcaption>{{ image.caption || image.alt }}</figcaption>
+              <figcaption>{{ image.caption || image.alt_text || image.alt }}</figcaption>
             </figure>
           {{ /for }}
           <div class="row">
-            {{ for image of project_info.awards.slice(1) }}
+            {{ for image of awards.slice(1) }}
               <figure class="col text-center">
                 <img
-                  src="{{assets}}/{{image.src}}"
-                  alt="{{image.alt}}"
+                  src="{{image.link || `${assets}/${image.src}`}}"
+                  alt="{{image.alt_text || image.alt}}"
                   width="200"
                 >
-                <figcaption>{{ image.caption || image.alt }}</figcaption>
+                <figcaption>{{ image.caption || image.alt_text || image.alt }}</figcaption>
               </figure>
             {{ /for }}
           </div>
         </section>
       {{ /if }}
-      {{ if project_info.external_links }}
+      {{ if card_links.length }}
+        <hr />
+        <h4 class="text-center">Links:</h4>
+        <section class="row is-center links">
+          <div class="pad col-1"></div>
+          {{ for item of card_links }}
+            <a href="{{item.link}}" class="col text-center">
+              {{ set link_icon = { "Home": "homepage", "Itch.io": "itchdotio", "GitHub Repo": "github", "GitLab Repo": "gitlab" }[item.name] }}
+              {{ if link_icon }}
+                <img
+                  src='{{link_icon |> icon("simpleicons")}}'
+                  alt="{{item.name}} Icon"
+                  width="24"
+                  fill="var(--color-primary)"
+                  inline
+                >
+                <br />
+              {{ /if }}
+              <span>{{item.name}}</span>
+            </a>
+          {{ /for }}
+          <div class="pad col-1"></div>
+        </section>
+      {{ else if project_info?.external_links }}
         <hr />
         {{ set links = project_info.external_links }}
         <h4 class="text-center">Links:</h4>

@@ -4,7 +4,7 @@ import { prepareField } from "lume/cms/core/utils/data.ts";
 import { Page } from "lume/core/file.ts";
 import Searcher from "lume/core/searcher.ts";
 import { engine } from "lume/deps/vento.ts";
-import cmsConfig from "../_cms.ts";
+import cmsConfig, { ProjectStorage } from "../_cms.ts";
 
 Deno.test("CMS relations use frontmatter IDs and survive save/reopen", async () => {
   const root = await Deno.makeTempDir({ prefix: "cms-relations-" });
@@ -19,20 +19,38 @@ Deno.test("CMS relations use frontmatter IDs and survive save/reopen", async () 
         "skill/language-title.md": "title: Language Title\nid: rust",
         "skill/missing-id.md": "title: Missing ID",
         "skill/empty-id.md": 'title: Empty ID\nid: ""',
+        "project/existing-project.md":
+          "title: Existing Project\norg: freelance\nproject_link: https://example.com\nproject_info:\n  role: Developer\n  external_links:\n    main: https://example.com",
+        "project/index.md": "title: Projects\nlayout: projects_list.vto",
+        "project/index-tool.md": "title: Index Tool",
       })
     ) {
       await Deno.writeTextFile(`${root}/${path}`, `---\n${frontmatter}\n---\n`);
     }
 
-    const cms = lumeCMS({ root }).storage("src", ".");
+    const cms = lumeCMS({ root }).storage("src", ".")
+      .storage("projects", new ProjectStorage(root));
     for (const upload of cmsConfig.uploads.values()) {
       cms.upload(upload);
     }
     for (const collection of cmsConfig.collections.values()) {
       cms.collection(collection);
     }
+    cms.document(cmsConfig.documents.get("portfolio-page")!);
     const content = cms.initContent();
     const projects = content.collections.projects;
+    const projectNames = [];
+    for await (const entry of projects) projectNames.push(entry.name);
+    deepStrictEqual(projectNames.sort(), [
+      "existing-project.md",
+      "index-tool.md",
+    ]);
+    const portfolio = content.documents["portfolio-page"];
+    equal((await portfolio.read()).root.title, "Projects");
+    await portfolio.write({
+      root: { summary: "Updated portfolio introduction" },
+    }, content);
+    equal((await portfolio.read()).root.layout, "projects_list.vto");
     const document = projects.create("fixture.md");
 
     const relationFields = async () => {
@@ -70,7 +88,16 @@ Deno.test("CMS relations use frontmatter IDs and survive save/reopen", async () 
         root: {
           title: "Fixture",
           id: "fixture",
+          type: "project",
           date: "2026-10-04",
+          summary: "Client project created in the CMS",
+          links: { "0": { name: "Home", link: "https://example.com/client" } },
+          cover_image: {
+            file: { current: "/assets/images/client.png" },
+            alt_text: "Client project screenshot",
+          },
+          highlighted_project: "true",
+          content: "## Client work\n\nWhat I built and delivered.",
           org_id: fields.org![0],
           skill_id: { "0": "unity", "1": "rust" },
         },
@@ -83,6 +110,14 @@ Deno.test("CMS relations use frontmatter IDs and survive save/reopen", async () 
     const { root: saved } = await reopened.read();
     equal(saved.org_id, "p1");
     deepStrictEqual(saved.skill_id, ["unity", "rust"]);
+    equal(saved.type, "project");
+    deepStrictEqual(saved.links, [{
+      name: "Home",
+      link: "https://example.com/client",
+    }]);
+    equal(saved.cover_image.file, "/assets/images/client.png");
+    equal(saved.highlighted_project, true);
+    ok(saved.content.includes("What I built and delivered."));
 
     await reopened.write({
       root: { org_id: "p1", skill_id: { "0": "rust" } },
@@ -98,6 +133,26 @@ Deno.test("CMS relations use frontmatter IDs and survive save/reopen", async () 
     const refreshed = await relationFields();
     ok(refreshed.skills?.includes("typescript"));
     ok(refreshed.skills?.includes(updated.skill_id[0]));
+
+    const existing = projects.get("existing-project.md");
+    const existingData = await existing.read();
+    await prepareField(projects.fields!, content, existingData, existing);
+    equal(existingData.root.id, "existing-project");
+    existingData.root.id = "stable-project-id";
+    await prepareField(projects.fields!, content, existingData, existing);
+    equal(existingData.root.id, "stable-project-id");
+    await existing.write({
+      root: {
+        summary: "Updated in the CMS",
+        project_info: { role: "Lead Developer" },
+      },
+    }, content);
+    const { root: legacy } = await existing.read();
+    equal(legacy.summary, "Updated in the CMS");
+    equal(legacy.org, "freelance");
+    equal(legacy.project_link, "https://example.com");
+    equal(legacy.project_info.role, "Lead Developer");
+    equal(legacy.project_info.external_links.main, "https://example.com");
   } finally {
     await Deno.remove(root, { recursive: true });
   }
@@ -128,7 +183,7 @@ async function renderList(
 ) {
   const search = new Searcher({
     pages: projects.map((project, index) =>
-      Page.create({ url: `/project/${index}/`, ...project })
+      Page.create({ url: `/project/${index}/`, type: "project", ...project })
     ),
     files: [],
     sourceData: new Map(),
@@ -178,13 +233,20 @@ Deno.test("portfolio groups support relation-only projects and new organizations
     { title: "Moved to School", org: "p1", org_id: "uci" },
     { title: "Graduate", org_id: "uiuc" },
     { title: "New Organization", org_id: "new-org" },
-  ]);
+    { title: "No Organization" },
+    { title: "About", type: "page", url: "/about/" },
+    { title: "Project Index", type: "page", url: "/project/" },
+  ], { content: "<p>Portfolio introduction from the CMS</p>" });
+  ok(html.includes("<p>Portfolio introduction from the CMS</p>"));
   const titles = projectTitles(html);
-  equal(titles.length, 7);
-  equal(new Set(titles).size, 7);
+  equal(titles.length, 8);
+  equal(new Set(titles).size, 8);
   const [beforeSchool, afterSchool] = html.split("<h2>School Projects</h2>");
   ok(!projectTitles(beforeSchool).includes("Moved to School"));
   ok(projectTitles(afterSchool).includes("Moved to School"));
   const [, other] = html.split("<h2>Other Projects</h2>");
-  deepStrictEqual(projectTitles(other), ["New Organization"]);
+  deepStrictEqual(projectTitles(other), [
+    "New Organization",
+    "No Organization",
+  ]);
 });

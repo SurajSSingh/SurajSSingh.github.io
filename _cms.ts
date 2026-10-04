@@ -1,6 +1,21 @@
 import lumeCMS from "lume/cms/mod.ts";
+import { Fs } from "lume/cms/storage/fs.ts";
+
+// The portfolio index is edited as a document, not as a project.
+export class ProjectStorage extends Fs {
+  constructor(root: string) {
+    super({ root, path: "project/*.md" });
+  }
+
+  override async *[Symbol.asyncIterator]() {
+    for await (const entry of super[Symbol.asyncIterator]()) {
+      if (entry.name !== "index.md") yield entry;
+    }
+  }
+}
 
 const cms = lumeCMS();
+cms.storage("projects", new ProjectStorage(`${cms.options.root}/src`));
 
 async function initRelationOptions(
   field: Lume.CMS.Fields["relation"] | Lume.CMS.Fields["relation-list"],
@@ -127,7 +142,7 @@ cms.collection({
 cms.collection({
   name: "projects",
   description: "Here you add, edit or delete projects for the portfolio",
-  store: "src:project/*.md",
+  store: "projects",
   documentName: "{title}.md",
   fields: [
     // ── Basics (always visible) ──
@@ -140,6 +155,11 @@ cms.collection({
       description:
         "Unique identifier for relations (e.g. 'keito', 'eco-defender')",
       attributes: { required: true },
+      init(field, _content, data, document) {
+        if (data && document) {
+          data[field.name] ??= document.name.replace(/\.md$/, "");
+        }
+      },
     },
     {
       name: "type",
@@ -184,7 +204,8 @@ cms.collection({
     {
       name: "org_id",
       label: "Organization",
-      description: "Organization this project belongs to",
+      description:
+        "Optional client or organization. Create it in Organizations first; projects without one appear under Other Projects.",
       type: "relation",
       collection: "organizations",
       init: initRelationOptions,
@@ -219,7 +240,8 @@ cms.collection({
     {
       name: "tech_stack",
       type: "list",
-      description: "List of technology associated with the project",
+      description:
+        "Technology metadata. Describe the tools used in Content to show them on the project page.",
     },
     "highlighted_project: checkbox",
 
@@ -236,7 +258,8 @@ cms.collection({
     },
     {
       name: "additional_image",
-      description: "Other images related to the project (gallery)",
+      description:
+        "Award images appear on highlighted cards. Include other images in Content to display a gallery on the project page.",
       type: "object-list",
       view: "media",
       fields: [
@@ -261,7 +284,8 @@ cms.collection({
     },
     {
       name: "project_info",
-      description: "Additional project information",
+      description:
+        "Role and trailer appear on highlighted cards. Include status, team size, and dates in Content to display them on the project page.",
       type: "object",
       view: "details",
       fields: [
@@ -299,7 +323,12 @@ cms.collection({
     },
 
     // ── Content (always visible) ──
-    "content: markdown",
+    {
+      name: "content",
+      type: "markdown",
+      description:
+        "Project page content: explain the client work, your contribution, and results. Include any additional links, images, or details you want on this page.",
+    },
   ],
 });
 cms.document({
@@ -461,7 +490,7 @@ cms.document({
 });
 cms.document(
   "portfolio-page: Edit the content of the portfolio page",
-  "src:portfolio.yml",
+  "src:project/index.md",
   [
     "title: text!",
     "summary: text",
