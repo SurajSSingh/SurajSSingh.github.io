@@ -1,12 +1,11 @@
 ---
 title: WASVD
-date: '2024-02-10T00:00:00.000Z'
+date: "2024-02-10T00:00:00.000Z"
 image: /assets/images/wasvd.png
 alt: Example of WASM function visualized
 summary: A WebAssembly Stack Visual Debugger
-project_link: 'https://github.com/SurajSSingh/WASVD'
+project_link: "https://github.com/SurajSSingh/WASVD"
 weight: 3
-start_new_row: true
 highlighted_project: true
 project_info:
   demo_gif: images/gifs/WASVD-Demo.gif
@@ -16,11 +15,11 @@ project_info:
     execution happens. Learned how to interoperate between Rust and TypeScript
     (via <a href='https://tauri.app'>Tauri</a>).
   external_links:
-    github: 'https://github.com/SurajSSingh/WASVD'
+    github: "https://github.com/SurajSSingh/WASVD"
 last_modified: 2025-01-02T05:29:00.000Z
 links:
   - name: GitHub Repo
-    link: 'https://github.com/SurajSSingh/WASVD'
+    link: "https://github.com/SurajSSingh/WASVD"
 cover_image:
   file: /assets/images/gifs/WASVD-Demo.gif
   alt_text: Demo of WASVD
@@ -34,7 +33,9 @@ tech_stack:
   - Svelte
   - SkeletonUI
 skills: []
+org: personal
 ---
+
 ## Overview
 
 A visual debugger for WebAssembly Text format. The idea is to allow one to see

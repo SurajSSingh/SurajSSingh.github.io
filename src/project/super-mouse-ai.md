@@ -30,6 +30,7 @@ project_info:
   role: Lead Developer
   external_links:
     github: "https://github.com/SurajSSingh/SuperMouseAI"
+start_new_row: true
 ---
 
 ## What is it

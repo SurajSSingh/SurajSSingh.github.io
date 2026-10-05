@@ -28,6 +28,7 @@ project_info:
   role: Developer and Researcher
   trailer: "https://youtu.be/Y2gcbZS6NvI"
 highlighted_project: false
+org: uci
 ---
 
 ## Course

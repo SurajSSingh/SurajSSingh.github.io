@@ -139,6 +139,8 @@ Deno.test("project_card preserves legacy wrapper, student, divider and learn-mor
   match(html, /href="https:\/\/example.com\/project"[^>]*>\s*<h3/);
   match(html, /href="https:\/\/example.com\/student">Student Name<\/a>/);
   match(html, /href="\/project\/fixture\/">Learn More\.\.\.<\/a>/);
+  match(html, /<article class="col card no-border project-card">/);
+  match(html, /<p class="project-card-more"><a href="\/project\/fixture\/">Learn More\.\.\.<\/a><\/p>\s*<\/article>/);
   deepStrictEqual(imageSources(html), ["/assets/legacy.png"]);
   ok(!html.includes('class="row is-center links"'));
 
@@ -158,6 +160,32 @@ Deno.test("project_card preserves legacy wrapper, student, divider and learn-mor
     links: [],
   });
   match(legacyLink, /href="https:\/\/example.com\/legacy"[^>]*>\s*<h3/);
+});
+
+Deno.test("portfolio_card uses the home icon for Download Page links", async () => {
+  const html = await renderCard("portfolio_card", {
+    links: [{ name: "Download Page", link: "https://www.speakflow.com/download" }],
+  });
+  deepStrictEqual(imageSources(html), ["/icons/simpleicons/homepage.svg"]);
+  match(html, /href="https:\/\/www.speakflow.com\/download"/);
+  match(html, /<span>Download Page<\/span>/);
+});
+
+Deno.test("portfolio_card renders a monochrome globe and Speakflow screenshot", async () => {
+  const html = await renderCard("portfolio_card", {
+    links: [{ name: "Speakflow", link: "https://www.speakflow.com/" }],
+    cover_image: {
+      file: "/assets/images/speakflow-desktop-screenshot.png",
+      alt_text: "Speakflow desktop app showing script search, folders, and saved scripts",
+    },
+  });
+  deepStrictEqual(imageSources(html), [
+    "/assets/images/speakflow-desktop-screenshot.png",
+  ]);
+  match(html, /<svg[^>]*stroke="currentColor"[^>]*aria-hidden="true"/);
+  match(html, /<circle cx="12" cy="12" r="9"/);
+  ok(!html.includes("speakflow-logo.svg"));
+  match(html, /<span>Speakflow<\/span>/);
 });
 
 Deno.test("portfolio_card uses current award fields and preserves award arrangement", async () => {
