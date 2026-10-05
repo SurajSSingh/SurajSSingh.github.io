@@ -1,7 +1,7 @@
 {{ if start_new_row && !ignore_row_div }}
 <div class="divider col-12"></div>
 {{ /if }}
-<article class="col card no-border">
+<article class="col card no-border project-card">
     {{ set card_links = (links || []).filter(item => item.link) }}
     {{ set link = card_links.find(item => item.name === "Home")?.link || card_links[0]?.link || project_link || link }}
     {{ set cover = cover_image?.file || image }}
@@ -30,6 +30,6 @@
         </section>
     {{ /if }}
     {{ if url }}
-        <p><a href="{{url}}">Learn More...</a></p>
+        <p class="project-card-more"><a href="{{url}}">Learn More...</a></p>
     {{ /if }}
 </article>

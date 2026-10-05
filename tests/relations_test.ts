@@ -250,3 +250,24 @@ Deno.test("portfolio groups support relation-only projects and new organizations
     "No Organization",
   ]);
 });
+
+Deno.test("freelance leads the portfolio with Speakflow followed by P1 projects", async () => {
+  const html = await renderList("components/projects_list.vto", [
+    { title: "Personal", org: "personal", weight: -30 },
+    { title: "Freelance", org_id: "freelance", weight: 0 },
+    { title: "Keito", org: "p1", weight: -10 },
+    { title: "P1 New", org_id: "p1", weight: -5 },
+    { title: "Speakflow", org_id: "speakflow", weight: -20 },
+    { title: "Other", org_id: "new-org" },
+  ]);
+  const [freelance, remainder] = html.split("<h2>Personal Projects</h2>");
+  ok(freelance.includes("<h2>Freelance</h2>"));
+  deepStrictEqual(projectTitles(freelance), [
+    "Speakflow",
+    "Keito",
+    "P1 New",
+    "Freelance",
+  ]);
+  deepStrictEqual(projectTitles(remainder), ["Personal", "Other"]);
+  ok(!html.includes("<h2>P1 Games:</h2>"));
+});
