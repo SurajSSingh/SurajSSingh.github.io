@@ -70,6 +70,18 @@ const site = lume({
     },
   }));
 
+// Identify legacy project documents without changing their URLs or frontmatter.
+site.preprocess([".md"], (pages) => {
+  for (const page of pages) {
+    if (
+      /^\/project\/[^/]+$/.test(page.src.path) &&
+      page.src.path !== "/project/index"
+    ) {
+      page.data.type = "project";
+    }
+  }
+});
+
 site.use(lightningCss())
   .use(purgecss())
   .use(metas())

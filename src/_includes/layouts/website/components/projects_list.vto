@@ -1,18 +1,16 @@
 {{ layout "layout.vto" }}
-    {{ set projects = search.pages("", "weight") }}
-    <p>Below are projects that I have worked on freelancing or in my personal time.</p>
+    {{ content }}
+    {{ set projects = search.pages("type=project", "weight") }}
+    <h2>Freelance</h2>
     <section class="row">
-        {{ for post of projects.filter(post => ["personal", "freelance"].includes(post.org_id || post.org)) }}
+        {{ for post of projects.filter(post => ["freelance", "p1", "speakflow"].includes(post.org_id || post.org)) }}
             {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
     
-    <hgroup>
-        <h2>P1 Games:</h2>
-        <p>Below are projects I have done during my time at <a href="https://p1games.com">P1 Games.</p>
-    </hgroup>
+    <h2>Personal Projects</h2>
     <section class="row">
-        {{ for post of projects.filter(post => (post.org_id || post.org) === "p1") }}
+        {{ for post of projects.filter(post => (post.org_id || post.org) === "personal") }}
             {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
@@ -62,7 +60,7 @@
         {{ /for }}
     </section>
 
-    {{ set other_projects = projects.filter(post => (post.org_id || post.org) && !["personal", "freelance", "p1", "coding-minds", "uci", "uiuc"].includes(post.org_id || post.org)) }}
+    {{ set other_projects = projects.filter(post => !["personal", "freelance", "p1", "speakflow", "coding-minds", "uci", "uiuc"].includes(post.org_id || post.org)) }}
     {{ if other_projects.length > 0 }}
         <h2>Other Projects</h2>
         <section class="row">

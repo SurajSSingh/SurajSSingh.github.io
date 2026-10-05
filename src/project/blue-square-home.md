@@ -27,7 +27,7 @@ project_info:
   external_links:
     main: "https://blue-square-legion.github.io/"
     github: "https://github.com/Blue-Square-Legion/Blue-Square-Legion.github.io"
-highlighted_project: true
+highlighted_project: false
 project_link: "https://blue-square-legion.github.io/"
 image: /assets/images/blue-square-homepage.png
 alt: Homepage of Blue Square Legion Website

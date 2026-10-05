@@ -3,7 +3,7 @@
   Here are a small selection of projects I have worked on:
 </p>
 <section class="row">
-  {{ for post of search.pages("highlighted_project=true", "weight") }}
+  {{ for post of search.pages("highlighted_project=true", "weight").slice(0, 5) }}
     {{ include "layouts/website/components/portfolio_card.vto" { ...post } }}
   {{ /for }}
 </section>
