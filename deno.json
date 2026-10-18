@@ -1,6 +1,6 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.2/",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.3.2/",
     "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.14.16/",
     "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.14/jsx-runtime.ts"
   },
@@ -33,7 +33,7 @@
   ],
   "lint": {
     "plugins": [
-      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.2/lint.ts"
+      "https://cdn.jsdelivr.net/gh/lumeland/lume@3.3.2/lint.ts"
     ],
     "rules": {
       "exclude": [
