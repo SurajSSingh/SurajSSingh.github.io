@@ -5,7 +5,8 @@
   {{ set cover = cover_image?.file || image }}
   {{ set current_awards = (additional_image || []).filter(image => image.is_award && image.link) }}
   {{ set awards = current_awards.length ? current_awards : (project_info?.awards || []).filter(image => image.src) }}
-  <h3 class="is-center"><a href="{{url}}">{{ title }}</a></h3>
+  {{ set transition_id = url && `project-${Array.from(url, character => character.codePointAt(0).toString(16)).join("-")}` }}
+  <h3 class="is-center" {{ if transition_id }}style="view-transition-name: {{transition_id}}-title"{{ /if }}><a href="{{url}}">{{ title }}</a></h3>
   <div class="row project-info">
     <div class="col-6 is-center">
       {{ if project_info?.trailer }}
@@ -27,6 +28,7 @@
           src="{{assets}}/{{project_info.demo_gif}}"
           alt="Demo of {{title}}"
           class="is-center"
+          {{ if transition_id && (!cover || cover === project_info.demo_gif || cover === `${assets}/${project_info.demo_gif}`) }}style="view-transition-name: {{transition_id}}-image"{{ /if }}
           height="{{data_default?.image_height || 200 }}"
         />
       {{ else if cover }}
@@ -34,6 +36,7 @@
           src="{{cover}}"
           alt="{{cover_image?.alt_text || alt || title}}"
           class="is-center"
+          {{ if transition_id }}style="view-transition-name: {{transition_id}}-image"{{ /if }}
           height="{{data_default?.image_height || 200 }}"
         />
       {{ /if }}

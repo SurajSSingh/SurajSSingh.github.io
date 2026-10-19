@@ -1,5 +1,6 @@
 <hgroup>
-    <h1>{{title}}</h1>
+    {{ set transition_id = type === "project" && url && `project-${Array.from(url, character => character.codePointAt(0).toString(16)).join("-")}` }}
+    <h1 {{ if transition_id }}style="view-transition-name: {{transition_id}}-title"{{ /if }}>{{title}}</h1>
     {{ if project_link }}
         <p>Link: <a href="{{project_link}}">{{project_link}}</a></p>
     {{ /if }}

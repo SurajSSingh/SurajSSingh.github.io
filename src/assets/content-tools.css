@@ -1,3 +1,22 @@
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(*) {
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+
+::view-transition-group(root) {
+  animation-duration: 180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
@@ -51,6 +70,50 @@
 
 #content .project-info img {
   object-fit: contain;
+}
+
+@media (min-width: 600px) {
+  #content .card:has(> .project-info) {
+    display: grid;
+    flex-basis: 100%;
+    min-width: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "media title" "media details";
+    column-gap: var(--grid-gutter);
+  }
+
+  #content .card:has(> .project-info):nth-of-type(even) {
+    grid-template-areas: "title media" "details media";
+  }
+
+  #content .card:has(> .project-info) > h3 {
+    grid-area: title;
+  }
+
+  /* Let the existing title and both nested columns share the card's grid. */
+  #content .card > .project-info {
+    display: contents;
+  }
+
+  #content .card > .project-info > .col-6 {
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+  }
+
+  #content .card > .project-info > .col-6:first-child {
+    grid-area: media;
+    align-self: center;
+  }
+
+  #content .card > .project-info > .col-6:last-child {
+    grid-area: details;
+  }
+
+  #content .card:has(> .project-info) > .project-links {
+    grid-column: 1 / -1;
+  }
 }
 
 #search {

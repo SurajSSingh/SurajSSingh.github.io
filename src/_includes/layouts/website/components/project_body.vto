@@ -5,9 +5,10 @@
 {{ set project_orgs = [...new Set([organization, ...(organizations || [])].filter(Boolean))] }}
 {{ if cover }}
   {{ set cover_url = /^(?:https?:)?\//.test(cover) ? cover : `${assets}/${cover}` }}
+  {{ set transition_id = url && `project-${Array.from(url, character => character.codePointAt(0).toString(16)).join("-")}` }}
   <figure class="project-cover">
     <a href="{{ cover_url |> escape }}">
-      <img src="{{ cover_url |> escape }}" alt="{{ (cover_image?.alt_text || alt || title) |> escape }}" decoding="async" fetchpriority="high" sizes="(min-width: 1200px) 1200px, 100vw">
+      <img src="{{ cover_url |> escape }}" alt="{{ (cover_image?.alt_text || alt || title) |> escape }}" {{ if transition_id }}style="view-transition-name: {{transition_id}}-image"{{ /if }} decoding="async" fetchpriority="high" sizes="(min-width: 1200px) 1200px, 100vw">
     </a>
   </figure>
 {{ /if }}
