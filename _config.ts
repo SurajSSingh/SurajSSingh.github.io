@@ -150,7 +150,9 @@ site.use(toc({ anchor: false }))
       safelist: {
         standard: ["picture", "source", /^pagefind-ui/],
         // Keep optional CMS sections styled before any project uses them.
-        greedy: [/project-(?:details|facts|links|case-study|gallery)/],
+        greedy: [
+          /project-(?:details|facts|links|link-icon|technologies|cover|case-study|gallery)/,
+        ],
       },
     },
   }))

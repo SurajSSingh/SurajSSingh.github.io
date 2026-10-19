@@ -278,6 +278,14 @@ cms.collection({
       view: "details",
     },
     {
+      name: "show_tech_icons",
+      label: "Show Technology Icons",
+      type: "checkbox",
+      description:
+        "Opt in to icons beside recognized technologies on this project page. Off by default; names and their order stay unchanged, and unsupported tools remain text-only.",
+      view: "details",
+    },
+    {
       name: "highlighted_project",
       label: "Feature on Homepage",
       type: "checkbox",
@@ -291,7 +299,7 @@ cms.collection({
       name: "cover_image",
       label: "Cover Image",
       description:
-        "Shown on project cards. Gallery images below appear on the project page.",
+        "Shown on project cards and at the top of the project page. Gallery images below appear after the project story.",
       type: "object",
       view: "media",
       fields: [

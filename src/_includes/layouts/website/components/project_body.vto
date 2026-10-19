@@ -1,6 +1,15 @@
 {{ set details = project_info || {} }}
 {{ set technologies = (tech_stack || []).filter(item => item) }}
 {{ set project_links = (links || []).filter(item => item.link) }}
+{{ set cover = cover_image?.file || image || details.demo_gif }}
+{{ if cover }}
+  {{ set cover_url = /^(?:https?:)?\//.test(cover) ? cover : `${assets}/${cover}` }}
+  <figure class="project-cover">
+    <a href="{{ cover_url |> escape }}">
+      <img src="{{ cover_url |> escape }}" alt="{{ (cover_image?.alt_text || alt || title) |> escape }}" decoding="async" fetchpriority="high" sizes="(min-width: 1200px) 1200px, 100vw">
+    </a>
+  </figure>
+{{ /if }}
 {{ if details.role || details.status || details.team_size || details.start_date || details.end_date || technologies.length }}
   <section class="project-details">
     <h2>Project Details</h2>
@@ -23,7 +32,13 @@
         <div><dt>Finished</dt><dd><time datetime="{{ end_date }}">{{ end_date }}</time></dd></div>
       {{ /if }}
       {{ if technologies.length }}
-        <div><dt>Technology Stack</dt><dd>{{ technologies.join(", ") |> escape }}</dd></div>
+        <div><dt>Technology Stack</dt><dd>
+          {{ if show_tech_icons === true }}
+            {{ include "layouts/website/components/project_technologies.vto" { technologies } }}
+          {{ else }}
+            {{ technologies.join(", ") |> escape }}
+          {{ /if }}
+        </dd></div>
       {{ /if }}
     </dl>
   </section>
@@ -31,7 +46,7 @@
 {{ if project_links.length }}
   <nav class="project-links" aria-label="Project links">
     {{ for item of project_links }}
-      <a href="{{ item.link |> escape }}">{{ (item.name || item.link) |> escape }}</a>
+      <a href="{{ item.link |> escape }}"><span class="project-link-icon" aria-hidden="true">{{ include "layouts/website/components/project_link_icon.vto" { item } }}</span><span>{{ (item.name || item.link) |> escape }}</span></a>
     {{ /for }}
   </nav>
 {{ /if }}
