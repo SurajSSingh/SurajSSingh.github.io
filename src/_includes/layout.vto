@@ -3,11 +3,20 @@
 {{ include "layouts/website/components/head.vto" }}
 <body class="">
   {{ include "layouts/website/components/header.vto" }}
-  <main id="content" class="is-full-screen container" role="main">
+  <main id="content" class="is-full-screen container" role="main" {{ if !unlisted && !search_page && url !== "/404.html" && url !== "/contact/success/" }}data-pagefind-body{{ /if }}>
+    {{ if !unlisted && url !== "/" && url !== "/404.html" }}
+      {{ include "layouts/website/components/breadcrumbs.vto" }}
+    {{ /if }}
     {{ for preItemName of preIncludeItems }}
       {{ include `${preItemName}.vto` }}
     {{ /for }}
-    {{ content }}
+    {{ if type === "project" && (content.match(/<h[23]\b/g) || []).length > 1 }}
+      <details class="page-toc" data-pagefind-ignore>
+        <summary>On This Page</summary>
+        <nav toc="page-body" aria-label="Table of contents"></nav>
+      </details>
+    {{ /if }}
+    <div id="page-body">{{ content }}</div>
     {{ for postItemName of postIncludeItems }}
       {{ include `${postItemName}.vto` }}
     {{ /for }}

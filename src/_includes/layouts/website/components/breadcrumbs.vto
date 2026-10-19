@@ -1,0 +1,15 @@
+<nav class="breadcrumbs hide-pr" aria-label="Breadcrumb" data-pagefind-ignore>
+  <ol>
+    {{ for item of nav.breadcrumb(url, "unlisted!=true") }}
+      <li>
+        {{ if item.data?.url === url }}
+          <span aria-current="page">{{ item.data.title }}</span>
+        {{ else if item.data?.url }}
+          <a href="{{ item.data.url }}">{{ item.data.url === "/" ? "Home" : item.data.title }}</a>
+        {{ else }}
+          <span>{{ ({org: "Organizations", skill: "Skills", project: "Projects"})[item.slug] || item.slug }}</span>
+        {{ /if }}
+      </li>
+    {{ /for }}
+  </ol>
+</nav>
