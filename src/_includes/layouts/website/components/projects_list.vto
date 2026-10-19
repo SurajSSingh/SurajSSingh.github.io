@@ -17,7 +17,7 @@
 
     <hgroup>
         <h2>Coding Minds:</h2>
-        <p>Below are projects I have done during my time at <a href="https://codingmindsacademy.com/">Coding Minds Academy</a>.</p>
+        <p>Below are projects I have done during my time at <a href="/org/coding-minds/">Coding Minds Academy</a>.</p>
     </hgroup>
     <section class="row">
         {{ for post of projects.filter(post => (post.org_id || post.org) === "coding-minds") }}
@@ -52,7 +52,7 @@
 
     <hgroup>
         <h2>School Projects</h2>
-        <p>Projects I have worked on for school. This includes my undergraduate work at University of California: Irvine (UCI) and graduate work at University of Illinois Urbana-Champaign (UIUC)</p>
+        <p>Projects I have worked on for school. This includes my undergraduate work at <a href="/org/uci/">University of California, Irvine (UCI)</a> and graduate work at <a href="/org/uiuc/">University of Illinois Urbana-Champaign (UIUC)</a></p>
     </hgroup>
     <section class="row">
         {{ for post of projects.filter(post => ["uci", "uiuc"].includes(post.org_id || post.org)) }}

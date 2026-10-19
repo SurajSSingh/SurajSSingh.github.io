@@ -2,6 +2,7 @@
 {{ set technologies = (tech_stack || []).filter(item => item) }}
 {{ set project_links = (links || []).filter(item => item.link) }}
 {{ set cover = cover_image?.file || image || details.demo_gif }}
+{{ set project_orgs = [...new Set([organization, ...(organizations || [])].filter(Boolean))] }}
 {{ if cover }}
   {{ set cover_url = /^(?:https?:)?\//.test(cover) ? cover : `${assets}/${cover}` }}
   <figure class="project-cover">
@@ -10,10 +11,24 @@
     </a>
   </figure>
 {{ /if }}
-{{ if details.role || details.status || details.team_size || details.start_date || details.end_date || technologies.length }}
+{{ if details.role || details.status || details.team_size || details.start_date || details.end_date || technologies.length || project_orgs.length || skills_rel?.length }}
   <section class="project-details">
     <h2>Project Details</h2>
     <dl class="project-facts">
+      {{ if project_orgs.length }}
+        <div><dt>{{ project_orgs.length > 1 ? "Organizations" : "Organization" }}</dt><dd>
+          {{ for index, org of project_orgs }}
+            {{ if index }}, {{ /if }}<a href="{{ org.url |> escape }}">{{ org.title |> escape }}</a>
+          {{ /for }}
+        </dd></div>
+      {{ /if }}
+      {{ if skills_rel?.length }}
+        <div><dt>Skills</dt><dd>
+          {{ for index, skill of skills_rel }}
+            {{ if index }}, {{ /if }}<a href="{{ skill.url |> escape }}">{{ skill.title |> escape }}</a>
+          {{ /for }}
+        </dd></div>
+      {{ /if }}
       {{ if details.role }}
         <div><dt>My Role</dt><dd>{{ details.role |> escape }}</dd></div>
       {{ /if }}
@@ -36,7 +51,7 @@
           {{ if show_tech_icons === true }}
             {{ include "layouts/website/components/project_technologies.vto" { technologies } }}
           {{ else }}
-            {{ technologies.join(", ") |> escape }}
+            {{ for index, technology of technologies }}{{ if index }}, {{ /if }}{{ set technology_skill = (skills_rel || []).find(skill => [skill.title, ...(skill.aliases || [])].some(label => label.toLowerCase() === technology.trim().toLowerCase())) }}{{ if technology_skill }}<a href="{{ technology_skill.url |> escape }}">{{ technology |> escape }}</a>{{ else }}{{ technology |> escape }}{{ /if }}{{ /for }}
           {{ /if }}
         </dd></div>
       {{ /if }}

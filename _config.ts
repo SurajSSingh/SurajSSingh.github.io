@@ -64,22 +64,7 @@ const site = lume({
       // TODO: Figure out why this is not working
       catalogs: icon_catalogs,
     },
-  ))
-  .use(relations({
-    foreignKeys: {
-      project: "project_id",
-      skill: {
-        foreignKey: "skill_id",
-        relationKey: "skill",
-        pluralRelationKey: "skills_rel",
-      },
-      organization: {
-        foreignKey: "org_id",
-        relationKey: "organization",
-        pluralRelationKey: "organizations",
-      },
-    },
-  }));
+  ));
 
 // Identify legacy project documents without changing their URLs or frontmatter.
 site.preprocess([".md"], (pages) => {
@@ -92,6 +77,23 @@ site.preprocess([".md"], (pages) => {
     }
   }
 });
+
+// Project types must be available before creating bidirectional relations.
+site.use(relations({
+  foreignKeys: {
+    project: "project_id",
+    skill: {
+      foreignKey: "skill_id",
+      relationKey: "skill",
+      pluralRelationKey: "skills_rel",
+    },
+    organization: {
+      foreignKey: "org_id",
+      relationKey: "organization",
+      pluralRelationKey: "organizations",
+    },
+  },
+}));
 
 // Apply responsive presets centrally, including images authored in Markdown.
 site.process([".html"], async (pages) => {

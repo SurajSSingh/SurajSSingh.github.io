@@ -8,7 +8,8 @@
       {{ if technology_icon }}
         <img src='{{ technology_icon |> icon("skill-icon") }}' alt="" width="24" height="24" loading="lazy" decoding="async">
       {{ /if }}
-      <span>{{ technology |> escape }}</span>
+      {{ set technology_skill = (skills_rel || []).find(skill => [skill.title, ...(skill.aliases || [])].some(label => label.toLowerCase() === technology_key)) }}
+      {{ if technology_skill }}<a href="{{ technology_skill.url |> escape }}"><span>{{ technology |> escape }}</span></a>{{ else }}<span>{{ technology |> escape }}</span>{{ /if }}
     </li>
   {{ /for }}
 </ul>

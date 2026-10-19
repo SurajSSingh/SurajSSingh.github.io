@@ -1,0 +1,10 @@
+---
+title: Organizations
+layout: layout.vto
+---
+<h1>Organizations</h1>
+<ul>
+    {{ for org of search.pages("type=organization", "title") }}
+    <li><a href="{{ org.url }}">{{ org.title }}</a></li>
+    {{ /for }}
+</ul>

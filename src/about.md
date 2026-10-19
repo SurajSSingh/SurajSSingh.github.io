@@ -14,27 +14,27 @@ who_i_am: |
   a tool that uses Whisper AI to transcribe voice to text from just their mouse.
   You can find it here: <https://github.com/SurajSSingh/SuperMouseAI>
 
-  I graduated from UCI with a dual degree in Computer Game Science (B.S.) and
-  Education Science (B.A.) and UIUC with a Masters of Computer Science; through my
+  I graduated from [UCI](/org/uci/) with a dual degree in Computer Game Science (B.S.) and
+  Education Science (B.A.) and [UIUC](/org/uiuc/) with a Masters of Computer Science; through my
   academic journey, I have worked through the video game development process,
   learned about how people learn, and built connections between the theoretical
   and application sides of computer science.
 
-  During my academic course work, I also worked as a coding instructor at Coding
-  Minds Academy, where I provided guidance to K-12 students through the world of
+  During my academic course work, I also worked as a coding instructor at
+  [Coding Minds Academy](/org/coding-minds/), where I provided guidance to K-12 students through the world of
   STEM using project-based lessons. Applying what I learned through my coursework,
   I passed on that knowledge and mentored students through development of their
-  projects, from helping with writing a machine learning programming in Python, to
-  developing video games with Unity and helping them release their game online.
+  projects, from helping with writing a machine learning programming in [Python](/skill/python/), to
+  developing video games with [Unity](/skill/unity/) and helping them release their game online.
 
-  I have volunteered time as a Unity programmer at P1 Virtual Civilization, an
+  I have volunteered time as a [Unity](/skill/unity/) programmer at [P1 Virtual Civilization](/org/p1/), an
   organization dedicated to building ethical virtual worlds. My contribution
   focused on fixing bugs and implementing features for the player-NPC interaction
   in the [Skyjellies game](https://redeagle-p1.itch.io/skyjellies). As new
   volunteers joined our organization, I have helped out with getting them oriented
   and ready to contribute.
 
-  Later on at P1, I became a team leader/lead programmer and help my team develop
+  Later on at [P1](/org/p1/), I became a team leader/lead programmer and help my team develop
   project from design sketches to working prototype demos within a couple of
   weeks. These are two game I lead development of: [Keito](../project/keito) and
   [Eco Defender](../project/eco-defender). Also, I served as lead adviser for
@@ -53,20 +53,20 @@ interests_intro: "Here are (a very small subset of) things I am interested in:"
 interests:
   - category: Game Development
     items:
-      - Unity
+      - '[Unity](/skill/unity/)'
       - Godot
       - Bevy
   - category: Software Development
     items:
-      - Rust
-      - Python
-      - C#
+      - '[Rust](/skill/rust/)'
+      - '[Python](/skill/python/)'
+      - '[C#](/skill/csharp/)'
   - category: Web Technologies
     items:
       - HTML
       - CSS
-      - JavaScript/TypeScript
-      - Svelte
+      - 'JavaScript/[TypeScript](/skill/typescript/)'
+      - '[Svelte](/skill/svelte/)'
   - category: Open Source Development
     items: []
   - category: Education
@@ -80,21 +80,21 @@ learning:
   - label: Tauri
     url: https://v2.tauri.app
   - label: SvelteKit
-    url: https://svelte.dev/docs/kit/introduction
+    url: /skill/svelte/
   - label: "Open Source ASR technologies: Whisper, Kyutai SST, Nvidia NeMo models"
     url: ""
 
 recent_work_intro: ""
 recent_work:
   - label: Speakflow Desktop App
-    url: https://www.speakflow.com/
+    url: /project/speakflow-desktop-app/
   - label: Super Mouse AI
     url: https://github.com/SurajSSingh/SuperMouseAI
   - label: "Nearly daily SILT (Something I Learned Today) on Bluesky and weekly TWIL (This Week I Learned) on Mastodon"
     url: ""
 
 personal_projects:
-  - Expanded a college project on a robotic small-scale self-driving car, which used Python and Electron
+  - Expanded a college project on a robotic small-scale self-driving car, which used [Python](/skill/python/) and Electron
   - "Built a couple of computers, including making a laptop (thanks to [Framework](https://frame.work) for making it easy)"
   - Built on creating a little home server on a Raspberry Pi using a custom Debian system
 ---

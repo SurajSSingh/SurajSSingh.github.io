@@ -73,6 +73,12 @@ cms.collection({
     },
     "summary: text",
     {
+      name: "aliases",
+      type: "list",
+      description:
+        "Alternate technology labels linked to this skill (e.g. SvelteKit for Svelte).",
+    },
+    {
       name: "category",
       type: "select",
       description: "Skill category",
@@ -139,6 +145,15 @@ cms.collection({
       type: "file",
       description: "Organization logo",
       view: "details",
+    },
+    {
+      name: "project_id",
+      label: "Additional Project Associations",
+      type: "relation-list",
+      collection: "projects",
+      init: initRelationOptions,
+      description:
+        "Associate a team or organization with projects that already have a primary organization. Primary organizations are selected on each project.",
     },
     "content: markdown",
   ],

@@ -46,7 +46,7 @@ layout: layout.vto
         {{ if group.items.length > 0 }}
         <ul>
           {{ for item of group.items }}
-          <li>{{ item }}</li>
+          <li>{{ item |> md(true) }}</li>
           {{ /for }}
         </ul>
         {{ /if }}
