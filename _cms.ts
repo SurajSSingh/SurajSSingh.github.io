@@ -37,7 +37,13 @@ async function initRelationOptions(
 
 cms.storage("img", "assets/images");
 
-cms.upload("images: Manage a all images here.", "src:assets/images");
+cms.upload({
+  name: "images",
+  label: "Image Library",
+  description: "Upload covers, screenshots, diagrams, GIFs, and award images.",
+  store: "src:assets/images",
+  publicPath: "/assets/images",
+});
 
 // --- Skills Collection ---
 cms.collection({
@@ -141,13 +147,25 @@ cms.collection({
 // --- Projects Collection ---
 cms.collection({
   name: "projects",
-  description: "Here you add, edit or delete projects for the portfolio",
+  label: "Portfolio Projects",
+  description:
+    "Edit the overview, project details, case-study sections, and image gallery. Existing Markdown stays in Project Story. Toggle Publishing or Legacy for less frequently used settings.",
   store: "projects",
   documentName: "{title}.md",
+  // Editing a title must not silently change an existing project's URL.
+  rename: false,
+  views: ["details", "media", "case-study"],
   fields: [
     // ── Basics (always visible) ──
     "title: text!",
-    "summary: text",
+    {
+      name: "summary",
+      label: "Short Overview",
+      type: "textarea",
+      description:
+        "A brief introduction used on project cards and at the top of the project page. Existing HTML links are supported.",
+      attributes: { rows: 3 },
+    },
     {
       name: "id",
       type: "text",
@@ -171,28 +189,40 @@ cms.collection({
       label: "First Created",
       type: "date",
       attributes: { required: true },
+      description: "Original publication date, not the project timeline.",
+      view: "publishing",
+      init(field) {
+        field.value = new Date().toISOString().slice(0, 10);
+      },
     },
     {
       name: "last_modified",
       type: "current-datetime",
       attributes: { readonly: true },
+      view: "publishing",
     },
     {
       name: "links",
-      description: "List of public links (at least one recommended)",
+      label: "Project Links",
+      description:
+        "Add and reorder website, demo, download, source, or article links. Choose a suggested label or write your own.",
       type: "object-list",
       fields: [
         {
           name: "name",
-          type: "select",
+          label: "Link Label",
+          type: "text",
           attributes: { required: true },
           options: [
             "Home",
+            "Live Demo",
+            "Download Page",
             "Itch.io",
             "GitHub Repo",
             "GitLab Repo",
             "Netlify",
             "Vercel",
+            "Article",
             "Other",
           ],
         },
@@ -200,13 +230,14 @@ cms.collection({
       ],
     },
 
-    // ── Relations (always visible) ──
+    // ── Relations (view: details; older fields in legacy) ──
     {
       name: "org_id",
       label: "Organization",
       description:
         "Optional client or organization. Create it in Organizations first; projects without one appear under Other Projects.",
       type: "relation",
+      view: "details",
       collection: "organizations",
       init: initRelationOptions,
     },
@@ -228,6 +259,7 @@ cms.collection({
       label: "Skills",
       description: "Skills associated with this project",
       type: "relation-list",
+      view: "details",
       collection: "skills",
       init: initRelationOptions,
     },
@@ -239,32 +271,67 @@ cms.collection({
     },
     {
       name: "tech_stack",
+      label: "Technology Stack",
       type: "list",
       description:
-        "Technology metadata. Describe the tools used in Content to show them on the project page.",
+        "Languages, frameworks, engines, and tools shown in Project Details. Skills above link the project to skill pages.",
+      view: "details",
     },
-    "highlighted_project: checkbox",
+    {
+      name: "highlighted_project",
+      label: "Feature on Homepage",
+      type: "checkbox",
+      description:
+        "The homepage displays up to five featured projects by sort weight.",
+      view: "publishing",
+    },
 
     // ── Images (view: media) ──
     {
       name: "cover_image",
-      description: "Cover Image of the project",
+      label: "Cover Image",
+      description:
+        "Shown on project cards. Gallery images below appear on the project page.",
       type: "object",
       view: "media",
       fields: [
-        "file: file",
-        "alt_text: text!",
+        {
+          name: "file",
+          type: "file",
+          upload: "images",
+          attributes: { accept: "image/*" },
+        },
+        {
+          name: "alt_text",
+          label: "Cover Description",
+          type: "text",
+          description:
+            "Describe the cover for accessibility. Leave both cover fields empty if no cover is needed.",
+        },
       ],
     },
     {
       name: "additional_image",
+      label: "Gallery and Award Images",
       description:
-        "Award images appear on highlighted cards. Include other images in Content to display a gallery on the project page.",
+        "Add, duplicate, or drag to reorder images. Non-award images form the project page gallery; award images stay on highlighted cards. Captions are optional plain text.",
       type: "object-list",
       view: "media",
       fields: [
-        "link: file",
+        {
+          name: "link",
+          label: "Image",
+          type: "file",
+          upload: "images",
+          attributes: { required: true, accept: "image/*" },
+        },
         "alt_text: text!",
+        {
+          name: "caption",
+          type: "textarea",
+          description: "Explain what this screenshot or diagram demonstrates.",
+          attributes: { rows: 2 },
+        },
         {
           name: "is_award",
           type: "checkbox",
@@ -280,17 +347,29 @@ cms.collection({
       type: "number",
       value: 1000,
       description: "Sort weight (lower = higher priority)",
-      view: "details",
+      view: "publishing",
     },
     {
       name: "project_info",
+      label: "Project Details",
       description:
-        "Role and trailer appear on highlighted cards. Include status, team size, and dates in Content to display them on the project page.",
+        "Optional facts shown on the project page. Role and YouTube trailer also appear on highlighted cards. Leave unknown dates and team size empty.",
       type: "object",
       view: "details",
       fields: [
-        "role: text",
-        "trailer: url",
+        {
+          name: "role",
+          label: "My Role",
+          type: "text",
+          attributes: { placeholder: "e.g. Lead Developer and Researcher" },
+        },
+        {
+          name: "trailer",
+          label: "YouTube Trailer",
+          type: "url",
+          description:
+            "Optional YouTube URL used on highlighted homepage cards.",
+        },
         {
           name: "status",
           type: "select",
@@ -322,12 +401,47 @@ cms.collection({
       ],
     },
 
+    {
+      name: "case_study",
+      label: "Case Study Sections",
+      type: "object-list",
+      view: "case-study",
+      description:
+        "Optional sections displayed after Project Story, in the order you choose. Add only what applies: the problem, your contribution, technical decisions, results, or lessons. Existing projects do not need to be migrated.",
+      fields: [
+        {
+          name: "title",
+          label: "Section Heading",
+          type: "text",
+          attributes: { required: true },
+          options: [
+            "Overview",
+            "Problem",
+            "My Contribution",
+            "Approach",
+            "Results",
+            "Lessons Learned",
+            "Next Steps",
+          ],
+        },
+        {
+          name: "body",
+          label: "Section Content",
+          type: "markdown",
+          attributes: { required: true },
+          description:
+            "Use paragraphs, lists, links, and images. Use level-three headings for subsections; the section heading above is level two.",
+        },
+      ],
+    },
+
     // ── Content (always visible) ──
     {
       name: "content",
+      label: "Project Story",
       type: "markdown",
       description:
-        "Project page content: explain the client work, your contribution, and results. Include any additional links, images, or details you want on this page.",
+        "The existing free-form Markdown body, displayed before Case Study Sections and the Gallery. Keep using it for the whole story, or gradually move sections into the structured editor above. Avoid repeating the same section in both places.",
     },
   ],
 });

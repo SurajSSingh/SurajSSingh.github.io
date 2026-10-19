@@ -44,6 +44,7 @@ const site = lume({
 })
   .copy("assets", "assets")
   .add("assets/content-tools.css")
+  .add("assets/project.css")
   .use(nav())
   .use(date(
     {
@@ -148,6 +149,8 @@ site.use(toc({ anchor: false }))
     options: {
       safelist: {
         standard: ["picture", "source", /^pagefind-ui/],
+        // Keep optional CMS sections styled before any project uses them.
+        greedy: [/project-(?:details|facts|links|case-study|gallery)/],
       },
     },
   }))

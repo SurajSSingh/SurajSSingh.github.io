@@ -10,13 +10,20 @@
     {{ for preItemName of preIncludeItems }}
       {{ include `${preItemName}.vto` }}
     {{ /for }}
-    {{ if type === "project" && (content.match(/<h[23]\b/g) || []).length > 1 }}
+    {{ set page_body }}
+      {{ if type === "project" }}
+        {{ include "layouts/website/components/project_body.vto" }}
+      {{ else }}
+        {{ content }}
+      {{ /if }}
+    {{ /set }}
+    {{ if type === "project" && (page_body.match(/<h[23]\b/g) || []).length > 1 }}
       <details class="page-toc" data-pagefind-ignore>
         <summary>On This Page</summary>
         <nav toc="page-body" aria-label="Table of contents"></nav>
       </details>
     {{ /if }}
-    <div id="page-body">{{ content }}</div>
+    <div id="page-body">{{ page_body }}</div>
     {{ for postItemName of postIncludeItems }}
       {{ include `${postItemName}.vto` }}
     {{ /for }}

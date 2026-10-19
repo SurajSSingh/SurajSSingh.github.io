@@ -5,5 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{title}}</title>
     <link href="{{assets}}/custom.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="{{assets}}/content-tools.css" media="screen, projection" rel="stylesheet" type="text/css">
+    {{ if type === "project" }}<link href="{{assets}}/project.css" media="screen, projection" rel="stylesheet" type="text/css">{{ /if }}
     <script src="{{assets}}/theme_switcher.js" defer></script>
 </head>

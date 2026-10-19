@@ -1,0 +1,61 @@
+.project-details,
+.project-case-study,
+.project-gallery-section {
+  margin-block: 3rem;
+}
+
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  gap: 1.5rem 3rem;
+  padding: 2rem;
+  border: 1px solid var(--color-lightGrey);
+  border-radius: 0.4rem;
+}
+
+.project-facts dt {
+  font-weight: 600;
+}
+
+.project-facts dd {
+  margin: 0.5rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-block: 2rem 3rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.project-gallery figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.project-gallery a {
+  display: block;
+}
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--color-lightGrey);
+  border-radius: 0.4rem;
+}
+
+.project-gallery figcaption {
+  margin-top: 1rem;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}

@@ -1,0 +1,66 @@
+{{ set details = project_info || {} }}
+{{ set technologies = (tech_stack || []).filter(item => item) }}
+{{ set project_links = (links || []).filter(item => item.link) }}
+{{ if details.role || details.status || details.team_size || details.start_date || details.end_date || technologies.length }}
+  <section class="project-details">
+    <h2>Project Details</h2>
+    <dl class="project-facts">
+      {{ if details.role }}
+        <div><dt>My Role</dt><dd>{{ details.role |> escape }}</dd></div>
+      {{ /if }}
+      {{ if details.status }}
+        <div><dt>Status</dt><dd>{{ details.status |> escape }}</dd></div>
+      {{ /if }}
+      {{ if details.team_size }}
+        <div><dt>Team Size</dt><dd>{{ details.team_size |> escape }}</dd></div>
+      {{ /if }}
+      {{ if details.start_date }}
+        {{ set start_date = new Date(details.start_date).toISOString().slice(0, 10) }}
+        <div><dt>Started</dt><dd><time datetime="{{ start_date }}">{{ start_date }}</time></dd></div>
+      {{ /if }}
+      {{ if details.end_date }}
+        {{ set end_date = new Date(details.end_date).toISOString().slice(0, 10) }}
+        <div><dt>Finished</dt><dd><time datetime="{{ end_date }}">{{ end_date }}</time></dd></div>
+      {{ /if }}
+      {{ if technologies.length }}
+        <div><dt>Technology Stack</dt><dd>{{ technologies.join(", ") |> escape }}</dd></div>
+      {{ /if }}
+    </dl>
+  </section>
+{{ /if }}
+{{ if project_links.length }}
+  <nav class="project-links" aria-label="Project links">
+    {{ for item of project_links }}
+      <a href="{{ item.link |> escape }}">{{ (item.name || item.link) |> escape }}</a>
+    {{ /for }}
+  </nav>
+{{ /if }}
+
+{{ content }}
+
+{{ for section of (case_study || []).filter(item => item.title?.trim() && item.body?.trim()) }}
+  <section class="project-case-study">
+    <h2>{{ section.title |> escape }}</h2>
+    {{ section.body |> md }}
+  </section>
+{{ /for }}
+
+{{ set gallery = (additional_image || []).filter(item => item.link && !item.is_award) }}
+{{ if gallery.length }}
+  <section class="project-gallery-section">
+    <h2>Gallery</h2>
+    <p>Open an image to view it at full size.</p>
+    <div class="project-gallery">
+      {{ for item of gallery }}
+        {{# Older project media paths are relative to the assets directory. #}}
+        {{ set image_url = /^(?:https?:)?\//.test(item.link) ? item.link : `${assets}/${item.link}` }}
+        <figure>
+          <a href="{{ image_url |> escape }}">
+            <img src="{{ image_url |> escape }}" alt="{{ (item.alt_text || item.caption || title) |> escape }}" loading="lazy" decoding="async" sizes="(min-width: 900px) 50vw, 100vw">
+          </a>
+          {{ if item.caption }}<figcaption>{{ item.caption |> escape }}</figcaption>{{ /if }}
+        </figure>
+      {{ /for }}
+    </div>
+  </section>
+{{ /if }}
