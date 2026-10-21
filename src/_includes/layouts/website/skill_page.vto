@@ -36,7 +36,7 @@
         <p>No projects found using this skill.</p>
         {{ /if }}
     </section>
-    {{ set related_orgs = search.pages("type=organization", "title").filter(org => skill_projects.some(post => (post.org_id || post.org) === org.id || org.project_id?.includes(post.id))) }}
+    {{ set related_orgs = search.pages("type=organization", "title").filter(org => org.skill_id?.includes(id) || skill_projects.some(post => (post.org_id || post.org) === org.id || org.project_id?.includes(post.id))) }}
     {{ if related_orgs.length }}
     <section class="related-organizations">
         <h2>Related Organizations</h2>

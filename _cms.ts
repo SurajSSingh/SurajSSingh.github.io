@@ -202,6 +202,15 @@ cms.collection({
       description:
         "Optional extra links, not the list of this organization's primary projects. To assign or move a primary project, edit its Organization in Portfolio Projects.",
     },
+    {
+      name: "skill_id",
+      label: "Related Skills",
+      type: "relation-list",
+      collection: "skills",
+      init: initRelationOptions,
+      description:
+        "Skills used at this organization, including work without a standalone project page.",
+    },
     "content: markdown",
   ],
 });
