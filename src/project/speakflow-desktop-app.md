@@ -6,6 +6,7 @@ date: "2026-10-04T00:00:00.000Z"
 summary: >-
   A desktop application to bring native functionality like window transparnecy and always on top to <a href="https://speakflow.com">Speakflow</a> app.
 org_id: speakflow
+skill_id: [rust]
 weight: -20
 highlighted_project: true
 cover_image:

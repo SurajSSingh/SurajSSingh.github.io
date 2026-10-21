@@ -1,4 +1,5 @@
 ---
+id: teapot
 title: Teapot
 date: '2023-11-06T00:00:00.000Z'
 image: /assets/images/teapot.png
@@ -8,7 +9,7 @@ summary: >-
   of the graphics pipeline and applying that to texturing a teapot.
 project_link: 'https://surajssingh.github.io/uiuc-cs418-surajss2/'
 weight: 4
-org: uiuc
+org_id: uiuc
 last_modified: 2025-01-02T05:21:00.000Z
 links:
   - name: Home

@@ -1,10 +1,12 @@
 ---
+id: super-mouse-ai
 title: Super Mouse AI
 date: "2025-04-04T00:00:00.000Z"
 last_modified: 2025-08-26T00:00:00.000Z
 summary: A tool to transcribe your voice with a click of your mouse
 weight: 1
-org: freelance
+org_id: freelance
+skill_id: [ts, svelte, rust]
 links:
   - name: GitHub Repo
     link: "https://github.com/SurajSSingh/SuperMouseAI"
@@ -45,17 +47,17 @@ the app to help get it off the ground.
 
 ### Tools, Framework, and Libraries used
 
-- [Rust](https://www.rust-lang.org): Backend
+- [Rust](/skill/rust/): Backend
 - [Tauri](https://tauri.app): Application framework
 - [whisper-rs](https://github.com/tazz4843/whisper-rs): Wrapper for
   [whisper.cpp](https://github.com/ggerganov/whisper.cpp) project, allowing
   local use of [Whisper](https://github.com/openai/whisper) model from
   [OpenAI](https://openai.com/index/whisper/)
 - [mutter](https://github.com/sigaloid/mutter): Project that wraps `whisper-rs`.
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)/[TypeScript](https://www.typescriptlang.org):
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)/[TypeScript](/skill/typescript/):
   Frontend language
 - [Deno](https://deno.com): Runtime
-- [Svelte/SvelteKit](https://svelte.dev): Framework/Meta-framework
+- [Svelte/SvelteKit](/skill/svelte/): Framework/Meta-framework
 - [BitsUI](https://www.bits-ui.com/docs/introduction) +
   [Shadcn-Svelte](https://www.shadcn-svelte.com): Functional components
 - [TailwindCSS](https://tailwindcss.com) + [DaisyUI](https://daisyui.com): App

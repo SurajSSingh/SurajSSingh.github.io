@@ -1,4 +1,5 @@
 ---
+id: wasdv
 title: WASVD
 date: "2024-02-10T00:00:00.000Z"
 image: /assets/images/wasvd.png
@@ -32,8 +33,8 @@ tech_stack:
   - Rust
   - Svelte
   - SkeletonUI
-skills: []
-org: personal
+skill_id: [rust, svelte, ts]
+org_id: personal
 ---
 
 ## Overview
@@ -46,10 +47,10 @@ write Wasm (text format). I started this to help understand how WebAssembly is
 
 ### Tech Stack
 
-- [Rust](https://www.rust-lang.org): Backend Programming Language
+- [Rust](/skill/rust/): Backend Programming Language
 - [Tauri](https://tauri.app): Desktop Framework
-- [TypeScript](https://www.typescriptlang.org): Frontend Programming Language
-- [SvelteKit](https://kit.svelte.dev): JavaScript (Meta) Framework
+- [TypeScript](/skill/typescript/): Frontend Programming Language
+- [SvelteKit](/skill/svelte/): JavaScript (Meta) Framework
 - [SkeletonUI](https://www.skeleton.dev): Tailwind UI Framework
 
 ### Current Status

@@ -1,4 +1,5 @@
 ---
+id: strsol
 title: StrSol
 date: '2023-11-06T00:00:00.000Z'
 image: /assets/images/regex-def.png
@@ -8,7 +9,7 @@ summary: >-
   transducers.
 weight: 5
 project_link: 'https://github.com/SurajSSingh/CS-421-Final-Project'
-org: uiuc
+org_id: uiuc
 last_modified: 2025-01-02T05:11:00.000Z
 links:
   - name: GitHub Repo

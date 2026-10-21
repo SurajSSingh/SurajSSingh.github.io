@@ -1,4 +1,5 @@
 ---
+id: nomie-stopwatch
 title: Nomie 6 Stopwatch Plugin
 date: '2023-11-06T00:00:00.000Z'
 image: /assets/images/nomie-stopwatch.png
@@ -9,7 +10,7 @@ summary: >-
   unified way of using the timer trackers.
 project_link: 'https://github.com/SurajSSingh/Nomie-Stopwatch'
 weight: 7
-org: personal
+org_id: personal
 last_modified: 2025-01-02T05:06:00.000Z
 links:
   - name: GitHub Repo
@@ -22,7 +23,7 @@ tech_stack:
   - Svelte
   - TypeScript
   - SkeletonUI
-skills: []
+skill_id: [svelte, ts]
 project_info:
   role: Primary Developer
 highlighted_project: false
@@ -36,7 +37,7 @@ associate timers with specific trackers.
 ## Stack
 
 - [(Petite) Vue](https://github.com/vuejs/petite-vue)
-- [TypeScript](https://www.typescriptlang.org/)
+- [TypeScript](/skill/typescript/)
 - [Nomie 6 Plugin](https://github.com/open-nomie/plugins)
 
 ## Current Status

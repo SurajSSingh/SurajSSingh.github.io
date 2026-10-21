@@ -1,4 +1,5 @@
 ---
+id: withered-away
 title: Withered Away by Team Alpha
 date: '2023-11-06T00:00:00.000Z'
 image: 'https://img.itch.zone/aW1nLzMxMTI4MDQucG5n/315x250%23c/ySWAdD.png'
@@ -9,7 +10,7 @@ summary: >-
 project_link: 'https://team-alpha.itch.io/withered-away'
 weight: 3
 highlighted_project: true
-org: uci
+org_id: uci
 project_info:
   demo_gif: images/gifs/Withered-Away-Demo.gif
   role: Sound Engineer and Unity Programmer
@@ -28,7 +29,7 @@ additional_image:
     alt_text: Demo of gameplay
     is_award: false
 tech_stack: []
-skills: []
+skill_id: [unity, cs]
 ---
 
 ## Course
@@ -37,8 +38,8 @@ UCI – ICS 169AB: Capstone Game Project
 
 ## Technology Used
 
-- [Unity](https://unity.com/): Game Engine
-- [C#](https://learn.microsoft.com/en-us/dotnet/csharp/): Programming Language
+- [Unity](/skill/unity/): Game Engine
+- [C#](/skill/csharp/): Programming Language
 - [GarageBand](https://www.apple.com/mac/garageband/): Digital Audio Workstation
 - [FMOD](https://fmod.com/): Music and Sound Effects authoring
 - [Abundant Music](https://pernyblom.github.io/abundant-music/index.html): Music

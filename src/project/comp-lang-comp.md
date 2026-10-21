@@ -1,4 +1,5 @@
 ---
+id: comp-lang-comp
 title: Comp-Lang-Comp
 date: '2023-11-05T00:00:00.000Z'
 image: /assets/images/comp-lang-comp.png
@@ -9,7 +10,7 @@ summary: >-
   href='https://exercism.org/challenges/12in23'>12in23 Exercism challenge</a>.
 project_link: 'https://github.com/SurajSSingh/comp-lang-comp.github.io'
 weight: 10
-org: personal
+org_id: personal
 project_info:
   demo_gif: images/gifs/Comp-Lang-Comp-Demo.gif
   role: Primary Project Developer

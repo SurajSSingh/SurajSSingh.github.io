@@ -1,4 +1,5 @@
 ---
+id: eco-defender
 title: Eco Defender VR
 date: '2024-05-05T00:00:00.000Z'
 image: /assets/images/EcoDefenderThumbnailSmall.png
@@ -9,7 +10,7 @@ summary: >-
 project_link: 'https://light-with-blocks.itch.io/eco-defender'
 weight: -5
 highlighted_project: true
-org: p1
+org_id: p1
 project_info:
   trailer: 'https://www.youtube-nocookie.com/embed/1v0EbLTb9Pg'
   role: Project Lead, Unity/C# Programmer, Art Integrator
@@ -44,6 +45,7 @@ tech_stack:
   - Unity
   - 'C#'
   - XR Toolkit
+skill_id: [unity, cs]
 skills:
   - Oculus 3
   - HTC Vive
@@ -61,10 +63,10 @@ for 3D artists to get their models into the game.
 
 ## Tech Stack
 
-- [Unity](https://unity.com/): Game Engine
+- [Unity](/skill/unity/): Game Engine
   - [XR Interaction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html):
     VR Framework
-- [C#](https://learn.microsoft.com/en-us/dotnet/csharp/): Programming Language
+- [C#](/skill/csharp/): Programming Language
 - [GitHub](https://github.com): Open Source project management.
 - [Miro](https://miro.com/): Brainstorming and meeting organizing board
 

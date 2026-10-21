@@ -1,4 +1,5 @@
 ---
+id: tech-tree-blog
 title: Tech-Tree-Blog
 date: '2023-11-12T00:00:00.000Z'
 image: /assets/images/tech-tree-blog.png
@@ -8,7 +9,7 @@ summary: >-
   technology explainers.
 project_link: 'https://surajssingh.github.io/Tech-Tree-Blog/'
 weight: 13
-org: personal
+org_id: personal
 last_modified: 2025-01-02T05:24:00.000Z
 links:
   - name: Home
