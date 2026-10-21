@@ -1,4 +1,5 @@
 ---
+id: crowded-market
 title: Crowded Market
 date: '2023-11-06T00:00:00.000Z'
 image: 'https://img.itch.zone/aW1nLzExNzg2MTM4LnBuZw==/315x250%23c/4GomOe.png'
@@ -8,7 +9,7 @@ summary: >-
   using Navigation Mesh and priority queue.
 project_link: 'https://surajss.itch.io/croweded-market'
 weight: 2
-org: uci
+org_id: uci
 last_modified: 2025-01-02T04:41:00.000Z
 links:
   - name: Itch.io
@@ -20,7 +21,7 @@ additional_image: []
 tech_stack:
   - Unity
   - 'C#'
-skills: []
+skill_id: [unity, cs]
 project_info:
   role: Primary Developer
 highlighted_project: false
@@ -31,8 +32,8 @@ UCI – ICS 166: Game Design
 
 ## Tech Stack
 
-- [Unity](https://unity.com/): Game Engine
-- [C#](https://learn.microsoft.com/en-us/dotnet/csharp/): Programming Language
+- [Unity](/skill/unity/): Game Engine
+- [C#](/skill/csharp/): Programming Language
 
 ## Overview
 

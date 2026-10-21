@@ -18,12 +18,14 @@
         {{ /if }}
         {{ if content }}
         <div class="skill-description">{{ content }}</div>
+        {{ else }}
+        <p class="content-pending"><strong>Content to be added:</strong> Experience with {{ title }}, contributions, and lessons learned still need to be written.</p>
         {{ /if }}
     </header>
 
     <section class="skill-projects">
         <h2>Related Projects</h2>
-        {{ set skill_projects = search.pages("", "weight").filter(post => post.skill_id?.includes(id) || post.skills?.includes(id) || post.skills?.includes(title)) }}
+        {{ set skill_projects = search.pages("type=project", "weight").filter(post => post.skill_id?.includes(id) || post.skills?.includes(id) || post.skills?.includes(title)) }}
         {{ if skill_projects.length > 0 }}
         <div class="row">
             {{ for post of skill_projects }}
@@ -34,5 +36,16 @@
         <p>No projects found using this skill.</p>
         {{ /if }}
     </section>
+    {{ set related_orgs = search.pages("type=organization", "title").filter(org => org.skill_id?.includes(id) || skill_projects.some(post => (post.org_id || post.org) === org.id || org.project_id?.includes(post.id))) }}
+    {{ if related_orgs.length }}
+    <section class="related-organizations">
+        <h2>Related Organizations</h2>
+        <ul>
+            {{ for org of related_orgs }}
+            <li><a href="{{ org.url }}">{{ org.title }}</a></li>
+            {{ /for }}
+        </ul>
+    </section>
+    {{ /if }}
 </article>
 {{ /layout }}

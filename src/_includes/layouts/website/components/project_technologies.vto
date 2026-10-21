@@ -1,0 +1,15 @@
+{{# Only request known catalog IDs; unrecognized technologies keep their labels. #}}
+{{ set technology_icons = { "astro": "astro", "c#": "cs", "css": "css", "css3": "css", "deno": "deno", "git": "git", "github": "github", "haskell": "haskell", "html": "html", "html5": "html", "javascript": "js", "jquery": "jquery", "markdown": "md", "nodejs": "nodejs", "node.js": "nodejs", "python": "py", "react": "react", "ruby": "ruby", "rust": "rust", "sass": "sass", "scss": "sass", "svelte": "svelte", "sveltekit": "svelte", "tailwind": "tailwind", "tailwind css": "tailwind", "tailwindcss": "tailwind", "tauri": "tauri", "typescript": "ts", "unity": "unity" } }}
+<ul class="project-technologies" role="list">
+  {{ for technology of technologies }}
+    {{ set technology_key = technology.trim().toLowerCase() }}
+    {{ set technology_icon = Object.hasOwn(technology_icons, technology_key) ? technology_icons[technology_key] : "" }}
+    <li>
+      {{ if technology_icon }}
+        <img src='{{ technology_icon |> icon("skill-icon") }}' alt="" width="24" height="24" loading="lazy" decoding="async">
+      {{ /if }}
+      {{ set technology_skill = (skills_rel || []).find(skill => [skill.title, ...(skill.aliases || [])].some(label => label.toLowerCase() === technology_key)) }}
+      {{ if technology_skill }}<a href="{{ technology_skill.url |> escape }}"><span>{{ technology |> escape }}</span></a>{{ else }}<span>{{ technology |> escape }}</span>{{ /if }}
+    </li>
+  {{ /for }}
+</ul>

@@ -15,6 +15,7 @@
                         <span class="text-center">{{nav.name}}</span>
                     </a>
                 {{ /for }}
+                <a href="/search/" class="is-center" {{ if url === "/search/" }}aria-current="page"{{ /if }}>Search</a>
                 {{ for nav of footer.nav }}
                 {{ if nav.top_include }}
                     <a href="{{nav.link}}" class="is-center">

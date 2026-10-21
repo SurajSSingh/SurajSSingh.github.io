@@ -1,4 +1,5 @@
 ---
+id: keito
 title: Keito Yarn Game
 date: "2024-03-17T00:00:00.000Z"
 image: /assets/images/keito_logo.png
@@ -9,7 +10,7 @@ summary: >-
 project_link: "https://sam325.itch.io/keito-game"
 weight: -10
 highlighted_project: true
-org: p1
+org_id: p1
 project_info:
   trailer: "https://www.youtube-nocookie.com/embed/u9BvzhMSJbw"
   role: Lead Mechanics Programmer (Unity and C#)
@@ -46,7 +47,7 @@ tech_stack:
   - "C#"
   - GitHub
   - Trello
-skills: []
+skill_id: [unity, cs]
 ---
 
 ## Tagline
@@ -67,8 +68,8 @@ same page, and get everyone's changes merged in.
 
 ## Tech Stack
 
-- [Unity](https://unity.com/): Game Engine
-- [C#](https://learn.microsoft.com/en-us/dotnet/csharp/): Programming Language
+- [Unity](/skill/unity/): Game Engine
+- [C#](/skill/csharp/): Programming Language
 - [GitHub](https://github.com): Open Source project management.
 - [Trello](https://trello.com/): Task Management
 

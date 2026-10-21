@@ -1,4 +1,5 @@
 ---
+id: collabuilder
 title: Collabuilder
 date: "2023-11-06T00:00:00.000Z"
 cover_image:
@@ -22,13 +23,12 @@ tech_stack:
   - Python
   - Project Malmo
   - Keras
-skills:
-  - Python
+skill_id: [py]
 project_info:
   role: Developer and Researcher
   trailer: "https://youtu.be/Y2gcbZS6NvI"
 highlighted_project: false
-org: uci
+org_id: uci
 ---
 
 ## Course
@@ -37,7 +37,7 @@ UCI – ICS 175: Project in AI
 
 ## Tech Stack
 
-- [Python](https://www.python.org/)
+- [Python](/skill/python/)
 - [Project Malmo](https://www.microsoft.com/en-us/research/project/project-malmo/)
 
 ## Overview

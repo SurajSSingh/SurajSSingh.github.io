@@ -5,10 +5,11 @@
     {{ set card_links = (links || []).filter(item => item.link) }}
     {{ set link = card_links.find(item => item.name === "Home")?.link || card_links[0]?.link || project_link || link }}
     {{ set cover = cover_image?.file || image }}
+    {{ set transition_id = url && `project-${Array.from(url, character => character.codePointAt(0).toString(16)).join("-")}` }}
     {{ layout "link_wrap.vto" {link} }}
-        <h3 class="is-center">{{title}}</h3>
+        <h3 class="is-center" {{ if transition_id }}style="view-transition-name: {{transition_id}}-title"{{ /if }}>{{title}}</h3>
         {{ if cover }}
-            <img src="{{cover}}" alt="{{cover_image?.alt_text || alt || title}}" class="is-center" />
+            <img src="{{cover}}" alt="{{cover_image?.alt_text || alt || title}}" class="is-center" {{ if transition_id }}style="view-transition-name: {{transition_id}}-image"{{ /if }} />
         {{ /if }}
     {{ /layout }}
     {{ if student }}

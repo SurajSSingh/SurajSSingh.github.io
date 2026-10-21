@@ -1,4 +1,5 @@
 ---
+id: tymeit
 title: Tymeit
 date: '2023-11-12T00:00:00.000Z'
 image: /assets/images/tymeit.png
@@ -8,7 +9,7 @@ summary: >-
   'https://nomie.app/'>Nomie</a>.
 project_link: 'https://github.com/SurajSSingh/Tymeit'
 weight: 6
-org: personal
+org_id: personal
 last_modified: 2025-01-02T05:25:00.000Z
 links:
   - name: GitHub Repo
@@ -21,7 +22,7 @@ tech_stack:
   - Svelte
   - TypeScript
   - Skeleton UI
-skills: []
+skill_id: [svelte, ts]
 project_info:
   role: Primary Developer
 highlighted_project: false
@@ -39,7 +40,7 @@ the YouTube tutorial
 
 ### Tech Stack
 
-- [SvelteKit](https://kit.svelte.dev): JavaScript (Meta) Framework
+- [SvelteKit](/skill/svelte/): JavaScript (Meta) Framework
 - [SkeletonUI](https://www.skeleton.dev): Tailwind UI Framework
 
 ### Current Status

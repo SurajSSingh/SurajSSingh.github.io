@@ -1,4 +1,5 @@
 ---
+id: my-mal
 title: Make A Lisp Implementation
 date: "2023-11-12T00:00:00.000Z"
 image: "https://raw.githubusercontent.com/kanaka/mal/master/process/stepA_mal.png"
@@ -8,7 +9,7 @@ summary: >-
   Lisp</a> (a Clojure inspired lisp).
 project_link: "https://github.com/SurajSSingh/make_a_lisp_typed_and_readable"
 weight: 9
-org: personal
+org_id: personal
 last_modified: 2025-08-26T00:00:00.000Z
 links:
   - name: GitHub Repo
@@ -19,7 +20,7 @@ cover_image:
 additional_image: []
 tech_stack:
   - Rust
-skills: []
+skill_id: [rust]
 project_info:
   role: Primary Developer
 highlighted_project: false
@@ -34,7 +35,7 @@ such as tail-call optimization.
 
 ## Tech Stack
 
-- [Rust](https://www.rust-lang.org/): Programming Language
+- [Rust](/skill/rust/): Programming Language
 
 ## What I accomplished
 

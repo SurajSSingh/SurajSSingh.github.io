@@ -1,0 +1,97 @@
+{{ set details = project_info || {} }}
+{{ set technologies = (tech_stack || []).filter(item => item) }}
+{{ set project_links = (links || []).filter(item => item.link) }}
+{{ set cover = cover_image?.file || image || details.demo_gif }}
+{{ set project_orgs = [...new Set([organization, ...(organizations || [])].filter(Boolean))] }}
+{{ if cover }}
+  {{ set cover_url = /^(?:https?:)?\//.test(cover) ? cover : `${assets}/${cover}` }}
+  {{ set transition_id = url && `project-${Array.from(url, character => character.codePointAt(0).toString(16)).join("-")}` }}
+  <figure class="project-cover">
+    <a href="{{ cover_url |> escape }}">
+      <img src="{{ cover_url |> escape }}" alt="{{ (cover_image?.alt_text || alt || title) |> escape }}" {{ if transition_id }}style="view-transition-name: {{transition_id}}-image"{{ /if }} decoding="async" fetchpriority="high" sizes="(min-width: 1200px) 1200px, 100vw">
+    </a>
+  </figure>
+{{ /if }}
+{{ if details.role || details.status || details.team_size || details.start_date || details.end_date || technologies.length || project_orgs.length || skills_rel?.length }}
+  <section class="project-details">
+    <h2>Project Details</h2>
+    <dl class="project-facts">
+      {{ if project_orgs.length }}
+        <div><dt>{{ project_orgs.length > 1 ? "Organizations" : "Organization" }}</dt><dd>
+          {{ for index, org of project_orgs }}
+            {{ if index }}, {{ /if }}<a href="{{ org.url |> escape }}">{{ org.title |> escape }}</a>
+          {{ /for }}
+        </dd></div>
+      {{ /if }}
+      {{ if skills_rel?.length }}
+        <div><dt>Skills</dt><dd>
+          {{ for index, skill of skills_rel }}
+            {{ if index }}, {{ /if }}<a href="{{ skill.url |> escape }}">{{ skill.title |> escape }}</a>
+          {{ /for }}
+        </dd></div>
+      {{ /if }}
+      {{ if details.role }}
+        <div><dt>My Role</dt><dd>{{ details.role |> escape }}</dd></div>
+      {{ /if }}
+      {{ if details.status }}
+        <div><dt>Status</dt><dd>{{ details.status |> escape }}</dd></div>
+      {{ /if }}
+      {{ if details.team_size }}
+        <div><dt>Team Size</dt><dd>{{ details.team_size |> escape }}</dd></div>
+      {{ /if }}
+      {{ if details.start_date }}
+        {{ set start_date = new Date(details.start_date).toISOString().slice(0, 10) }}
+        <div><dt>Started</dt><dd><time datetime="{{ start_date }}">{{ start_date }}</time></dd></div>
+      {{ /if }}
+      {{ if details.end_date }}
+        {{ set end_date = new Date(details.end_date).toISOString().slice(0, 10) }}
+        <div><dt>Finished</dt><dd><time datetime="{{ end_date }}">{{ end_date }}</time></dd></div>
+      {{ /if }}
+      {{ if technologies.length }}
+        <div><dt>Technology Stack</dt><dd>
+          {{ if show_tech_icons === true }}
+            {{ include "layouts/website/components/project_technologies.vto" { technologies } }}
+          {{ else }}
+            {{ for index, technology of technologies }}{{ if index }}, {{ /if }}{{ set technology_skill = (skills_rel || []).find(skill => [skill.title, ...(skill.aliases || [])].some(label => label.toLowerCase() === technology.trim().toLowerCase())) }}{{ if technology_skill }}<a href="{{ technology_skill.url |> escape }}">{{ technology |> escape }}</a>{{ else }}{{ technology |> escape }}{{ /if }}{{ /for }}
+          {{ /if }}
+        </dd></div>
+      {{ /if }}
+    </dl>
+  </section>
+{{ /if }}
+{{ if project_links.length }}
+  <nav class="project-links" aria-label="Project links">
+    {{ for item of project_links }}
+      <a href="{{ item.link |> escape }}"><span class="project-link-icon" aria-hidden="true">{{ include "layouts/website/components/project_link_icon.vto" { item } }}</span><span>{{ (item.name || item.link) |> escape }}</span></a>
+    {{ /for }}
+  </nav>
+{{ /if }}
+
+{{ content }}
+
+{{ for section of (case_study || []).filter(item => item.title?.trim() && item.body?.trim()) }}
+  <section class="project-case-study">
+    <h2>{{ section.title |> escape }}</h2>
+    {{ section.body |> md }}
+  </section>
+{{ /for }}
+
+{{ set gallery = (additional_image || []).filter(item => item.link && !item.is_award) }}
+{{ if gallery.length }}
+  <section class="project-gallery-section">
+    <h2>Gallery</h2>
+    <p>Open an image to view it at full size.</p>
+    <div class="project-gallery">
+      {{ for item of gallery }}
+        {{# Older project media paths are relative to the assets directory. #}}
+        {{ set image_url = /^(?:https?:)?\//.test(item.link) ? item.link : `${assets}/${item.link}` }}
+        <figure>
+          <a href="{{ image_url |> escape }}">
+            <img src="{{ image_url |> escape }}" alt="{{ (item.alt_text || item.caption || title) |> escape }}" loading="lazy" decoding="async" sizes="(min-width: 900px) 50vw, 100vw">
+          </a>
+          {{ if item.caption }}<figcaption>{{ item.caption |> escape }}</figcaption>{{ /if }}
+        </figure>
+      {{ /for }}
+    </div>
+  </section>
+{{ /if }}

@@ -1,0 +1,10 @@
+---
+title: Skills
+layout: layout.vto
+---
+<h1>Skills</h1>
+<ul>
+    {{ for skill of search.pages("type=skill", "title") }}
+    <li><a href="{{ skill.url }}">{{ skill.title }}</a></li>
+    {{ /for }}
+</ul>
