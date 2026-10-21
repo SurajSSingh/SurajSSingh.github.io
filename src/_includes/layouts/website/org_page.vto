@@ -16,13 +16,17 @@
         {{ if content }}
         <div class="org-description">{{ content }}</div>
         {{ else }}
-        <p class="content-pending"><strong>Content to be added:</strong> The background, work, and contributions associated with {{ title }} still need to be written.</p>
+        {{# <p class="content-pending"><strong>Content to be added:</strong> The background, work, and contributions associated with {{ title }} still need to be written.</p> #}}
         {{ /if }}
     </header>
 
+    {{ include "layouts/website/components/mentored_projects.vto" }}
+    {{ include "layouts/website/components/curriculum_templates.vto" }}
+
+    {{ set org_projects = search.pages("type=project", "weight").filter(post => (post.org_id || post.org) === id || project_id?.includes(post.id)) }}
+    {{ if org_projects.length || (!mentored && !curriculum_templates) }}
     <section class="org-projects">
         <h2>Related Projects</h2>
-        {{ set org_projects = search.pages("type=project", "weight").filter(post => (post.org_id || post.org) === id || project_id?.includes(post.id)) }}
         {{ if org_projects.length > 0 }}
         <div class="row">
             {{ for post of org_projects }}
@@ -33,7 +37,8 @@
         <p>No projects found for this organization.</p>
         {{ /if }}
     </section>
-    {{ set related_skills = search.pages("type=skill", "title").filter(skill => org_projects.some(post => post.skill_id?.includes(skill.id) || post.skills?.includes(skill.id) || post.skills?.includes(skill.title))) }}
+    {{ /if }}
+    {{ set related_skills = search.pages("type=skill", "title").filter(skill => skill_id?.includes(skill.id) || org_projects.some(post => post.skill_id?.includes(skill.id) || post.skills?.includes(skill.id) || post.skills?.includes(skill.title))) }}
     {{ if related_skills.length }}
     <section class="related-skills">
         <h2>Related Skills</h2>

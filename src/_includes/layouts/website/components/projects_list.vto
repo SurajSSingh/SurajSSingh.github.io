@@ -17,37 +17,15 @@
 
     <hgroup>
         <h2>Coding Minds:</h2>
-        <p>Below are projects I have done during my time at <a href="/org/coding-minds/">Coding Minds Academy</a>.</p>
+        <p>Explore <a href="/org/coding-minds/">my work at Coding Minds Academy</a>, including mentored student projects, Unity curriculum templates, and Python curriculum examples.</p>
     </hgroup>
+    {{ set coding_minds_projects = projects.filter(post => (post.org_id || post.org) === "coding-minds") }}
+    {{ if coding_minds_projects.length }}
     <section class="row">
-        {{ for post of projects.filter(post => (post.org_id || post.org) === "coding-minds") }}
+        {{ for post of coding_minds_projects }}
             {{ include "layouts/website/components/project_card.vto" {...post} }}
         {{ /for }}
     </section>
-
-    {{ if mentored }}
-        <hgroup>
-            <h3>Mentored:</h3>
-            <p>Student projects I have helped mentor, primarily done in Unity. My main contribution was providing students with the knowledge they need to design, implement, and publish their game idea.</p>
-        </hgroup>
-        <section class="row">
-        {{ for projects of mentored.student_project }}
-            {{ include "layouts/website/components/project_card.vto" {...projects, title: projects.name, project_link: projects.link, url: false} }}
-        {{ /for }}
-        </section>
-    {{ /if }}
-    
-    {{ if curriculum_templates }}
-        <hgroup>
-            <h3>Curriculum Templates:</h3>
-            <p>Template projects I have made to help with Unity curriculum</p>
-        </hgroup>
-        <ul>
-            {{ for template of curriculum_templates.unity_templates }}
-                <li><a href="{{template.link}}">{{template.name}}</a>: {{template.summary}}
-                </li>
-            {{ /for }}
-        </ul>
     {{ /if }}
 
     <hgroup>

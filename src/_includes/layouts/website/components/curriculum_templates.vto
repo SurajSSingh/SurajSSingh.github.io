@@ -1,0 +1,16 @@
+{{ for group of [
+  {title: "Unity Curriculum Templates", description: curriculum_templates?.templates?.unity, items: curriculum_templates?.unity_templates},
+  {title: "Python Curriculum Examples", description: curriculum_templates?.templates?.colab, items: curriculum_templates?.colab_templates}
+] }}
+  {{ if group.items?.length }}
+    <section class="curriculum-templates">
+      <h2>{{ group.title |> escape }}</h2>
+      {{ if group.description }}<p>{{ group.description |> md(true) }}</p>{{ /if }}
+      <ul>
+        {{ for template of group.items }}
+          <li><a href="{{ template.link |> escape }}">{{ template.name |> escape }}</a>: {{ template.summary |> md(true) }}</li>
+        {{ /for }}
+      </ul>
+    </section>
+  {{ /if }}
+{{ /for }}

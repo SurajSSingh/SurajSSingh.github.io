@@ -1,0 +1,13 @@
+{{ if mentored?.student_project?.length }}
+  <section class="mentored-projects">
+    <hgroup>
+      <h2>Mentored Projects</h2>
+      <p>Student projects I have helped mentor, primarily done in Unity. My main contribution was providing students with the knowledge they need to design, implement, and publish their game idea.</p>
+    </hgroup>
+    <div class="row">
+      {{ for project of mentored.student_project }}
+        {{ include "layouts/website/components/project_card.vto" {...project, title: project.name, project_link: project.link, url: false} }}
+      {{ /for }}
+    </div>
+  </section>
+{{ /if }}
