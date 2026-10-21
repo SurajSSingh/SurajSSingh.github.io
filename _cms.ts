@@ -1,5 +1,7 @@
 import lumeCMS from "lume/cms/mod.ts";
 import { Fs } from "lume/cms/storage/fs.ts";
+import { applyTextChanges } from "lume/cms/fields/utils.ts";
+import fileField from "lume/cms/fields/file.ts";
 
 // The portfolio index is edited as a document, not as a project.
 export class ProjectStorage extends Fs {
@@ -15,6 +17,25 @@ export class ProjectStorage extends Fs {
 }
 
 const cms = lumeCMS();
+cms.field("file", {
+  ...fileField,
+  async applyChanges(
+    data,
+    changes,
+    field: Lume.CMS.ResolvedFields["file"],
+    document,
+    content,
+  ) {
+    const value = changes[field.name] as
+      | { current?: string; uploaded?: File }
+      | undefined;
+    // CMS 0.14.16 treats an unselected browser file input as an upload.
+    if (value?.uploaded && !value.uploaded.name) {
+      changes = { ...changes, [field.name]: { current: value.current ?? "" } };
+    }
+    await fileField.applyChanges!(data, changes, field, document, content);
+  },
+});
 cms.storage("projects", new ProjectStorage(`${cms.options.root}/src`));
 
 async function initRelationOptions(
@@ -28,7 +49,12 @@ async function initRelationOptions(
   for await (const { name, label } of collection) {
     const { root } = await collection.get(name).read();
     if (typeof root.id === "string" && root.id.trim()) {
-      options.push({ label, value: root.id });
+      options.push({
+        label: typeof root.title === "string" && root.title.trim()
+          ? root.title
+          : label,
+        value: root.id,
+      });
     }
   }
 
@@ -110,20 +136,39 @@ cms.collection({
 });
 
 // --- Organizations Collection ---
+const organizationId: Lume.CMS.Fields["text"] & {
+  applyChanges: typeof applyTextChanges;
+} = {
+  name: "id",
+  type: "text",
+  label: "Unique ID",
+  description:
+    "Permanent identifier for project relations (e.g. 'p1', 'uci'). Set when creating an organization; existing IDs cannot be changed.",
+  attributes: { required: true },
+  init(field, _content, data) {
+    if (typeof data?.[field.name] === "string" && data[field.name].trim()) {
+      field.attributes = { ...field.attributes, readonly: true };
+    }
+  },
+  applyChanges(data, changes, field) {
+    // Preserve foreign keys even if a form submits a different ID.
+    if (typeof data[field.name] === "string" && data[field.name].trim()) {
+      return;
+    }
+    applyTextChanges(data, changes, field);
+  },
+};
+
 cms.collection({
   name: "organizations",
-  description: "Organizations associated with projects",
+  description:
+    "Clients, studios, schools, and work categories associated with projects. Select a primary organization in Portfolio Projects; use additional associations here only when needed.",
   store: "src:org/*.md",
-  documentName: "{title}.md",
+  documentName: "{id}.md",
+  rename: false,
   fields: [
     "title: text!",
-    {
-      name: "id",
-      type: "text",
-      label: "Unique ID",
-      description: "Unique identifier for relations (e.g. 'p1', 'uci')",
-      attributes: { required: true },
-    },
+    organizationId,
     {
       name: "type",
       type: "hidden",
@@ -143,6 +188,8 @@ cms.collection({
     {
       name: "logo",
       type: "file",
+      upload: "images",
+      attributes: { accept: "image/*" },
       description: "Organization logo",
       view: "details",
     },
@@ -153,7 +200,7 @@ cms.collection({
       collection: "projects",
       init: initRelationOptions,
       description:
-        "Associate a team or organization with projects that already have a primary organization. Primary organizations are selected on each project.",
+        "Optional extra links, not the list of this organization's primary projects. To assign or move a primary project, edit its Organization in Portfolio Projects.",
     },
     "content: markdown",
   ],
